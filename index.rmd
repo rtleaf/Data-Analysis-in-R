@@ -114,6 +114,18 @@ knitr::kable(course.eval) %>%
 ## Mental Well-Being Statement
 `r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Mental Well-Being Statement")])`
 
+## Covid-19 (Physical Well-Being)
+
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Covid 1")])`
+
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Covid 2")])`
+
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Covid 3")])`
+
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Covid 4")])`
+
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Covid 5")])`
+
 ## Nondiscrimination Statement
 `r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Nondiscrimination Statement")])`
 
