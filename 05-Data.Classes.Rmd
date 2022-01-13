@@ -1,0 +1,93 @@
+---
+site: "bookdown::bookdown_site"
+output:
+  bookdown::gitbook:
+    lib_dir: "book_assets"
+  bookdown::pdf_book:
+    keep_tex: yes
+---
+
+# Data Classes
+
+```{r ,eval=FALSE}
+# Create a numeric vector using the concatenate function
+y.vect <- c(2,3,4)
+y.vect
+class(y.vect)
+length(y.vect)
+```
+
+```{r ,eval=FALSE}
+# Create a numeric vector using the replicate function
+y.vect <- rep(x = 2, times = 4)
+y.vect
+class(y.vect)
+```
+
+```{r ,eval=FALSE}
+# Create a numeric vector the sequence function
+y.vect <- seq(from = 1, to = 12)
+y.vect
+class(y.vect)
+```
+
+```{r ,eval=FALSE}
+# Create a numeric vector the sequence function
+y.vect <- seq(from = 1, to = 12, by = 3.4)
+y.vect
+class(y.vect)
+```
+
+Class Data Frames
+```{r ,eval=FALSE}
+# Create a data frame using the "data.frame" function
+site.name <- c(rep("Site.01",3),rep("Site.02",3))
+density <- rep(x = 2.3, times = length(site.name))
+abundance <- seq(from = 14.5, to = 19.8, length.out = length(site.name))
+sampled. <- c(F, T, F, F, T, F)
+y.data.frame <- data.frame(site.name, density, abundance, sampled.)
+y.data.frame
+class(y.data.frame)
+```
+
+Class Matrices
+```{r, eval=FALSE}
+# Use the matrix function
+y.mat <- matrix(data = c(2,3,4,5,6,7), nrow = 2, ncol = 3, byrow = FALSE)
+y.mat
+class(y.mat)
+length(y.mat)
+dim(y.mat)
+```
+
+```{r ,eval=FALSE}
+# Use the matrix function
+y.mat <- matrix(data = c(2,3,4,5,6,7), nrow = 2, ncol = 3, byrow = TRUE)
+y.mat
+class(y.mat)
+```
+
+Class Lists
+```{r, eval=FALSE}
+# Create the list
+y.list <- list(site.name, density, abundance)
+y.list
+class(y.list)
+```
+
+```{r, eval=FALSE}
+# Create list with variable names
+y.list <- list(site.name = site.name, density = density, abundance = abundance)
+y.list
+class(y.list)
+length(y.list)
+```
+
+Class Logical
+```{r ,eval=FALSE}
+# Create a vector of logical elements
+y.vect
+y.vect == 3.2
+y.log <- c(y.vect == 3.2)
+class(y.log)
+```

@@ -1,0 +1,22 @@
+---
+site: "bookdown::bookdown_site"
+output:
+  bookdown::gitbook:
+    lib_dir: "book_assets"
+  bookdown::pdf_book:
+    keep_tex: yes
+---
+
+# Projects and Directory Structure
+
+## Projects
+
+https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects
+
+## Stereotypical Directory Structure
+
+https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/
+
+## Filetypes in R
+
+https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R1_GettingStarted/R1_GettingStarted8.html

@@ -1,0 +1,143 @@
+---
+site: "bookdown::bookdown_site"
+output:
+  bookdown::gitbook:
+    lib_dir: "book_assets"
+    toc_depth: 2
+  bookdown::pdf_book:
+    keep_tex: yes
+---
+
+# Syllabus
+
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+syl.comp <- read.csv("Syllabus Components.csv")
+```
+
+## `r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Title")])`
+
+Date: `r format(Sys.time(), '%d %B %Y')`
+
+Instructor: `r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Instructor")])`
+
+Office: `r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Office")])`
+
+Office Hours: `r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Office Hours")])`
+
+Email: `r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Email")])`
+
+Phone: `r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Phone")])`
+
+Course Meeting Day and Time: `r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Course Meeting Days")])`, `r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Course Meeting Time")])`
+
+Course Meeting Location: Caylor Computer Lab and Zoom
+
+## Course Description and Objectives
+This course examines the fundamental concepts and techniques for programming in the R statistical programming language. I am convinced that data analysis, data manipulation, data visualization, and reproducible research necessitates command of quantitative tools. Although there are many specialized and general programming languages, the R programming language offers exceptional utility for analysis and is used widely in academia, industry, and by federal and state scientific groups. The demand for skilled data analysis practitioners is rapidly growing and this course prepares you to tackle real-world data analysis challenges.
+
+The primary components of the course: 
+
+1) Introduce the basics of R programming
+
+The course will introduce stereotypical programming concepts, in particular code modularisation, writing and using functions, and code re-usability. We will focus on understanding software engineering concepts such as project build and code testing. Participants will establish a working knowledge of R, R Studio, and relevant packages
+
+2) Review aspects of project organization
+
+A typical data analysis project involves several many components, each including several data files and different binary scripts with code. Keeping these files organized can be challenging and requires a suite of analytical tools.
+
+3) Perform operations on vectors and understand how to use advanced functions
+
+Learn how to wrangle, analyze and visualize data using base R operations and specialized packages (e.g. tidyverse and ggplot2)
+
+4) Promote a reproducible research workflow
+
+Finally, we will examine how to  write markdown documents for high throughput data presentation which permits you to incorporate text and code into a document. 
+
+## At the conclusion of this course: 
+Students will be able to recognize problems that can be solved using statistical programming and reproducible research approaches. The skills of sharing, automation, and organization enable making research more reproducible. By practicing and reinforcing the use of quantitative tools, participants will be better able to make insights that would otherwise be hidden.
+
+## Course Materials
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Course Materials 1")])`
+
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Course Materials 2")])`
+
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Course Materials 3")])`
+
+## Course Scheduling
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+require(knitr)
+require(kableExtra)
+course.eval <- read.csv("Course Schedule.csv")
+course.eval <- course.eval[,1:4]
+
+names(course.eval) <- c("Class Number",	"Day",	"Assignments", "Reading")
+knitr::kable(course.eval) %>%
+column_spec(1, bold = T, width = "5em") %>%
+  kable_styling(bootstrap_options = "striped", full_width = T, position = "center")
+```
+
+## Course Workload Statement
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Course Workload Statement")])`
+
+## Course Evaluation
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+require(knitr)
+gs.scale <- read.csv("Grading Scale.csv")
+names(gs.scale) <- c("Percentage", "Letter Grade")
+knitr::kable(gs.scale) %>%
+  kable_styling(bootstrap_options = "striped", full_width = T, position = "center")
+```
+
+## Assignment Policy and Procedures
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Assignment Policy and Procedures")])`
+
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Assignment Policy and Procedures 2")])`
+
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Assignment Policy and Procedures 3")])`
+
+## Grading scale
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+require(knitr)
+course.eval <- read.csv("Course Evaluation.csv")
+names(course.eval) <- c("Evaluation type",	"Number",	"Points per item",	"Total points")
+knitr::kable(course.eval) %>%
+  kable_styling(bootstrap_options = "striped", full_width = T, position = "center")
+```
+
+## Academic Support Resources
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Academic Support Resources")])`
+
+## Academic Success
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Academic Success")])`
+
+## Mental Well-Being Statement
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Mental Well-Being Statement")])`
+
+## Nondiscrimination Statement
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Nondiscrimination Statement")])`
+
+## Confidentiality and Mandatory Reporting
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Confidentiality and Mandatory Reporting")])`
+\pagebreak
+
+## Academic Integrity
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Academic Integrity")])`
+
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Academic Integrity 2")])`
+
+## Content of this online material.
+
+The material presented on this site is derived from a few different online and published sources. These sources are not explicitly cited and the intention is for the presented material to be referenced with the following books (on reserve in the library). 
+
+* Crawley, M. J. (2013). The R book. New York: Wiley. ISBN: 9781118448908 1118448901 9781118448946 1118448944 9781118448960 1118448960
+
+* Teetor, P. (2011). R cookbook. Beijing: O'Reilly. ISBN: 9780596809157 0596809158
+
+* Tufte, E. R. (2001). The Visual Display of Quantitative Information. Cheshire, Connecticut: Graphics Press. ISBN: 0-9613921-4-2
+
+* Wickham, Hadley (2014). Advanced R. Routledge. ISBN-10 : 9781466586963
+
+* Wickham, Hadley and Grolemund, Garret (2017). R for Data Science. O'Reilly Media. ISBN-13: 978-1491910399
+
+* Wickham, Hadley (2016).ggplot2: Elegant Graphics for Data Analysis (Use R). Springer. ISBN-13: 978-3319242750

@@ -1,0 +1,177 @@
+---
+output:
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+---
+
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+syl.comp <- read.csv("Syllabus Components.csv")
+```
+
+### Workload Expectations
+
+Below you will find:
+
++ Four assignments that you will complete during the semester,
+
++ A description of the Project proposal and final project assignment, and
+
++ General workload expectations.
+
+### Assignment Policy and Procedures
+
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Assignment Policy and Procedures 3")])`
+
+#### Turning in code
+
+You will save your code to your individual-linked dropbox account.
+
+Considerations:
+
+1. All files submitted must be annotated and have descriptive header information. Annotation and descriptive header information is described in the 'functions' tab on our course website.
+
+2. For assignments that require you to submit multiple files, all of the files will need to run error free and accomplish the tasks for credit to be earned.
+
+3. Every assignment is an Rstudio project. If data are used in the assignments, then the data must be linked through the 'data' directory. If figures are created, then they must be written to the 'figs' directory.
+
+4. You will upload all project files to the proper directory in your linked dropbox.
+
+### Assignment 01 - Working in R and RStudio
+
+#### Task 01
++ Make a project called 'Assignment 01'.
+
++ Make a new script into the 'R' directory, the name of the script will be called 'init.proj.r'
+
++ This script will contain a single function, called 'init.proj'
+
++ The goal of the function will be to automatically creates a directory structure outlined in (https://nicercode.github.io/blog/2013-04-05-projects/). i.e. it will have directories: R, data, doc, figs, and output.
+
++ Pro tip (optional): Change your R site profile so that this function loads every time you start R. See (https://www.r-bloggers.com/fun-with-rprofile-and-customizing-r-startup/)
+
+#### Task 02 - "Import and Transform"
+
++ Make a new script into the 'R' directory, the name of the script will be called 'import.and.write.r'
+
++ Save this script in the r directory.
+
++ This script will do the following:
+
+1. Write the entire mtcars data as a csv file to the 'data' directory (mtcars is in the package 'datasets')
+
+2. Import the the.csv file you wrote, selecting only the first 10 rows only. 
+
+3. From this imported and reduced data frame, make a new data frame that includes a column that is the hp per cylinder (divide hp by cyl)
+
+4. Name this column "hp.per.cyl". 
+
+5. Print the data frame to the screen
+
+6. Save the data frame the 'data' directory as mtcars.red.RData (it will be saved as file type .RData).
+
+### Assignment 02 - Communicate
+
+Make a project called 'Assignment 02'.
+
++ Use your function init.proj to populate the project directory.
+
++ For each of the exercises in:
+
+'28.2.1 Exercises' (n = 3)
+
+Wrap each of the exercise codes in a function saved to: 
+
+1. function make.fig.01 saved in .r file 'make.fig.01.r'
+
+2. function make.fig.02 saved in .r file 'make.fig.02.r'  
+
+3. function make.fig.03 saved in .r file 'make.fig.03.r'
+
+Each of the functions functions will have at least two function arguments that can be changed by the user to alter the aesthetics or data in the figure. The function will write the output figure to a .png file in the 'figs' directory in your project. The title of the figures will be:
+
+'fig.01.png', 'fig.02.png', and 'fig.03.png'
+
+### Assignment 03 - The Tidyverse and Loops
+
+You will make a project called 'Assignment 03'.
+
++ Use your function init.proj
+
++ The goal of this exercise will be to compare the speed of execution of operations on large data frames. We will use with the babynames data from the 'babynames' package (you will need to download this). The babynames dataset has historical information about births of babies in the U.S. View a preview of this dataset by typing babynames in to the console. Yes, this dataset contains 1.8 million observations (that's a lot of data!). 
+
++ After your inspection of the data, create a file 'speed.test.r', this will be a script, and saved in the correct directory. The .r file will contain two functions:
+
++ The first function will be called 'tidy.arrange' and will contain code to arrange the babynames tibble in alphabetical order. You will arrange the rows such that the names column is arranged alphabetically. Here you will use tidyverse functionality. The function will have two function arguments, 1. the input data, babynames, and 2, the row numbers that will be sorted. So, for example if all row numbers are sampled, the argument will be 1:dim(babynames)[1]. If you want the first 30 rows to be sorted, the argument will be 1:30 .
+
++ tidy.arrange will return two objects. The first is a data frame of the ordered babynames, the second is the time that it takes the function to execute. Hint: to get the time use a function that returns the time from computer's internal clock at the start and finish of the function (I generally use package 'matlab' functions 'tic' and 'toc' for this, there are other ways). 
+
++ Now you will write a script saved as 'arrange.test.r'. This script will run 'tidy.arrange' but the goal will be to sequentially change the second function argument in tidy.arrange to evaluate the time to completion on different sized (number of rows) data.
+
++ The 'arrange.test.r' script will do the following:
+
+1. Source 'tidy.arrange.r'
+
+1. Run 'arrange.test' multiple times (at least five). During each of these trials you will:
+
+a. Change the second function argument of tidy.arrange
+
+b. Save the output from arrange.test in a data frame. 
+
+Run 'arrange.test' at least five times and assign these data to an object.
+
+2. Using the saved data from the trials you performed: Create a plot that has the number of seconds on the x-axis and the number of rows of the input data on the y-axis. Write this figure to the figs directory as a .png file, 'arrange.test.trial.png'.
+
+### Assignment 04 - Rmarkdown
+
+You will make a project called 'Assignment 04'.
+
+Create a Rmarkdown document (.Rmd) that describes and documents the motivation and approach, code and output, and figure(s) you created in Assignment 03 - basically walk an uninformed reader through the assignment. Note when using Rmarkdown, it is easiest to put all of the files (.r, .png, ect.) into a single directory, so no need to make sub-directories in the project. Target: 500 words of text. Cite at least one paper and use the bibtex functionality of Rmarkdown to add a formatted citation (this does not count against your word count).
+
+This Rmarkdown document 'speed.test.write up.Rmd' will pull the functions created in Assignment 03. Therefore the figure and functions will need to be saved into the Assignment 04 directory. 
+
+### Project
+
+#### Project Requirement 01: 
+
+You will upload a .Rmd file that I will knit to a .doc and .html file. This document will include your name and the title of your project. Note in Rmarkdown doc, it is easiest to put all of the files (.r, .png, ect.) into a single directory, so no need to make sub-directories in the project.
+
+You will write approximately 400 words allocated into three sections:
+
+1.) Introduce your project - three sentences.
+
+2.) Describe the:
+
++ computational methods and 
+
++ the data you will use.
+
+This section (the data section) will take the most text. You will use topic sentences and paragraphs. The data must be larger than 2,000 records and must be publicly available. You will keep the scope of the proposal to focus on description of the data and how you will manipulate the data with code (i.e. describe the computational methods). The focus of the project is not to review the actual scientific implications (statistical inference and hypothesis testing). Instead, the focus of the porject will be data exploration, using Groelmund and Wickham approches.
+
+3.) Describe the deliverable (at least three) that you will accomplish (one sentence per deliverable),
+
+4.) Present the project idea to the class - 10 minute presentation using only material you have provided me in the .Rmd file.
+
+The document will be titled "LAST.CODE.Proj.Prop.Rmd". You will meet in person or by phone, with me, to discuss the project scope and objectives prior to submitting the .Rmd file. I will not be available to meet with you after W, April 1, 2020 5 PM. It is your responsibility to make an appointment with me to discuss your project prior to this date. You will turn this assignment in on W, April 08, 2020 12 PM (noon).  
+
+You will be graded with a 1 or 0 if you have fulfilled all of the requirements: 
+
+1. Meet with me prior to or on W, April 1, 2020 5 PM to discuss your proposed project (Let's make sure you have a project that will be sufficiently ambitious), 
+
+2. Submit the .Rmd file that can be kitted, and
+
+3. Have fulfilled the formatting and length requirements I document above. 
+
+Requirement 01 is worth 1 point.
+
+#### Project Requirement 02: 
+
+You will prepare a .Rmd file of your project. I will knit this to a .html file that you will present to the class.
+
+A zero or one will be assigned based on the level of complexity of the analysis and amount of original coding. Only projects that contain every aspect of import, tidy, transform, visualize, model, and communicate can be given credit. The code you provide in your project will be extensive and will document your mastery of the tidyverse, data visualization, and original and interesting analysis. My expectation is that the coding will be extensive and demonstrate the philosophy of reproducible workflow that we have studied. The .html knit must knit on my machine.
+
+A zero or one will be assigned based on the quality of the talk and the quality of the .html presentation. You will have 10 minutes for your presentation. The visuals and narrative should be interesting, polished, and concise.
+
+Requirement 02 is worth 2 points.

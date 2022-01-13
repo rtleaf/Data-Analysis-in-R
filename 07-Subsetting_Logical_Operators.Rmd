@@ -1,0 +1,93 @@
+---
+site: "bookdown::bookdown_site"
+output:
+  bookdown::gitbook:
+    lib_dir: "book_assets"
+  bookdown::pdf_book:
+    keep_tex: yes
+---
+
+# Subsetting and Logical Operators
+
+## Indexing
+Indexing is used for "interogation" and "assignment". Interogation means to examine the value of an object. Assigment means to assign the value of an object.
+```{r, eval=FALSE}
+x <- c(3,7,11,19)
+# Assignment
+x[c(2,3)] <- c(120,140)
+# Interogation
+x <- c(3,7,11,19)
+x[3]
+x[4]
+```
+
+Extend the utility of indexing: `[]` by combining with `c`. For example to get the second and third element in the variable "x"
+```{r, eval=FALSE}
+x <- c(3,7,11,19)
+x[1]
+x[2]
+x[c(1,2)]
+x[c(2,1)]
+y <- c(3,2,1)
+x[y]
+```
+
+```{r, eval=FALSE}
+# Extend the index using a negative sign
+y.vect <- c(1,2,3,4,5,6)
+y.vect[-3]
+```
+
+Number| Excercise
+------| -------------------------------------------------------------------
+1.    |Can you get a + to occur on your console?
+2.    |How many different ways can you create a vector labled `q` containing two 3's and four 5's? Try some!
+3.    |Assign a vector of four elements: 3,7,9 and 2 to `w`.
+4.    |Assign the third element of `w` to `s`, where `s` is equal to 6. 
+5.    |What is the length of a sequence that starts at 1.1, ends at 9.2, and has increments of 0.894?
+6.    |What is the 3rd value of the sequence you created?
+7.    |Use the summary function on the sequence object you created, what is returned?
+
+
+
+## Logical operators
+Symbol | Operation
+------ | ---------
+<      | less than
+>      | greater than
+<=     | less than or equal to
+>=     | greater than or equal to
+==     | exactly equal to
+
+Logical operators are useful in indexing and subsetting data classes. They return `TRUE` and `FALSE` values.
+```{r, eval=FALSE}
+# logical operators examples
+y <- c(2,3,4)
+w <- c(3,7,9,2)
+y > 1
+w == 2
+w < 4 | w >= 8
+w > 4 & w <= 8
+``` 
+
+Combine logical operators with the function `which`
+```{r, eval=FALSE}
+# logical operators examples
+y <- c(2,3,4)
+y > 1
+which(y > 1)
+which(y < 3)
+which(y <= 3)
+y[which(y <= 3)] <- 0
+``` 
+
+Logical operators practice
+
+Number | Excercise
+------ | -------------------------------------------------------------------
+1.     |Assign a vector `a` to have six elements: 1,0,8,11,12,20
+2.     |Which elements in `a` are less than five
+3.     |Which elements in `a` are greater than 13 or less than 10
+
+
+

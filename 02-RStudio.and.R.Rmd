@@ -1,0 +1,127 @@
+---
+site: "bookdown::bookdown_site"
+output:
+  bookdown::gitbook:
+    lib_dir: "book_assets"
+  bookdown::pdf_book:
+    keep_tex: yes
+---
+
+# RStudio and R
+
+## R installation
+
++ Open an internet browser and go to www.r-project.org.
+
++ Click the "download R" link in the middle of the page under "Getting Started."
+
++ Select a CRAN location (a mirror site) and click the corresponding link.
+
++ Click on the "Download R for (Mac) OS X" link at the top of the page.
+
++ Click on the file containing the latest version of R under "Files."
+
++ Save the .pkg file, double-click it to open, and follow the installation instructions.
+
++ Now that R is installed, you need to download and install RStudio.
+
+## RStudio installation
+
++ Go to www.rstudio.com and click on the "Download RStudio" button.
+
++ Click on "Download RStudio Desktop."
+
++ Click on the version recommended for your system, or the latest Mac version, save the .dmg file on your computer, double-click it to open, and then drag and drop it to your applications folder.
+
+## RStudio and R
+Is a developer environment for coding, data management, and version control.  
+
+Multi-pane structure
+
++ Script editor  
+
++ Console
+
++ Environment and history
+
++ Files, plots, packages and help
+
+## Working in RStudio 
+
+### Script Editor
+Allows the user to create multi-line code. It is here that you will develop your code and send it to the console. You will save your scripts as appropriately titled .r files.
+
+To create a new R script you can either go to File -> New -> R Script, or click on the icon with the "+" sign and select "R Script", or simply press Ctrl+Shift+N. Make sure to save the script.
+
+### Console
+The console is where you can type commands and see output.
+
+`>` is the R Prompt Symbol:
+You should see the R prompt symbol in your console. If you don't see the prompt, you cannot execute code.
+
+`+` is the R Prompt Symbol meaning you have unfinished code from the previous line. This often occurs if you have an open (unmatched) parentheses or a multiline input.  
+
+Pressing the `ESC` will return the `>` symbol to your console.
+
+### Files tab
+The files tab shows the directory structure and allows GUI manipulation of directories.
+
+### Plots tab
+The plots tab will show all your figures and it is possible to scroll through multiple plots windows.
+
+### Packages tab
+Provides a list of installed packages and a mechanism to load new ones. Here, you can install packages here or using the command line (in the console).
+
+```{r, eval = F}
+# In the console type:
+install.packages("package name in quotes")
+# Example:
+install.packages("dplyr")
+```
+
+For some packages you will see that "dependencies" are installed when the desired package is installed. These are the packages that the installed package needs in order to run some or all of the functions.
+
+### Help tab
+
+This tab will be automatically selected whenever you run help code in the Console.
+
+### History tab
+The history tab keeps a record of all previous commands. This can be useful when testing and running processes. To use archived code here, select all and click on the "To Source" icon, a window on the left will open with the list of commands. 
+
+### Environment tab
+Displays data, their classes, and dimensions in your workspace.
+
+## Change my .Rprofile site
+
+.Rprofile files are user-controllable files to set options and environment variables. .Rprofile files can be either at the user or project level. User-level .Rprofile files live in the base of the user's home directory, and project-level .Rprofile files live in the base of the project directory. 
+
+R will source only one .Rprofile file. So if you have both a project-specific .Rprofile file and a user .Rprofile file that you want to use, you explicitly source the user-level .Rprofile at the top of your project-level .Rprofile with source("~/.Rprofile").
+
+One easy way to edit your .Rprofile file is to use the usethis::edit_r_profile() function from within an R session. You can specify whether you want to edit the user or project level .Rprofile.
+
+```{r, eval = F}
+usethis::edit_r_profile
+```
+
+## Useful RStudio shortcuts
+
+1. Execute code [Ctrl+Alt+R] or [Ctrl+Enter]
+
+*Ctrl+Enter is used when executing the code line by line. Also, a highlighted chunk of code can also be executed by this command.*
+
+2. Commenting and uncommenting code [Ctrl + Shift + C]
+
+3. Adding a Pipe operator [Ctrl + Shift + M]
+
+4. Insert The Assignment Operator [Alt +]
+
+5. Cursor-Select Multiple Lines [Ctrl + Alt + Up/Down/Click]
+
+6. Find in Files [Ctrl + Shift + F]
+
+7. Keyboard Shortcut Cheat Sheet [Alt + Shift + K]
+
+8. Hide code [Alt + L] 
+
+*Hiding the code is handy when your code involves large functions or chunks of code that can be hidden to ease the writing of the code. By using the Alt+L shortcut, one can hide the highlighted code which can be expanded back by clicking on the yellow icon with a two-way arrow. Once you close and open the code window again, the hidden code will be in the expanded form.*
+
