@@ -64,12 +64,14 @@ Students will be able to recognize problems that can be solved using statistical
 
 `r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Course Materials 3")])`
 
+`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Course Materials 4")])`
+
 ## Course Scheduling
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 require(knitr)
 require(kableExtra)
 course.eval <- read.csv("Course Schedule.csv")
-course.eval <- course.eval[,1:4]
+course.eval <- course.eval[,c(1,2,4,5)]
 
 names(course.eval) <- c("Class Number",	"Day",	"Assignments", "Reading")
 knitr::kable(course.eval) %>%
