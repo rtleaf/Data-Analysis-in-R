@@ -8,3 +8,145 @@ output:
 ---
 
 # Data input and output (IO)
+
+## Some considerations: 
+
+1.  Keep the names of local files downloaded from the internet or copied onto your computer unchanged. This will help you trace the provenance of the data in the future.
+
+2. R's native file format `.RData` can be accessed using `load` and `save.`
+
+## Reading and Writing Files
+
+There are many methods to read and write files in R programming. Your command of these is critical because all scientific work begins with data, and most data is found inside files and databases.
+
+Dealing with input is probably the first step of implementing any significant project.
+
+## Small data
+
++ For very small datasets, enter the data by hand.
+
+`c` is a common function used for concatenation (think combine): 
+```{r, eval = FALSE}
+x <- c(3,7,11,19)
+y <- c(1,1,1,1)
+c(x,y)
+y <- c(x,y,5)
+```
+
+There are a suite of functions to enter data in the console. The sequence function `seq`:
+```{r, eval=FALSE}
+y <- seq(from = 1, to = 10)
+y <- seq(from = 1, to = 10, by = 2.5)
+y <- seq(from = 1, to = 10, length.out = 22)
+```
+
+Use the function `rep` (repeat):
+```{r, eval=FALSE}
+y <- rep(x = 5, times = 4)
+x.value <- c(2,3)
+rep(x.value, times = 3)
+```
+
++ Alternatively, you can create an empty data frame and then invoke the built-in, spreadsheet-like editor to populate it using `data.frame`.
+
+```{r ,eval=FALSE}
+# Create a data frame using the "data.frame" function
+site.name <- c(rep("Site.01",3),rep("Site.02",3))
+density <- rep(x = 2.3, times = length(site.name))
+abundance <- seq(from = 14.5, to = 19.8, length.out = length(site.name))
+sampled. <- c(F, T, F, F, T, F)
+y.data.frame <- data.frame(site.name, density, abundance, sampled.)
+y.data.frame
+class(y.data.frame)
+```
+
+## Large(r) data
+
+### read.csv
+
++ Most scientific work will involve data larger than can be entered by hand.
+
++ In this case we will use a suite of commands and different packages to get the data into our environment.
+
+```{r, eval = F, echo = T}
+read.csv("./Data/co2.csv")
+```
+
+### xlsx
+
++ MS Excel files are widely used
+
+```{r, eval = F, echo = T}
+install.packages('readxl')
+require('readxl')
+
+read_xlsx("./Data/Codes.xlsx", sheet = 1)
+```
+
+
+### Specialized file types - shapefiles
+
+```{r, eval = F}
+require(maptools)
+land. <- readShapePoly('./GOM shp/gom_states.shp')
+```
+
+### Webscraping
+
+A web scraper is a specialized tool designed to accurately and quickly extract data from a web page. 
+
+Test case: 
+
+1. We will modifying the URL address to scrape Google Scholar
+- Specify publication year and journal title
+
+2. Using a CSS Viewer
+- Modifying R code based on the layout and CSS tags of the publisher
+
+#### Develope URL code
+
+The code below documents the structure of the URL text.
+
+```{r, eval = F}
+stem.1 <- "https://scholar.google.com/scholar?start="
+stem.2 <- "&q=source:%22transactions+of+the+american+fisheries+society%22&hl=en&as_sdt=1,25&as_ylo="
+stem.3 <- "&as_yhi="
+stem.4 <- "&as_vis=1"
+
+st.y <- 1973
+en.y <- 1973
+
+page.vect <- seq(0,80, by = 10)
+year.vect <- seq(st.y, en.y, by = 1)
+page.year <- expand.grid(page.vect, year.vect)
+html.list <- paste0(stem.1, page.year[,1], stem.2, page.year[,2], stem.3, page.year[,2], stem.4)
+```
+
+#### stem.1
+This chunk specifies to direct to Google Scholar.
+
+#### stem.2
+This chunk specifies the journal to be "scraped". In this case the target journal is the "Transactions of the American Fisheries Society". This term is joined by + signs.
+
+#### page.year
+For a given start and end year ('st.y' and 'en.y')
+
+####
+
+```{r, eval=FALSE}
+require('textreadr')
+read_html(file = html.list[1])
+
+```
+
+### Download data from public repository
+```{r, eval=FALSE}
+
+website <- "https://www.stats.govt.nz/large-datasets/csv-files-for-download/"
+url <- "https://www.stats.govt.nz/assets/Uploads/Annual-enterprise-survey/Annual-enterprise-survey-2020-financial-year-provisional/Download-data/annual-enterprise-survey-2020-financial-year-provisional-csv.csv"
+
+destfile <- "./Data/output.csv"
+
+download.file(url, destfile)
+
+```

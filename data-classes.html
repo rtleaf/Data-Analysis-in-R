@@ -168,7 +168,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="projects-and-directory-structure.html"><a href="projects-and-directory-structure.html#stereotypical-directory-structure"><i class="fa fa-check"></i><b>3.2</b> Stereotypical Directory Structure</a></li>
 <li class="chapter" data-level="3.3" data-path="projects-and-directory-structure.html"><a href="projects-and-directory-structure.html#filetypes-in-r"><i class="fa fa-check"></i><b>3.3</b> Filetypes in R</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html"><i class="fa fa-check"></i><b>4</b> Data input and output (IO)</a></li>
+<li class="chapter" data-level="4" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html"><i class="fa fa-check"></i><b>4</b> Data input and output (IO)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#some-considerations"><i class="fa fa-check"></i><b>4.1</b> Some considerations:</a></li>
+<li class="chapter" data-level="4.2" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#reading-and-writing-files"><i class="fa fa-check"></i><b>4.2</b> Reading and Writing Files</a></li>
+<li class="chapter" data-level="4.3" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#small-data"><i class="fa fa-check"></i><b>4.3</b> Small data</a></li>
+<li class="chapter" data-level="4.4" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#larger-data"><i class="fa fa-check"></i><b>4.4</b> Large(r) data</a></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="data-classes.html"><a href="data-classes.html"><i class="fa fa-check"></i><b>5</b> Data Classes</a></li>
 <li class="chapter" data-level="6" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>6</b> R syntax</a>
 <ul>
@@ -205,59 +211,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="data-classes" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Data Classes</h1>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="data-classes.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a numeric vector using the concatenate function</span></span>
-<span id="cb3-2"><a href="data-classes.html#cb3-2" aria-hidden="true" tabindex="-1"></a>y.vect <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
-<span id="cb3-3"><a href="data-classes.html#cb3-3" aria-hidden="true" tabindex="-1"></a>y.vect</span>
-<span id="cb3-4"><a href="data-classes.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.vect)</span>
-<span id="cb3-5"><a href="data-classes.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(y.vect)</span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="data-classes.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a numeric vector using the replicate function</span></span>
-<span id="cb4-2"><a href="data-classes.html#cb4-2" aria-hidden="true" tabindex="-1"></a>y.vect <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">times =</span> <span class="dv">4</span>)</span>
-<span id="cb4-3"><a href="data-classes.html#cb4-3" aria-hidden="true" tabindex="-1"></a>y.vect</span>
-<span id="cb4-4"><a href="data-classes.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.vect)</span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="data-classes.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a numeric vector the sequence function</span></span>
-<span id="cb5-2"><a href="data-classes.html#cb5-2" aria-hidden="true" tabindex="-1"></a>y.vect <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">12</span>)</span>
-<span id="cb5-3"><a href="data-classes.html#cb5-3" aria-hidden="true" tabindex="-1"></a>y.vect</span>
-<span id="cb5-4"><a href="data-classes.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.vect)</span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="data-classes.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a numeric vector the sequence function</span></span>
-<span id="cb6-2"><a href="data-classes.html#cb6-2" aria-hidden="true" tabindex="-1"></a>y.vect <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">12</span>, <span class="at">by =</span> <span class="fl">3.4</span>)</span>
-<span id="cb6-3"><a href="data-classes.html#cb6-3" aria-hidden="true" tabindex="-1"></a>y.vect</span>
-<span id="cb6-4"><a href="data-classes.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.vect)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="data-classes.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a numeric vector using the concatenate function</span></span>
+<span id="cb13-2"><a href="data-classes.html#cb13-2" aria-hidden="true" tabindex="-1"></a>y.vect <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
+<span id="cb13-3"><a href="data-classes.html#cb13-3" aria-hidden="true" tabindex="-1"></a>y.vect</span>
+<span id="cb13-4"><a href="data-classes.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.vect)</span>
+<span id="cb13-5"><a href="data-classes.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(y.vect)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="data-classes.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a numeric vector using the replicate function</span></span>
+<span id="cb14-2"><a href="data-classes.html#cb14-2" aria-hidden="true" tabindex="-1"></a>y.vect <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">times =</span> <span class="dv">4</span>)</span>
+<span id="cb14-3"><a href="data-classes.html#cb14-3" aria-hidden="true" tabindex="-1"></a>y.vect</span>
+<span id="cb14-4"><a href="data-classes.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.vect)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="data-classes.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a numeric vector the sequence function</span></span>
+<span id="cb15-2"><a href="data-classes.html#cb15-2" aria-hidden="true" tabindex="-1"></a>y.vect <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">12</span>)</span>
+<span id="cb15-3"><a href="data-classes.html#cb15-3" aria-hidden="true" tabindex="-1"></a>y.vect</span>
+<span id="cb15-4"><a href="data-classes.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.vect)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="data-classes.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a numeric vector the sequence function</span></span>
+<span id="cb16-2"><a href="data-classes.html#cb16-2" aria-hidden="true" tabindex="-1"></a>y.vect <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">12</span>, <span class="at">by =</span> <span class="fl">3.4</span>)</span>
+<span id="cb16-3"><a href="data-classes.html#cb16-3" aria-hidden="true" tabindex="-1"></a>y.vect</span>
+<span id="cb16-4"><a href="data-classes.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.vect)</span></code></pre></div>
 <p>Class Data Frames</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="data-classes.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame using the &quot;data.frame&quot; function</span></span>
-<span id="cb7-2"><a href="data-classes.html#cb7-2" aria-hidden="true" tabindex="-1"></a>site.name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">&quot;Site.01&quot;</span>,<span class="dv">3</span>),<span class="fu">rep</span>(<span class="st">&quot;Site.02&quot;</span>,<span class="dv">3</span>))</span>
-<span id="cb7-3"><a href="data-classes.html#cb7-3" aria-hidden="true" tabindex="-1"></a>density <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="at">x =</span> <span class="fl">2.3</span>, <span class="at">times =</span> <span class="fu">length</span>(site.name))</span>
-<span id="cb7-4"><a href="data-classes.html#cb7-4" aria-hidden="true" tabindex="-1"></a>abundance <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="fl">14.5</span>, <span class="at">to =</span> <span class="fl">19.8</span>, <span class="at">length.out =</span> <span class="fu">length</span>(site.name))</span>
-<span id="cb7-5"><a href="data-classes.html#cb7-5" aria-hidden="true" tabindex="-1"></a>sampled. <span class="ot">&lt;-</span> <span class="fu">c</span>(F, T, F, F, T, F)</span>
-<span id="cb7-6"><a href="data-classes.html#cb7-6" aria-hidden="true" tabindex="-1"></a>y.data.frame <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(site.name, density, abundance, sampled.)</span>
-<span id="cb7-7"><a href="data-classes.html#cb7-7" aria-hidden="true" tabindex="-1"></a>y.data.frame</span>
-<span id="cb7-8"><a href="data-classes.html#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.data.frame)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="data-classes.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame using the &quot;data.frame&quot; function</span></span>
+<span id="cb17-2"><a href="data-classes.html#cb17-2" aria-hidden="true" tabindex="-1"></a>site.name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">&quot;Site.01&quot;</span>,<span class="dv">3</span>),<span class="fu">rep</span>(<span class="st">&quot;Site.02&quot;</span>,<span class="dv">3</span>))</span>
+<span id="cb17-3"><a href="data-classes.html#cb17-3" aria-hidden="true" tabindex="-1"></a>density <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="at">x =</span> <span class="fl">2.3</span>, <span class="at">times =</span> <span class="fu">length</span>(site.name))</span>
+<span id="cb17-4"><a href="data-classes.html#cb17-4" aria-hidden="true" tabindex="-1"></a>abundance <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="fl">14.5</span>, <span class="at">to =</span> <span class="fl">19.8</span>, <span class="at">length.out =</span> <span class="fu">length</span>(site.name))</span>
+<span id="cb17-5"><a href="data-classes.html#cb17-5" aria-hidden="true" tabindex="-1"></a>sampled. <span class="ot">&lt;-</span> <span class="fu">c</span>(F, T, F, F, T, F)</span>
+<span id="cb17-6"><a href="data-classes.html#cb17-6" aria-hidden="true" tabindex="-1"></a>y.data.frame <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(site.name, density, abundance, sampled.)</span>
+<span id="cb17-7"><a href="data-classes.html#cb17-7" aria-hidden="true" tabindex="-1"></a>y.data.frame</span>
+<span id="cb17-8"><a href="data-classes.html#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.data.frame)</span></code></pre></div>
 <p>Class Matrices</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="data-classes.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the matrix function</span></span>
-<span id="cb8-2"><a href="data-classes.html#cb8-2" aria-hidden="true" tabindex="-1"></a>y.mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb8-3"><a href="data-classes.html#cb8-3" aria-hidden="true" tabindex="-1"></a>y.mat</span>
-<span id="cb8-4"><a href="data-classes.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.mat)</span>
-<span id="cb8-5"><a href="data-classes.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(y.mat)</span>
-<span id="cb8-6"><a href="data-classes.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(y.mat)</span></code></pre></div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="data-classes.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the matrix function</span></span>
-<span id="cb9-2"><a href="data-classes.html#cb9-2" aria-hidden="true" tabindex="-1"></a>y.mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb9-3"><a href="data-classes.html#cb9-3" aria-hidden="true" tabindex="-1"></a>y.mat</span>
-<span id="cb9-4"><a href="data-classes.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.mat)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="data-classes.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the matrix function</span></span>
+<span id="cb18-2"><a href="data-classes.html#cb18-2" aria-hidden="true" tabindex="-1"></a>y.mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb18-3"><a href="data-classes.html#cb18-3" aria-hidden="true" tabindex="-1"></a>y.mat</span>
+<span id="cb18-4"><a href="data-classes.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.mat)</span>
+<span id="cb18-5"><a href="data-classes.html#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(y.mat)</span>
+<span id="cb18-6"><a href="data-classes.html#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(y.mat)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="data-classes.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the matrix function</span></span>
+<span id="cb19-2"><a href="data-classes.html#cb19-2" aria-hidden="true" tabindex="-1"></a>y.mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb19-3"><a href="data-classes.html#cb19-3" aria-hidden="true" tabindex="-1"></a>y.mat</span>
+<span id="cb19-4"><a href="data-classes.html#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.mat)</span></code></pre></div>
 <p>Class Lists</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="data-classes.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the list</span></span>
-<span id="cb10-2"><a href="data-classes.html#cb10-2" aria-hidden="true" tabindex="-1"></a>y.list <span class="ot">&lt;-</span> <span class="fu">list</span>(site.name, density, abundance)</span>
-<span id="cb10-3"><a href="data-classes.html#cb10-3" aria-hidden="true" tabindex="-1"></a>y.list</span>
-<span id="cb10-4"><a href="data-classes.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.list)</span></code></pre></div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="data-classes.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create list with variable names</span></span>
-<span id="cb11-2"><a href="data-classes.html#cb11-2" aria-hidden="true" tabindex="-1"></a>y.list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">site.name =</span> site.name, <span class="at">density =</span> density, <span class="at">abundance =</span> abundance)</span>
-<span id="cb11-3"><a href="data-classes.html#cb11-3" aria-hidden="true" tabindex="-1"></a>y.list</span>
-<span id="cb11-4"><a href="data-classes.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.list)</span>
-<span id="cb11-5"><a href="data-classes.html#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(y.list)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="data-classes.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the list</span></span>
+<span id="cb20-2"><a href="data-classes.html#cb20-2" aria-hidden="true" tabindex="-1"></a>y.list <span class="ot">&lt;-</span> <span class="fu">list</span>(site.name, density, abundance)</span>
+<span id="cb20-3"><a href="data-classes.html#cb20-3" aria-hidden="true" tabindex="-1"></a>y.list</span>
+<span id="cb20-4"><a href="data-classes.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.list)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="data-classes.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create list with variable names</span></span>
+<span id="cb21-2"><a href="data-classes.html#cb21-2" aria-hidden="true" tabindex="-1"></a>y.list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">site.name =</span> site.name, <span class="at">density =</span> density, <span class="at">abundance =</span> abundance)</span>
+<span id="cb21-3"><a href="data-classes.html#cb21-3" aria-hidden="true" tabindex="-1"></a>y.list</span>
+<span id="cb21-4"><a href="data-classes.html#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.list)</span>
+<span id="cb21-5"><a href="data-classes.html#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(y.list)</span></code></pre></div>
 <p>Class Logical</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="data-classes.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a vector of logical elements</span></span>
-<span id="cb12-2"><a href="data-classes.html#cb12-2" aria-hidden="true" tabindex="-1"></a>y.vect</span>
-<span id="cb12-3"><a href="data-classes.html#cb12-3" aria-hidden="true" tabindex="-1"></a>y.vect <span class="sc">==</span> <span class="fl">3.2</span></span>
-<span id="cb12-4"><a href="data-classes.html#cb12-4" aria-hidden="true" tabindex="-1"></a>y.log <span class="ot">&lt;-</span> <span class="fu">c</span>(y.vect <span class="sc">==</span> <span class="fl">3.2</span>)</span>
-<span id="cb12-5"><a href="data-classes.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.log)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="data-classes.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a vector of logical elements</span></span>
+<span id="cb22-2"><a href="data-classes.html#cb22-2" aria-hidden="true" tabindex="-1"></a>y.vect</span>
+<span id="cb22-3"><a href="data-classes.html#cb22-3" aria-hidden="true" tabindex="-1"></a>y.vect <span class="sc">==</span> <span class="fl">3.2</span></span>
+<span id="cb22-4"><a href="data-classes.html#cb22-4" aria-hidden="true" tabindex="-1"></a>y.log <span class="ot">&lt;-</span> <span class="fu">c</span>(y.vect <span class="sc">==</span> <span class="fl">3.2</span>)</span>
+<span id="cb22-5"><a href="data-classes.html#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.log)</span></code></pre></div>
 
 </div>
             </section>

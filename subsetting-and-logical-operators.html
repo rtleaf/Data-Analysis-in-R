@@ -168,7 +168,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="projects-and-directory-structure.html"><a href="projects-and-directory-structure.html#stereotypical-directory-structure"><i class="fa fa-check"></i><b>3.2</b> Stereotypical Directory Structure</a></li>
 <li class="chapter" data-level="3.3" data-path="projects-and-directory-structure.html"><a href="projects-and-directory-structure.html#filetypes-in-r"><i class="fa fa-check"></i><b>3.3</b> Filetypes in R</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html"><i class="fa fa-check"></i><b>4</b> Data input and output (IO)</a></li>
+<li class="chapter" data-level="4" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html"><i class="fa fa-check"></i><b>4</b> Data input and output (IO)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#some-considerations"><i class="fa fa-check"></i><b>4.1</b> Some considerations:</a></li>
+<li class="chapter" data-level="4.2" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#reading-and-writing-files"><i class="fa fa-check"></i><b>4.2</b> Reading and Writing Files</a></li>
+<li class="chapter" data-level="4.3" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#small-data"><i class="fa fa-check"></i><b>4.3</b> Small data</a></li>
+<li class="chapter" data-level="4.4" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#larger-data"><i class="fa fa-check"></i><b>4.4</b> Large(r) data</a></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="data-classes.html"><a href="data-classes.html"><i class="fa fa-check"></i><b>5</b> Data Classes</a></li>
 <li class="chapter" data-level="6" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>6</b> R syntax</a>
 <ul>
@@ -208,24 +214,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="indexing" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> Indexing</h2>
 <p>Indexing is used for “interogation” and “assignment”. Interogation means to examine the value of an object. Assigment means to assign the value of an object.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="subsetting-and-logical-operators.html#cb21-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">19</span>)</span>
-<span id="cb21-2"><a href="subsetting-and-logical-operators.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Assignment</span></span>
-<span id="cb21-3"><a href="subsetting-and-logical-operators.html#cb21-3" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">120</span>,<span class="dv">140</span>)</span>
-<span id="cb21-4"><a href="subsetting-and-logical-operators.html#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Interogation</span></span>
-<span id="cb21-5"><a href="subsetting-and-logical-operators.html#cb21-5" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">19</span>)</span>
-<span id="cb21-6"><a href="subsetting-and-logical-operators.html#cb21-6" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">3</span>]</span>
-<span id="cb21-7"><a href="subsetting-and-logical-operators.html#cb21-7" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">4</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="subsetting-and-logical-operators.html#cb31-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">19</span>)</span>
+<span id="cb31-2"><a href="subsetting-and-logical-operators.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Assignment</span></span>
+<span id="cb31-3"><a href="subsetting-and-logical-operators.html#cb31-3" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">120</span>,<span class="dv">140</span>)</span>
+<span id="cb31-4"><a href="subsetting-and-logical-operators.html#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Interogation</span></span>
+<span id="cb31-5"><a href="subsetting-and-logical-operators.html#cb31-5" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">19</span>)</span>
+<span id="cb31-6"><a href="subsetting-and-logical-operators.html#cb31-6" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">3</span>]</span>
+<span id="cb31-7"><a href="subsetting-and-logical-operators.html#cb31-7" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">4</span>]</span></code></pre></div>
 <p>Extend the utility of indexing: <code>[]</code> by combining with <code>c</code>. For example to get the second and third element in the variable “x”</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="subsetting-and-logical-operators.html#cb22-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">19</span>)</span>
-<span id="cb22-2"><a href="subsetting-and-logical-operators.html#cb22-2" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>]</span>
-<span id="cb22-3"><a href="subsetting-and-logical-operators.html#cb22-3" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">2</span>]</span>
-<span id="cb22-4"><a href="subsetting-and-logical-operators.html#cb22-4" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)]</span>
-<span id="cb22-5"><a href="subsetting-and-logical-operators.html#cb22-5" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">1</span>)]</span>
-<span id="cb22-6"><a href="subsetting-and-logical-operators.html#cb22-6" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>)</span>
-<span id="cb22-7"><a href="subsetting-and-logical-operators.html#cb22-7" aria-hidden="true" tabindex="-1"></a>x[y]</span></code></pre></div>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="subsetting-and-logical-operators.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extend the index using a negative sign</span></span>
-<span id="cb23-2"><a href="subsetting-and-logical-operators.html#cb23-2" aria-hidden="true" tabindex="-1"></a>y.vect <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>)</span>
-<span id="cb23-3"><a href="subsetting-and-logical-operators.html#cb23-3" aria-hidden="true" tabindex="-1"></a>y.vect[<span class="sc">-</span><span class="dv">3</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="subsetting-and-logical-operators.html#cb32-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">19</span>)</span>
+<span id="cb32-2"><a href="subsetting-and-logical-operators.html#cb32-2" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>]</span>
+<span id="cb32-3"><a href="subsetting-and-logical-operators.html#cb32-3" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">2</span>]</span>
+<span id="cb32-4"><a href="subsetting-and-logical-operators.html#cb32-4" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)]</span>
+<span id="cb32-5"><a href="subsetting-and-logical-operators.html#cb32-5" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">1</span>)]</span>
+<span id="cb32-6"><a href="subsetting-and-logical-operators.html#cb32-6" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>)</span>
+<span id="cb32-7"><a href="subsetting-and-logical-operators.html#cb32-7" aria-hidden="true" tabindex="-1"></a>x[y]</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="subsetting-and-logical-operators.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extend the index using a negative sign</span></span>
+<span id="cb33-2"><a href="subsetting-and-logical-operators.html#cb33-2" aria-hidden="true" tabindex="-1"></a>y.vect <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>)</span>
+<span id="cb33-3"><a href="subsetting-and-logical-operators.html#cb33-3" aria-hidden="true" tabindex="-1"></a>y.vect[<span class="sc">-</span><span class="dv">3</span>]</span></code></pre></div>
 <table>
 <colgroup>
 <col width="8%" />
@@ -302,21 +308,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 <p>Logical operators are useful in indexing and subsetting data classes. They return <code>TRUE</code> and <code>FALSE</code> values.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="subsetting-and-logical-operators.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># logical operators examples</span></span>
-<span id="cb24-2"><a href="subsetting-and-logical-operators.html#cb24-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
-<span id="cb24-3"><a href="subsetting-and-logical-operators.html#cb24-3" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">2</span>)</span>
-<span id="cb24-4"><a href="subsetting-and-logical-operators.html#cb24-4" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;</span> <span class="dv">1</span></span>
-<span id="cb24-5"><a href="subsetting-and-logical-operators.html#cb24-5" aria-hidden="true" tabindex="-1"></a>w <span class="sc">==</span> <span class="dv">2</span></span>
-<span id="cb24-6"><a href="subsetting-and-logical-operators.html#cb24-6" aria-hidden="true" tabindex="-1"></a>w <span class="sc">&lt;</span> <span class="dv">4</span> <span class="sc">|</span> w <span class="sc">&gt;=</span> <span class="dv">8</span></span>
-<span id="cb24-7"><a href="subsetting-and-logical-operators.html#cb24-7" aria-hidden="true" tabindex="-1"></a>w <span class="sc">&gt;</span> <span class="dv">4</span> <span class="sc">&amp;</span> w <span class="sc">&lt;=</span> <span class="dv">8</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="subsetting-and-logical-operators.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># logical operators examples</span></span>
+<span id="cb34-2"><a href="subsetting-and-logical-operators.html#cb34-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
+<span id="cb34-3"><a href="subsetting-and-logical-operators.html#cb34-3" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">2</span>)</span>
+<span id="cb34-4"><a href="subsetting-and-logical-operators.html#cb34-4" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;</span> <span class="dv">1</span></span>
+<span id="cb34-5"><a href="subsetting-and-logical-operators.html#cb34-5" aria-hidden="true" tabindex="-1"></a>w <span class="sc">==</span> <span class="dv">2</span></span>
+<span id="cb34-6"><a href="subsetting-and-logical-operators.html#cb34-6" aria-hidden="true" tabindex="-1"></a>w <span class="sc">&lt;</span> <span class="dv">4</span> <span class="sc">|</span> w <span class="sc">&gt;=</span> <span class="dv">8</span></span>
+<span id="cb34-7"><a href="subsetting-and-logical-operators.html#cb34-7" aria-hidden="true" tabindex="-1"></a>w <span class="sc">&gt;</span> <span class="dv">4</span> <span class="sc">&amp;</span> w <span class="sc">&lt;=</span> <span class="dv">8</span></span></code></pre></div>
 <p>Combine logical operators with the function <code>which</code></p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="subsetting-and-logical-operators.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># logical operators examples</span></span>
-<span id="cb25-2"><a href="subsetting-and-logical-operators.html#cb25-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
-<span id="cb25-3"><a href="subsetting-and-logical-operators.html#cb25-3" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;</span> <span class="dv">1</span></span>
-<span id="cb25-4"><a href="subsetting-and-logical-operators.html#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(y <span class="sc">&gt;</span> <span class="dv">1</span>)</span>
-<span id="cb25-5"><a href="subsetting-and-logical-operators.html#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(y <span class="sc">&lt;</span> <span class="dv">3</span>)</span>
-<span id="cb25-6"><a href="subsetting-and-logical-operators.html#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(y <span class="sc">&lt;=</span> <span class="dv">3</span>)</span>
-<span id="cb25-7"><a href="subsetting-and-logical-operators.html#cb25-7" aria-hidden="true" tabindex="-1"></a>y[<span class="fu">which</span>(y <span class="sc">&lt;=</span> <span class="dv">3</span>)] <span class="ot">&lt;-</span> <span class="dv">0</span></span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="subsetting-and-logical-operators.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># logical operators examples</span></span>
+<span id="cb35-2"><a href="subsetting-and-logical-operators.html#cb35-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
+<span id="cb35-3"><a href="subsetting-and-logical-operators.html#cb35-3" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;</span> <span class="dv">1</span></span>
+<span id="cb35-4"><a href="subsetting-and-logical-operators.html#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(y <span class="sc">&gt;</span> <span class="dv">1</span>)</span>
+<span id="cb35-5"><a href="subsetting-and-logical-operators.html#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(y <span class="sc">&lt;</span> <span class="dv">3</span>)</span>
+<span id="cb35-6"><a href="subsetting-and-logical-operators.html#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(y <span class="sc">&lt;=</span> <span class="dv">3</span>)</span>
+<span id="cb35-7"><a href="subsetting-and-logical-operators.html#cb35-7" aria-hidden="true" tabindex="-1"></a>y[<span class="fu">which</span>(y <span class="sc">&lt;=</span> <span class="dv">3</span>)] <span class="ot">&lt;-</span> <span class="dv">0</span></span></code></pre></div>
 <p>Logical operators practice</p>
 <table>
 <thead>
