@@ -9,85 +9,176 @@ output:
 
 # Data Classes
 
+There are various kinds of R-objects or data structures:
+
+1. Vectors
+2. Lists
+3. Matrices
+4. Arrays
+5. Factors
+6. Data Frames
+
+Let's first understand some of the basic datatypes on which the R-objects are built like Numeric, Integer, Character, Factor, and Logical.
+
+
+## Numeric
 ```{r ,eval=FALSE}
-# Create a numeric vector using the concatenate function
-y.vect <- c(2,3,4)
-y.vect
-class(y.vect)
-length(y.vect)
+num <- 1.2
+print(num)
+class(num)
 ```
 
-```{r ,eval=FALSE}
-# Create a numeric vector using the replicate function
-y.vect <- rep(x = 2, times = 4)
-y.vect
-class(y.vect)
-```
+## Integer
+Integer: Numbers that do not contain decimal values have a data type as an integer. However, to create an integer data type, you explicitly use as.integer() and pass the variable as an argument.
 
 ```{r ,eval=FALSE}
-# Create a numeric vector the sequence function
-y.vect <- seq(from = 1, to = 12)
-y.vect
-class(y.vect)
+int <- as.integer(2.2)
+print(int)
+class(int)
 ```
+
+## Character
+
+As the name suggests, it can be a letter or a combination of letters enclosed by quotes is considered as a character data type by R.
 
 ```{r ,eval=FALSE}
-# Create a numeric vector the sequence function
-y.vect <- seq(from = 1, to = 12, by = 3.4)
-y.vect
-class(y.vect)
+char <- "datacamp"
+print(char)
+class(char)
+char <- "12345"
+class(char)
 ```
 
-Class Data Frames
+## Logical
+Logical: A variable that can have a value of True and False like a boolean is called a logical variable.
+
 ```{r ,eval=FALSE}
-# Create a data frame using the "data.frame" function
-site.name <- c(rep("Site.01",3),rep("Site.02",3))
-density <- rep(x = 2.3, times = length(site.name))
-abundance <- seq(from = 14.5, to = 19.8, length.out = length(site.name))
-sampled. <- c(F, T, F, F, T, F)
-y.data.frame <- data.frame(site.name, density, abundance, sampled.)
-y.data.frame
-class(y.data.frame)
+log_true <- TRUE
+print(log_true)
+class(log_true)
+log_false <- FALSE
+class(log_false)
 ```
 
-Class Matrices
+## Factor
+
+Factor: They are a data type that is used to refer to a qualitative relationship like colors, good & bad, course or movie ratings, etc. They are useful in statistical modeling.
+
+```{r ,eval=FALSE}
+fac <- factor(c("good", "bad", "ugly","good", "bad", "ugly"))
+print(fac)
+class(fac)
+levels(fac)
+nlevels(fac)
+class(levels(fac))
+```
+
+## List
+Unlike vectors, a list can contain elements of various data types and is often known as an ordered collection of values. It can contain vectors, functions, matrices, and even another list inside it (nested-list).
+
 ```{r, eval=FALSE}
-# Use the matrix function
-y.mat <- matrix(data = c(2,3,4,5,6,7), nrow = 2, ncol = 3, byrow = FALSE)
-y.mat
-class(y.mat)
-length(y.mat)
-dim(y.mat)
+lis1 <- seq(1,5)     # Integer Vector
+lis2 <- factor(1:5)  # Factor Vector
+lis3 <- letters[1:5] 
+combined_list <- list(lis1, lis2, lis3)
+
+combined_list[[1]]
+combined_list[[2]]
+combined_list[[3]]
+combined_list[[3]][5]
+
+flat_list <- unlist(combined_list)
+class(flat_list)
+```
+
+## Vectors
+Vectors are an object which is used to store multiple information or values of the same data type. A vector can not have a combination of both integer and character. For example, if you want to store 100 students' total marks, instead of creating 100 different variables for each student, you would create a vector of length 100, which will store all the student marks in it.
+
+```{r ,eval=FALSE}
+marks <- c(88,65,90,40,65)
+marks[4]
+marks[1]
+marks[6]
+```
+
+### Slicing vectors
+```{r ,eval=FALSE}
+marks[seq(1,4)]
+marks[c(1,2,4)]
 ```
 
 ```{r ,eval=FALSE}
-# Use the matrix function
-y.mat <- matrix(data = c(2,3,4,5,6,7), nrow = 2, ncol = 3, byrow = TRUE)
-y.mat
-class(y.mat)
+char_vector <- c("a", "b", "c")
+class(char_vector)
+length(char_vector)
+char_vector[1:3]
+char_vector[-3]
+char_num_vec <- c(1,2, "a")
 ```
-
-Class Lists
-```{r, eval=FALSE}
-# Create the list
-y.list <- list(site.name, density, abundance)
-y.list
-class(y.list)
-```
-
-```{r, eval=FALSE}
-# Create list with variable names
-y.list <- list(site.name = site.name, density = density, abundance = abundance)
-y.list
-class(y.list)
-length(y.list)
-```
-
-Class Logical
 ```{r ,eval=FALSE}
-# Create a vector of logical elements
-y.vect
-y.vect == 3.2
-y.log <- c(y.vect == 3.2)
-class(y.log)
+char_vector <- c("a", "b", "c")
+class(char_vector)
+length(char_vector)
+char_vector[1:3]
+char_vector[-3]
 ```
+
+```{r ,eval=FALSE}
+vec <- seq(1,1024)
+vec <- c(1:1024)
+```
+## Matrix
+
+Similar to a vector, a matrix is used to store information about the same data type. However, unlike vectors, matrices are capable of holding two-dimensional information inside it.
+
+```{r ,eval=FALSE}
+M <- matrix(vector, 
+            nrow=r, 
+            ncol=c, 
+            byrow=FALSE, 
+            dimnames=list(char_vector_rownames, char_vector_colnames))
+
+# byrow=TRUE signifies that the matrix should be filled by rows. 
+# byrow=FALSE indicates that the matrix should be filled by columns (the default).
+```
+
+
+```{r ,eval=FALSE}
+M <- matrix(seq(1,6), 
+            nrow = 2, ncol = 3, byrow = TRUE)
+
+M <- matrix(seq(1,6), 
+            nrow = 2, ncol = 3, byrow = F)
+```
+
+### Slicing matrices
+```{r ,eval=FALSE}
+M <- matrix(seq(1,6), 
+            nrow = 2, ncol = 3, byrow = F)
+
+M[1:2, 2:3]
+```
+
+## DataFrame
+
+Unlike a matrix, Data frames are a more generalized form of a matrix. It contains data in a tabular fashion. The data in the data frame can be spread across various columns, having different data types. 
+
+
+```{r ,eval=FALSE}
+dataset <- data.frame(
+   Person = c("Aditya", "Ayush","Akshay"),
+   Age = c(26, 26, 27),
+   Weight = c(81,85, 90),
+   Height = c(6,5.8,6.2),
+   Salary = c(50000, 80000, 100000))
+
+class(dataset)
+nrow(dataset) 
+ncol(dataset) 
+df1 <- rbind(dataset, dataset) 
+df2 <- cbind(dataset, dataset)
+head(df1,3) 
+str(dataset) 
+summary(dataset)
+```
+
