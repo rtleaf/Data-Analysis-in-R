@@ -4,12 +4,12 @@ Class Number,Start Date,End Date,Subject,Reading,Start Time,End Time,Description
 3,"Wednesday, January 26, 2022","Wednesday, January 26, 2022",Data input and output,,2:30,3:45,R Programming - Data input and output 
 4,"Monday, January 31, 2022","Monday, January 31, 2022",Data Classes,,2:30,3:45,R Programming - Data Classes 
 5,"Wednesday, February 2, 2022","Wednesday, February 2, 2022",R syntax,,2:30,3:45,R Programming - R syntax 
-6,"Monday, February 7, 2022","Monday, February 7, 2022",R syntax,,2:30,3:45,R Programming - R syntax 
+6,"Monday, February 7, 2022","Monday, February 7, 2022","R syntax, Assignment 01 Due",,2:30,3:45,R Programming - R syntax 
 7,"Wednesday, February 9, 2022","Wednesday, February 9, 2022",Indexing and Logical Operators,,2:30,3:45,R Programming - Indexing and Logical Operators 
 8,"Monday, February 14, 2022","Monday, February 14, 2022",Loops,,2:30,3:45,R Programming - Loops 
 9,"Wednesday, February 16, 2022","Wednesday, February 16, 2022",Data Organization and Workflow,"R4DS 01, 02, Broman and Wu",2:30,3:45,"R Programming - Data Organization and Workflow R4DS 01, 02, Broman and Wu"
 10,"Monday, February 21, 2022","Monday, February 21, 2022",Data Transformation,R4DS 05,2:30,3:45,R Programming - Data Transformation R4DS 05
-11,"Wednesday, February 23, 2022","Wednesday, February 23, 2022",Data Wrangling and Tibbles,"R4DS 09, R4DS 10",2:30,3:45,"R Programming - Data Wrangling and Tibbles R4DS 09, R4DS 10"
+11,"Wednesday, February 23, 2022","Wednesday, February 23, 2022","Data Wrangling and Tibbles, Assignment 02 Due","R4DS 09, R4DS 10",2:30,3:45,"R Programming - Data Wrangling and Tibbles R4DS 09, R4DS 10"
 ,"Monday, February 28, 2022","Monday, February 28, 2022",Mardi Gras Holiday,,2:30,3:45,R Programming - Mardi Gras Holiday 
 12,"Wednesday, March 2, 2022","Wednesday, March 2, 2022",Tidy Data,R4DS 12,2:30,3:45,R Programming - Tidy Data R4DS 12
 13,"Monday, March 7, 2022","Monday, March 7, 2022",Relational Data,R4DS 13,2:30,3:45,R Programming - Relational Data R4DS 13
@@ -17,14 +17,14 @@ Class Number,Start Date,End Date,Subject,Reading,Start Time,End Time,Description
 15,"Monday, March 14, 2022","Monday, March 14, 2022",Factors,R4DS 15,2:30,3:45,R Programming - Factors R4DS 15
 16,"Wednesday, March 16, 2022","Wednesday, March 16, 2022",Dates and Times,R4DS 16,2:30,3:45,R Programming - Dates and Times R4DS 16
 17,"Monday, March 21, 2022","Monday, March 21, 2022",Pipes,"R4DS 17, R4DS 18",2:30,3:45,"R Programming - Pipes R4DS 17, R4DS 18"
-18,"Wednesday, March 23, 2022","Wednesday, March 23, 2022",Functions,R4DS 19,2:30,3:45,R Programming - Functions R4DS 19
+18,"Wednesday, March 23, 2022","Wednesday, March 23, 2022","Functions, Assignment 03 Due",R4DS 19,2:30,3:45,R Programming - Functions R4DS 19
 19,"Monday, March 28, 2022","Monday, March 28, 2022",Graphical Display,Tufte,2:30,3:45,R Programming - Graphical Display Tufte
 20,"Wednesday, March 30, 2022","Wednesday, March 30, 2022",ggplot2 I,R4DS 03,2:30,3:45,R Programming - ggplot2 I R4DS 03
 21,"Monday, April 4, 2022","Monday, April 4, 2022",ggplot2 II,R4DS 03,2:30,3:45,R Programming - ggplot2 II R4DS 03
 22,"Wednesday, April 6, 2022","Wednesday, April 6, 2022",ggplot2 III,R4DS 28,2:30,3:45,R Programming - ggplot2 III R4DS 28
 23,"Monday, April 11, 2022","Monday, April 11, 2022",Rmarkdown I,R4DS 29,2:30,3:45,R Programming - Rmarkdown I R4DS 29
 24,"Wednesday, April 13, 2022","Wednesday, April 13, 2022",Rmarkdown II,R4DS 30,2:30,3:45,R Programming - Rmarkdown II R4DS 30
-25,"Monday, April 18, 2022","Monday, April 18, 2022",Bookdown,BD 01 to BD 02,2:30,3:45,R Programming - Bookdown BD 01 to BD 02
+25,"Monday, April 18, 2022","Monday, April 18, 2022","Bookdown, Assignment 04 Due",BD 01 to BD 02,2:30,3:45,R Programming - Bookdown BD 01 to BD 02
 26,"Wednesday, April 20, 2022","Wednesday, April 20, 2022",Preliminary Project Presentations I,,2:30,3:45,R Programming - Preliminary Project Presentations I 
 27,"Monday, April 25, 2022","Monday, April 25, 2022",Preliminary Project Presentations II,,2:30,3:45,R Programming - Preliminary Project Presentations II 
 28,"Wednesday, April 27, 2022","Wednesday, April 27, 2022",R Shiny I,MS 01 to MS 02,2:30,3:45,R Programming - R Shiny I MS 01 to MS 02
