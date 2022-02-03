@@ -114,7 +114,7 @@ Using the mtcars data:
 
 ## Assignment 02 - Communicate
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=FALSE}
 # + Use your function init.proj to populate the project directory.
 # 
 # + For each of the exercises in: r4ds  '28.2.1 Exercises' (n = 3)
@@ -134,7 +134,7 @@ Using the mtcars data:
 
 ## Assignment 03 - The Tidyverse and Loops
 
-```{r}
+```{r, echo=FALSE}
 
 # You will make a project called 'Assignment 03'.
 # 
@@ -166,7 +166,7 @@ Using the mtcars data:
 
 ```
 
-```{r}
+```{r, echo=FALSE}
 # ## Assignment 04 - Rmarkdown
 # 
 # You will make a project called 'Assignment 04'.

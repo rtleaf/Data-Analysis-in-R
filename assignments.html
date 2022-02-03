@@ -334,58 +334,9 @@ Write code to determine the maximum and minimum values of a[b].</p></li>
 </div>
 <div id="assignment-02---communicate" class="section level2" number="9.3">
 <h2><span class="header-section-number">9.3</span> Assignment 02 - Communicate</h2>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="assignments.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># + Use your function init.proj to populate the project directory.</span></span>
-<span id="cb61-2"><a href="assignments.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb61-3"><a href="assignments.html#cb61-3" aria-hidden="true" tabindex="-1"></a><span class="co"># + For each of the exercises in: r4ds  &#39;28.2.1 Exercises&#39; (n = 3)</span></span>
-<span id="cb61-4"><a href="assignments.html#cb61-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb61-5"><a href="assignments.html#cb61-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrap each of the exercise codes in a function saved to: </span></span>
-<span id="cb61-6"><a href="assignments.html#cb61-6" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb61-7"><a href="assignments.html#cb61-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. function make.fig.01 saved in .r file &#39;make.fig.01.r&#39;</span></span>
-<span id="cb61-8"><a href="assignments.html#cb61-8" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb61-9"><a href="assignments.html#cb61-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. function make.fig.02 saved in .r file &#39;make.fig.02.r&#39;  </span></span>
-<span id="cb61-10"><a href="assignments.html#cb61-10" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb61-11"><a href="assignments.html#cb61-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. function make.fig.03 saved in .r file &#39;make.fig.03.r&#39;</span></span>
-<span id="cb61-12"><a href="assignments.html#cb61-12" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb61-13"><a href="assignments.html#cb61-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Each of the functions functions will have at least two function arguments that can be changed by the user to alter the aesthetics or data in the figure. The function will write the output figure to a .png file in the &#39;figs&#39; directory in your project. The title of the figures will be:</span></span>
-<span id="cb61-14"><a href="assignments.html#cb61-14" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb61-15"><a href="assignments.html#cb61-15" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;fig.01.png&#39;, &#39;fig.02.png&#39;, and &#39;fig.03.png&#39;</span></span></code></pre></div>
 </div>
 <div id="assignment-03---the-tidyverse-and-loops" class="section level2" number="9.4">
 <h2><span class="header-section-number">9.4</span> Assignment 03 - The Tidyverse and Loops</h2>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="assignments.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># You will make a project called &#39;Assignment 03&#39;.</span></span>
-<span id="cb62-2"><a href="assignments.html#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb62-3"><a href="assignments.html#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="co"># + Use your function init.proj</span></span>
-<span id="cb62-4"><a href="assignments.html#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb62-5"><a href="assignments.html#cb62-5" aria-hidden="true" tabindex="-1"></a><span class="co"># + The goal of this exercise will be to compare the speed of execution of operations on large data frames. We will use with the babynames data from the &#39;babynames&#39; package (you will need to download this). The babynames dataset has historical information about births of babies in the U.S. View a preview of this dataset by typing babynames in to the console. Yes, this dataset contains 1.8 million observations (that&#39;s a lot of data!). </span></span>
-<span id="cb62-6"><a href="assignments.html#cb62-6" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb62-7"><a href="assignments.html#cb62-7" aria-hidden="true" tabindex="-1"></a><span class="co"># + After your inspection of the data, create a file &#39;speed.test.r&#39;, this will be a script, and saved in the correct directory. The .r file will contain two functions:</span></span>
-<span id="cb62-8"><a href="assignments.html#cb62-8" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb62-9"><a href="assignments.html#cb62-9" aria-hidden="true" tabindex="-1"></a><span class="co"># + The first function will be called &#39;tidy.arrange&#39; and will contain code to arrange the babynames tibble in alphabetical order. You will arrange the rows such that the names column is arranged alphabetically. Here you will use tidyverse functionality. The function will have two function arguments, 1. the input data, babynames, and 2, the row numbers that will be sorted. So, for example if all row numbers are sampled, the argument will be 1:dim(babynames)[1]. If you want the first 30 rows to be sorted, the argument will be 1:30 .</span></span>
-<span id="cb62-10"><a href="assignments.html#cb62-10" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb62-11"><a href="assignments.html#cb62-11" aria-hidden="true" tabindex="-1"></a><span class="co"># + tidy.arrange will return two objects. The first is a data frame of the ordered babynames, the second is the time that it takes the function to execute. Hint: to get the time use a function that returns the time from computer&#39;s internal clock at the start and finish of the function (I generally use package &#39;matlab&#39; functions &#39;tic&#39; and &#39;toc&#39; for this, there are other ways). </span></span>
-<span id="cb62-12"><a href="assignments.html#cb62-12" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb62-13"><a href="assignments.html#cb62-13" aria-hidden="true" tabindex="-1"></a><span class="co"># + Now you will write a script saved as &#39;arrange.test.r&#39;. This script will run &#39;tidy.arrange&#39; but the goal will be to sequentially change the second function argument in tidy.arrange to evaluate the time to completion on different sized (number of rows) data.</span></span>
-<span id="cb62-14"><a href="assignments.html#cb62-14" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb62-15"><a href="assignments.html#cb62-15" aria-hidden="true" tabindex="-1"></a><span class="co"># + The &#39;arrange.test.r&#39; script will do the following:</span></span>
-<span id="cb62-16"><a href="assignments.html#cb62-16" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb62-17"><a href="assignments.html#cb62-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Source &#39;tidy.arrange.r&#39;</span></span>
-<span id="cb62-18"><a href="assignments.html#cb62-18" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb62-19"><a href="assignments.html#cb62-19" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Run &#39;arrange.test&#39; multiple times (at least five). During each of these trials you will:</span></span>
-<span id="cb62-20"><a href="assignments.html#cb62-20" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb62-21"><a href="assignments.html#cb62-21" aria-hidden="true" tabindex="-1"></a><span class="co"># a. Change the second function argument of tidy.arrange</span></span>
-<span id="cb62-22"><a href="assignments.html#cb62-22" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb62-23"><a href="assignments.html#cb62-23" aria-hidden="true" tabindex="-1"></a><span class="co"># b. Save the output from arrange.test in a data frame. </span></span>
-<span id="cb62-24"><a href="assignments.html#cb62-24" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb62-25"><a href="assignments.html#cb62-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Run &#39;arrange.test&#39; at least five times and assign these data to an object.</span></span>
-<span id="cb62-26"><a href="assignments.html#cb62-26" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb62-27"><a href="assignments.html#cb62-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Using the saved data from the trials you performed: Create a plot that has the number of seconds on the x-axis and the number of rows of the input data on the y-axis. Write this figure to the figs directory as a .png file, &#39;arrange.test.trial.png&#39;.</span></span></code></pre></div>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="assignments.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ## Assignment 04 - Rmarkdown</span></span>
-<span id="cb63-2"><a href="assignments.html#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb63-3"><a href="assignments.html#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="co"># You will make a project called &#39;Assignment 04&#39;.</span></span>
-<span id="cb63-4"><a href="assignments.html#cb63-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb63-5"><a href="assignments.html#cb63-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a Rmarkdown document (.Rmd) that describes and documents the motivation and approach, code and output, and figure(s) you created in Assignment 03 - basically walk an uninformed reader through the assignment. Note when using Rmarkdown, it is easiest to put all of the files (.r, .png, ect.) into a single directory, so no need to make sub-directories in the project. Target: 500 words of text. Cite at least one paper and use the bibtex functionality of Rmarkdown to add a formatted citation (this does not count against your word count).</span></span>
-<span id="cb63-6"><a href="assignments.html#cb63-6" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb63-7"><a href="assignments.html#cb63-7" aria-hidden="true" tabindex="-1"></a><span class="co"># This Rmarkdown document &#39;speed.test.write up.Rmd&#39; will pull the functions created in Assignment 03. Therefore the figure and functions will need to be saved into the Assignment 04 directory. </span></span></code></pre></div>
 </div>
 <div id="project" class="section level2" number="9.5">
 <h2><span class="header-section-number">9.5</span> Project</h2>
