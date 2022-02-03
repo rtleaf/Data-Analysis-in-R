@@ -12,7 +12,7 @@ output:
 ## Arithmetic operators
 Symbol| Operation
 ------| ---------
-+     | addtion
++     | addition
 -     | subtraction
 *     | multiplication
 /     | division

@@ -70,6 +70,8 @@ Students will be able to recognize problems that can be solved using statistical
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 require(knitr)
 require(kableExtra)
+options(knitr.kable.NA = '')
+
 course.eval <- read.csv("Course Schedule.csv")
 course.eval <- course.eval[,c(1,2,4,5)]
 
@@ -155,3 +157,4 @@ The material presented on this site is derived from a few different online and p
 * Wickham, Hadley and Grolemund, Garret (2017). R for Data Science. O'Reilly Media. ISBN-13: 978-1491910399
 
 * Wickham, Hadley (2016).ggplot2: Elegant Graphics for Data Analysis (Use R). Springer. ISBN-13: 978-3319242750
+
