@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Projects and Directory Structure | _main.knit</title>
+  <title>6 Working in R | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Projects and Directory Structure | _main.knit" />
+  <meta property="og:title" content="6 Working in R | _main.knit" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Projects and Directory Structure | _main.knit" />
+  <meta name="twitter:title" content="6 Working in R | _main.knit" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="rstudio-and-r.html"/>
-<link rel="next" href="data-input-and-output-io.html"/>
+<link rel="prev" href="data-classes.html"/>
+<link rel="next" href="examples-of-coding-statistical-operations.html"/>
 <script src="book_assets/header-attrs-2.11/header-attrs.js"></script>
 <script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -245,19 +245,141 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="projects-and-directory-structure" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Projects and Directory Structure</h1>
-<div id="projects" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Projects</h2>
-<p><a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects" class="uri">https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects</a></p>
+<div id="working-in-r" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Working in R</h1>
+<div id="arithmetic-operators" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Arithmetic operators</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+</td>
+<td>addition</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td>subtraction</td>
+</tr>
+<tr class="odd">
+<td>*</td>
+<td>multiplication</td>
+</tr>
+<tr class="even">
+<td>/</td>
+<td>division</td>
+</tr>
+<tr class="odd">
+<td>^</td>
+<td>exponentiation</td>
+</tr>
+</tbody>
+</table>
+<p>PEMDAS applies when writing R-code</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="working-in-r.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Arithmetic operators in action:</span></span>
+<span id="cb24-2"><a href="working-in-r.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">5</span> <span class="sc">/</span> <span class="dv">2</span></span>
+<span id="cb24-3"><a href="working-in-r.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="sc">*</span> <span class="dv">2</span><span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb24-4"><a href="working-in-r.html#cb24-4" aria-hidden="true" tabindex="-1"></a>(<span class="dv">3</span><span class="sc">*</span><span class="dv">2</span>)<span class="sc">^</span><span class="dv">2</span> </span>
+<span id="cb24-5"><a href="working-in-r.html#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Arithmetic operators using objects:</span></span>
+<span id="cb24-6"><a href="working-in-r.html#cb24-6" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb24-7"><a href="working-in-r.html#cb24-7" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">2</span>)</span>
+<span id="cb24-8"><a href="working-in-r.html#cb24-8" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> w[<span class="dv">3</span>]</span>
+<span id="cb24-9"><a href="working-in-r.html#cb24-9" aria-hidden="true" tabindex="-1"></a>z <span class="sc">+</span> s</span></code></pre></div>
 </div>
-<div id="stereotypical-directory-structure" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Stereotypical Directory Structure</h2>
-<p><a href="https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/" class="uri">https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/</a></p>
+<div id="arithmetic-operators-practice" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Arithmetic operators practice</h2>
+<p>Using what you know about parenthesis and PEMDAS, in one line of code do each of the following:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Number</th>
+<th>Excercise</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.</td>
+<td>Assign the variable <code>x</code> to be a vector containing the values 5,5,6,2</td>
+</tr>
+<tr class="even">
+<td>2.</td>
+<td>Assign the variable <code>y</code> to be a vector containing the values 3,3,1,7</td>
+</tr>
+<tr class="odd">
+<td>3.</td>
+<td>Add <code>x</code> and <code>y</code></td>
+</tr>
+<tr class="even">
+<td>4.</td>
+<td>Substract <code>y</code> from <code>x</code></td>
+</tr>
+<tr class="odd">
+<td>5.</td>
+<td>Assign <code>d</code> as <code>y</code> divided by <code>x</code></td>
+</tr>
+<tr class="even">
+<td>3.</td>
+<td>Multiply <code>z</code> by <code>s</code> then add five (<code>z</code> and <code>s</code> from last practice)</td>
+</tr>
+<tr class="odd">
+<td>4.</td>
+<td>Add 5 to <code>z</code> then multilply by <code>s</code></td>
+</tr>
+<tr class="even">
+<td>5.</td>
+<td>Take <code>z</code> to the fifth power and then add 2</td>
+</tr>
+<tr class="odd">
+<td>6.</td>
+<td>Divide <code>s</code> by three, then add 33, then take that sum to the 0.5 power</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="filetypes-in-r" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Filetypes in R</h2>
-<p><a href="https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R1_GettingStarted/R1_GettingStarted8.html" class="uri">https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R1_GettingStarted/R1_GettingStarted8.html</a></p>
+<div id="missing-values-na" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Missing values (NA)</h2>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="working-in-r.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># is.na tests for missing values</span></span>
+<span id="cb25-2"><a href="working-in-r.html#cb25-2" aria-hidden="true" tabindex="-1"></a>dat<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="cn">NA</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb25-3"><a href="working-in-r.html#cb25-3" aria-hidden="true" tabindex="-1"></a>dat<span class="fl">.1</span> <span class="sc">+</span> <span class="dv">2</span></span>
+<span id="cb25-4"><a href="working-in-r.html#cb25-4" aria-hidden="true" tabindex="-1"></a>dat<span class="fl">.1</span> <span class="sc">+</span> <span class="fu">rep</span>(<span class="dv">2</span>, <span class="fu">length</span>(dat<span class="fl">.1</span>))</span></code></pre></div>
+</div>
+<div id="dealing-with-missing-values" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Dealing with missing values</h2>
+<ul>
+<li><p>In R, missing values are represented by “NA”.</p></li>
+<li><p>Undefined values (like dividing by zero) are represented by “NaN”, not a number. Often missing values are represented with numbers: -1, 99, -9999, etc. This is obviously a problem and should be avoided. You will likely need to use indexing prior using arithmetic operations to replace these values.</p></li>
+</ul>
+<p>The “is.na” function and the “na.rm”” argument:</p>
+<ul>
+<li><p>Sometimes we do not know whether there are missing values in our data.</p></li>
+<li><p>We can use the <code>is.na</code> function to test for missing values:</p></li>
+</ul>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="working-in-r.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># is.na tests for missing values</span></span>
+<span id="cb26-2"><a href="working-in-r.html#cb26-2" aria-hidden="true" tabindex="-1"></a>dat<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="cn">NA</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb26-3"><a href="working-in-r.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>(dat<span class="fl">.1</span>)</span>
+<span id="cb26-4"><a href="working-in-r.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(<span class="fu">is.na</span>(dat<span class="fl">.1</span>))</span></code></pre></div>
+<p>We can use the logical <code>na.rm</code> argument to remove missing values from our data prior to executing the funciton:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="working-in-r.html#cb27-1" aria-hidden="true" tabindex="-1"></a>dat<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="cn">NA</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb27-2"><a href="working-in-r.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dat<span class="fl">.1</span>)</span>
+<span id="cb27-3"><a href="working-in-r.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dat<span class="fl">.1</span>, <span class="at">na.rm =</span> T)</span></code></pre></div>
+</div>
+<div id="dealing-with-problematic-values" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Dealing with problematic values</h2>
+<p>Sometimes we code no data as -1 and that can really screw things up. R does not know that -1 means “no data”. However we can replace the -1 with NA. There are many ways to do this, but here is a one way.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="working-in-r.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In this example, -1 is coded as a missing data field. Think back to our logical arguments and subsetting exercises.</span></span>
+<span id="cb28-2"><a href="working-in-r.html#cb28-2" aria-hidden="true" tabindex="-1"></a>dat<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb28-3"><a href="working-in-r.html#cb28-3" aria-hidden="true" tabindex="-1"></a>dat<span class="fl">.2</span> <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span></span>
+<span id="cb28-4"><a href="working-in-r.html#cb28-4" aria-hidden="true" tabindex="-1"></a>dat<span class="fl">.2</span>[dat<span class="fl">.2</span> <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb28-5"><a href="working-in-r.html#cb28-5" aria-hidden="true" tabindex="-1"></a>dat<span class="fl">.2</span>[dat<span class="fl">.2</span> <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span> </span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="working-in-r.html#cb29-1" aria-hidden="true" tabindex="-1"></a>dat<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="cn">NA</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb29-2"><a href="working-in-r.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co"># is.na tests for missing values</span></span>
+<span id="cb29-3"><a href="working-in-r.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>(dat<span class="fl">.1</span>) </span>
+<span id="cb29-4"><a href="working-in-r.html#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># returns the element(s) number in the vector that is NA</span></span>
+<span id="cb29-5"><a href="working-in-r.html#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(<span class="fu">is.na</span>(dat<span class="fl">.1</span>))</span></code></pre></div>
 
 </div>
 </div>
@@ -266,8 +388,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="rstudio-and-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data-input-and-output-io.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-classes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="examples-of-coding-statistical-operations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>

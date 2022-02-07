@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Projects and Directory Structure | _main.knit</title>
+  <title>7 Examples of coding statistical operations | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Projects and Directory Structure | _main.knit" />
+  <meta property="og:title" content="7 Examples of coding statistical operations | _main.knit" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Projects and Directory Structure | _main.knit" />
+  <meta name="twitter:title" content="7 Examples of coding statistical operations | _main.knit" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="rstudio-and-r.html"/>
-<link rel="next" href="data-input-and-output-io.html"/>
+<link rel="prev" href="working-in-r.html"/>
+<link rel="next" href="subsetting-and-logical-operators.html"/>
 <script src="book_assets/header-attrs-2.11/header-attrs.js"></script>
 <script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -245,19 +245,109 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="projects-and-directory-structure" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Projects and Directory Structure</h1>
-<div id="projects" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Projects</h2>
-<p><a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects" class="uri">https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects</a></p>
+<div id="examples-of-coding-statistical-operations" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Examples of coding statistical operations</h1>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="examples-of-coding-statistical-operations.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
+<span id="cb30-2"><a href="examples-of-coding-statistical-operations.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(datasets)</span>
+<span id="cb30-3"><a href="examples-of-coding-statistical-operations.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(utils)</span></code></pre></div>
+<div id="z-scores" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Z-scores</h2>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="examples-of-coding-statistical-operations.html#cb31-1" aria-hidden="true" tabindex="-1"></a>scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">76</span>,<span class="dv">80</span>,<span class="dv">83</span>,<span class="dv">97</span>,<span class="dv">100</span>)</span>
+<span id="cb31-2"><a href="examples-of-coding-statistical-operations.html#cb31-2" aria-hidden="true" tabindex="-1"></a>?scale</span>
+<span id="cb31-3"><a href="examples-of-coding-statistical-operations.html#cb31-3" aria-hidden="true" tabindex="-1"></a>scaled.scores <span class="ot">&lt;-</span> <span class="fu">scale</span>(scores)</span>
+<span id="cb31-4"><a href="examples-of-coding-statistical-operations.html#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(scores)</span>
+<span id="cb31-5"><a href="examples-of-coding-statistical-operations.html#cb31-5" aria-hidden="true" tabindex="-1"></a>scores.data.frame <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(scores,scaled.scores)</span>
+<span id="cb31-6"><a href="examples-of-coding-statistical-operations.html#cb31-6" aria-hidden="true" tabindex="-1"></a>scores.data.frame</span>
+<span id="cb31-7"><a href="examples-of-coding-statistical-operations.html#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> scores.data.frame<span class="sc">$</span>scores, </span>
+<span id="cb31-8"><a href="examples-of-coding-statistical-operations.html#cb31-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> scores.data.frame<span class="sc">$</span>scaled.scores, </span>
+<span id="cb31-9"><a href="examples-of-coding-statistical-operations.html#cb31-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">type =</span> <span class="st">&quot;b&quot;</span>,</span>
+<span id="cb31-10"><a href="examples-of-coding-statistical-operations.html#cb31-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Raw Test Scores&quot;</span>,</span>
+<span id="cb31-11"><a href="examples-of-coding-statistical-operations.html#cb31-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">&quot;Scaled Test Scores&quot;</span>)</span>
+<span id="cb31-12"><a href="examples-of-coding-statistical-operations.html#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>)</span>
+<span id="cb31-13"><a href="examples-of-coding-statistical-operations.html#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(scores)</span>
+<span id="cb31-14"><a href="examples-of-coding-statistical-operations.html#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="fu">mean</span>(scores))</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="examples-of-coding-statistical-operations.html#cb32-1" aria-hidden="true" tabindex="-1"></a>z.scores <span class="ot">&lt;-</span> <span class="fu">c</span>(scores <span class="sc">-</span> <span class="fu">mean</span>(scores))<span class="sc">/</span><span class="fu">sd</span>(scores)</span>
+<span id="cb32-2"><a href="examples-of-coding-statistical-operations.html#cb32-2" aria-hidden="true" tabindex="-1"></a>scores.data.frame <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(scores,scaled.scores,z.scores)</span>
+<span id="cb32-3"><a href="examples-of-coding-statistical-operations.html#cb32-3" aria-hidden="true" tabindex="-1"></a>scores.data.frame</span></code></pre></div>
 </div>
-<div id="stereotypical-directory-structure" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Stereotypical Directory Structure</h2>
-<p><a href="https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/" class="uri">https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/</a></p>
+<div id="quantiles" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Quantiles</h2>
+<p>Here is an example using the quantile() function:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="examples-of-coding-statistical-operations.html#cb33-1" aria-hidden="true" tabindex="-1"></a>?quantile</span>
+<span id="cb33-2"><a href="examples-of-coding-statistical-operations.html#cb33-2" aria-hidden="true" tabindex="-1"></a>nile.vect <span class="ot">&lt;-</span> Nile</span>
+<span id="cb33-3"><a href="examples-of-coding-statistical-operations.html#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(nile.vect, <span class="at">main =</span> <span class="st">&quot;&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Nile river discharge volume&quot;</span>)</span>
+<span id="cb33-4"><a href="examples-of-coding-statistical-operations.html#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(<span class="at">x =</span> nile.vect)</span>
+<span id="cb33-5"><a href="examples-of-coding-statistical-operations.html#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="fu">quantile</span>(<span class="at">x =</span> nile.vect), <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
 </div>
-<div id="filetypes-in-r" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Filetypes in R</h2>
-<p><a href="https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R1_GettingStarted/R1_GettingStarted8.html" class="uri">https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R1_GettingStarted/R1_GettingStarted8.html</a></p>
+<div id="normality" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Normality</h2>
+<p>Shaprio-Wilk test of normality, the null hypothesis - data are normally distributed</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="examples-of-coding-statistical-operations.html#cb34-1" aria-hidden="true" tabindex="-1"></a>?shapiro.test</span>
+<span id="cb34-2"><a href="examples-of-coding-statistical-operations.html#cb34-2" aria-hidden="true" tabindex="-1"></a>?rbeta</span>
+<span id="cb34-3"><a href="examples-of-coding-statistical-operations.html#cb34-3" aria-hidden="true" tabindex="-1"></a>test.dat<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">rbeta</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="at">shape1 =</span> <span class="fl">0.5</span>, <span class="at">shape2 =</span> <span class="dv">5</span>)</span>
+<span id="cb34-4"><a href="examples-of-coding-statistical-operations.html#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="at">x =</span> test.dat<span class="fl">.1</span>)</span>
+<span id="cb34-5"><a href="examples-of-coding-statistical-operations.html#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Test if these data are normally distributed</span></span>
+<span id="cb34-6"><a href="examples-of-coding-statistical-operations.html#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(<span class="at">x =</span> test.dat<span class="fl">.1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="examples-of-coding-statistical-operations.html#cb35-1" aria-hidden="true" tabindex="-1"></a>test.dat<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">500</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
+<span id="cb35-2"><a href="examples-of-coding-statistical-operations.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="at">x =</span> test.dat<span class="fl">.2</span>)</span>
+<span id="cb35-3"><a href="examples-of-coding-statistical-operations.html#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Test if these data are normally distributed</span></span>
+<span id="cb35-4"><a href="examples-of-coding-statistical-operations.html#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(<span class="at">x =</span> test.dat<span class="fl">.2</span>)</span></code></pre></div>
+</div>
+<div id="t-test" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> t-test</h2>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="examples-of-coding-statistical-operations.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ToothGrowth,<span class="dv">15</span>)</span>
+<span id="cb36-2"><a href="examples-of-coding-statistical-operations.html#cb36-2" aria-hidden="true" tabindex="-1"></a>un.dose <span class="ot">&lt;-</span> <span class="fu">unique</span>(ToothGrowth<span class="sc">$</span>dose)</span>
+<span id="cb36-3"><a href="examples-of-coding-statistical-operations.html#cb36-3" aria-hidden="true" tabindex="-1"></a>ind<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">which</span>(ToothGrowth<span class="sc">$</span>dose <span class="sc">==</span> un.dose[<span class="dv">1</span>])</span>
+<span id="cb36-4"><a href="examples-of-coding-statistical-operations.html#cb36-4" aria-hidden="true" tabindex="-1"></a>ind<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">which</span>(ToothGrowth<span class="sc">$</span>dose <span class="sc">==</span> un.dose[<span class="dv">2</span>])</span>
+<span id="cb36-5"><a href="examples-of-coding-statistical-operations.html#cb36-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-6"><a href="examples-of-coding-statistical-operations.html#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(ToothGrowth<span class="sc">$</span>len[ind<span class="fl">.1</span>], ToothGrowth<span class="sc">$</span>len[ind<span class="fl">.2</span>])</span></code></pre></div>
+</div>
+<div id="linear-models" class="section level2" number="7.5">
+<h2><span class="header-section-number">7.5</span> Linear Models</h2>
+<p>The lm function can be used to create a simple regression model.
+The <code>r</code>lm()` function accepts a number of arguments:</p>
+<ul>
+<li>formula: describes the model
+<ul>
+<li>This is “YVAR ~ XVAR”</li>
+<li>YVAR is the dependent (predicted)</li>
+<li>XVAR is the independent (predictor)</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="examples-of-coding-statistical-operations.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the UNM_Enroll.csv data file</span></span>
+<span id="cb37-2"><a href="examples-of-coding-statistical-operations.html#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> mtcars<span class="sc">$</span>wt, </span>
+<span id="cb37-3"><a href="examples-of-coding-statistical-operations.html#cb37-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> mtcars<span class="sc">$</span>mpg,</span>
+<span id="cb37-4"><a href="examples-of-coding-statistical-operations.html#cb37-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Weight&quot;</span>, </span>
+<span id="cb37-5"><a href="examples-of-coding-statistical-operations.html#cb37-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">&quot;mpg&quot;</span>, </span>
+<span id="cb37-6"><a href="examples-of-coding-statistical-operations.html#cb37-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">type =</span> <span class="st">&quot;p&quot;</span>, </span>
+<span id="cb37-7"><a href="examples-of-coding-statistical-operations.html#cb37-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> F)</span>
+<span id="cb37-8"><a href="examples-of-coding-statistical-operations.html#cb37-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-9"><a href="examples-of-coding-statistical-operations.html#cb37-9" aria-hidden="true" tabindex="-1"></a>model.object <span class="ot">&lt;-</span> mtcars<span class="sc">$</span>mpg <span class="sc">~</span> mtcars<span class="sc">$</span>wt</span>
+<span id="cb37-10"><a href="examples-of-coding-statistical-operations.html#cb37-10" aria-hidden="true" tabindex="-1"></a>model.object</span>
+<span id="cb37-11"><a href="examples-of-coding-statistical-operations.html#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(model.object)</span></code></pre></div>
+<ul>
+<li>The intercept is 37.285 and the coefficient for the unemployment rate is -5.344<br />
+</li>
+<li>Therefore, the complete regression equation is <code>r</code>mpg = 37.285 + -5.344 x Weight`.</li>
+</ul>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="examples-of-coding-statistical-operations.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># NHST</span></span>
+<span id="cb38-2"><a href="examples-of-coding-statistical-operations.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(<span class="fu">lm</span>(model.object))</span>
+<span id="cb38-3"><a href="examples-of-coding-statistical-operations.html#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(model.object))</span>
+<span id="cb38-4"><a href="examples-of-coding-statistical-operations.html#cb38-4" aria-hidden="true" tabindex="-1"></a>pred.y.vals <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="fu">lm</span>(model.object))</span>
+<span id="cb38-5"><a href="examples-of-coding-statistical-operations.html#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> mtcars<span class="sc">$</span>wt, </span>
+<span id="cb38-6"><a href="examples-of-coding-statistical-operations.html#cb38-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> mtcars<span class="sc">$</span>mpg,</span>
+<span id="cb38-7"><a href="examples-of-coding-statistical-operations.html#cb38-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Weight&quot;</span>, </span>
+<span id="cb38-8"><a href="examples-of-coding-statistical-operations.html#cb38-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">&quot;mpg&quot;</span>, </span>
+<span id="cb38-9"><a href="examples-of-coding-statistical-operations.html#cb38-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">type =</span> <span class="st">&quot;p&quot;</span>, </span>
+<span id="cb38-10"><a href="examples-of-coding-statistical-operations.html#cb38-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">las =</span> F)</span>
+<span id="cb38-11"><a href="examples-of-coding-statistical-operations.html#cb38-11" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="at">x =</span> mtcars<span class="sc">$</span>wt, pred.y.vals)</span></code></pre></div>
+</div>
+<div id="analysis-of-variance" class="section level2" number="7.6">
+<h2><span class="header-section-number">7.6</span> Analysis of Variance</h2>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="examples-of-coding-statistical-operations.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ANOVAs are linear models with categorical predictors</span></span>
+<span id="cb39-2"><a href="examples-of-coding-statistical-operations.html#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ToothGrowth)</span>
+<span id="cb39-3"><a href="examples-of-coding-statistical-operations.html#cb39-3" aria-hidden="true" tabindex="-1"></a>anova.model.object <span class="ot">&lt;-</span> ToothGrowth<span class="sc">$</span>len <span class="sc">~</span> ToothGrowth<span class="sc">$</span>dose</span>
+<span id="cb39-4"><a href="examples-of-coding-statistical-operations.html#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(<span class="fu">lm</span>(anova.model.object))</span></code></pre></div>
 
 </div>
 </div>
@@ -266,8 +356,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="rstudio-and-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data-input-and-output-io.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="working-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="subsetting-and-logical-operators.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>

@@ -151,14 +151,6 @@ M <- matrix(seq(1,6),
             nrow = 2, ncol = 3, byrow = F)
 ```
 
-### Slicing matrices
-```{r ,eval=FALSE}
-M <- matrix(seq(1,6), 
-            nrow = 2, ncol = 3, byrow = F)
-
-M[1:2, 2:3]
-```
-
 ## DataFrame
 
 Unlike a matrix, Data frames are a more generalized form of a matrix. It contains data in a tabular fashion. The data in the data frame can be spread across various columns, having different data types. 
@@ -180,5 +172,7 @@ df2 <- cbind(dataset, dataset)
 head(df1,3) 
 str(dataset) 
 summary(dataset)
+
+
 ```
 

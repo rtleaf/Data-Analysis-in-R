@@ -15,9 +15,9 @@ In programming loops are very common and represent the most basic way to accompl
 Structure of loops:
 ```{r, eval = F}
 for (i in 1:5) # Run the loop by single integers
-{   # start loop
+{              # start loop
   # run recursive calculation here
-}   # end loop
+}              # end loop
 ```
 
 ```{r, eval = F}
@@ -47,9 +47,60 @@ for(i in 1:n)
 
 Practice
 ```{r, eval = F}
-# Create a vector of recursive values
-# Use a loop to calculate:
-# 1/2 + 2/3 + 3/4 + 4/5
+# Use a loop to calculate: 1/2 + 2/3 + 3/4 + 4/5
+```
+
+## Nested Loops
+
+```{r, eval = F}
+# for (variable in sequence) {
+#   for (variable in sequence) {
+#     expression 
+#   } 
+# }
+
+# Example:
+# for(i in 1:n) {
+#   for(j in 1:n) {
+#     expression
+#   }
+# }
+
+```
+
+```{r, eval = F}
+
+for (k in 1:3) {
+  for (l in 1:2) {
+    print(paste("k =", k, "l= ",l))
+  }
+}
+
+```
+
+
+```{r, eval = F}
+
+res = matrix(nrow=4, ncol=4) # create a 4 x 4 matrix (of 4 rows and 4 columns)
+for(i in 1:nrow(res)) {   # Assigned a variable  ‘i’for each row
+  for(j in 1:ncol(res)) { # Assigned a variable  ‘j for each column
+    res[i,j] = i*j        # calculating product of two indices
+  }
+}
+print(res)
+
+```
+
+## while loop
+
+Syntax of while loop: while (test_expression) { statement }
+
+```{r, eval = F}
+i <- 1
+while (i < 6) {
+print(i)
+i = i+1
+}
 ```
 
 ## If, else, and ifelse 
@@ -97,6 +148,6 @@ tide.df <- data.frame(Year = c(1990:1995), height = c(130, 230, 210, 1450, 1870,
 tide.df <- data.frame(Year = c(1990:1995), height = c(13, 23, 21, 14, 18, 22))
 ifelse(tide.df$Year <= 1992,"Pre-change", "Post-Change")
 tide.df$height <- ifelse(tide.df$Year <= 1992, 
-                           tide.df$height/100, 
-                           tide.df$height/1000)
+                         tide.df$height/100, 
+                         tide.df$height/1000)
 ```
