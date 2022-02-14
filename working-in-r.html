@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 Subsetting and Logical Operators | _main.knit</title>
+  <title>6 Working in R | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8 Subsetting and Logical Operators | _main.knit" />
+  <meta property="og:title" content="6 Working in R | _main.knit" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 Subsetting and Logical Operators | _main.knit" />
+  <meta name="twitter:title" content="6 Working in R | _main.knit" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="examples-of-coding-statistical-operations.html"/>
-<link rel="next" href="loops-and-ifelse-statements.html"/>
+<link rel="prev" href="data-classes.html"/>
+<link rel="next" href="examples-of-coding-statistical-operations.html"/>
 <script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -235,74 +235,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="subsetting-and-logical-operators" class="section level1">
-<h1><span class="header-section-number">8</span> Subsetting and Logical Operators</h1>
-<div id="indexing" class="section level2">
-<h2><span class="header-section-number">8.1</span> Indexing</h2>
-<p>Indexing is used to examine or assign the value of an object.</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="subsetting-and-logical-operators.html#cb40-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">19</span>)</span>
-<span id="cb40-2"><a href="subsetting-and-logical-operators.html#cb40-2"></a><span class="co"># Assignment</span></span>
-<span id="cb40-3"><a href="subsetting-and-logical-operators.html#cb40-3"></a>x[<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)] &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">120</span>,<span class="dv">140</span>)</span>
-<span id="cb40-4"><a href="subsetting-and-logical-operators.html#cb40-4"></a></span>
-<span id="cb40-5"><a href="subsetting-and-logical-operators.html#cb40-5"></a><span class="co"># Examine</span></span>
-<span id="cb40-6"><a href="subsetting-and-logical-operators.html#cb40-6"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">19</span>)</span>
-<span id="cb40-7"><a href="subsetting-and-logical-operators.html#cb40-7"></a>x[<span class="dv">3</span>]</span>
-<span id="cb40-8"><a href="subsetting-and-logical-operators.html#cb40-8"></a>x[<span class="dv">4</span>]</span></code></pre></div>
-<p>Extend the utility of indexing: <code>[]</code> by combining with <code>c</code>. For example to get the second and third element in the variable “x”</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="subsetting-and-logical-operators.html#cb41-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">19</span>)</span>
-<span id="cb41-2"><a href="subsetting-and-logical-operators.html#cb41-2"></a>x[<span class="dv">1</span>]</span>
-<span id="cb41-3"><a href="subsetting-and-logical-operators.html#cb41-3"></a>x[<span class="dv">2</span>]</span>
-<span id="cb41-4"><a href="subsetting-and-logical-operators.html#cb41-4"></a>x[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)]</span>
-<span id="cb41-5"><a href="subsetting-and-logical-operators.html#cb41-5"></a>x[<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">1</span>)]</span>
-<span id="cb41-6"><a href="subsetting-and-logical-operators.html#cb41-6"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>)</span>
-<span id="cb41-7"><a href="subsetting-and-logical-operators.html#cb41-7"></a>x[y]</span></code></pre></div>
-</div>
-<div id="indexing-using-a-negative-sign" class="section level2">
-<h2><span class="header-section-number">8.2</span> Indexing using a negative sign</h2>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="subsetting-and-logical-operators.html#cb42-1"></a><span class="co"># Extend the index using a negative sign</span></span>
-<span id="cb42-2"><a href="subsetting-and-logical-operators.html#cb42-2"></a>y.vect &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>)</span>
-<span id="cb42-3"><a href="subsetting-and-logical-operators.html#cb42-3"></a>y.vect[<span class="op">-</span><span class="dv">3</span>]</span>
-<span id="cb42-4"><a href="subsetting-and-logical-operators.html#cb42-4"></a>y.vect[<span class="op">-</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>]]</span></code></pre></div>
-</div>
-<div id="slicing-matrices" class="section level2">
-<h2><span class="header-section-number">8.3</span> Slicing Matrices</h2>
-<p>A matrix function in R is a 2-dimensional array that has m number of rows and n number of columns. In other words, matrix in R programming is a combination of two or more vectors with the same data type.</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="subsetting-and-logical-operators.html#cb43-1"></a><span class="co"># Construct a matrix with 5 rows that contain the numbers 1 up to 10 and byrow =  TRUE </span></span>
-<span id="cb43-2"><a href="subsetting-and-logical-operators.html#cb43-2"></a>matrix_c &lt;-<span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>, <span class="dt">nrow =</span> <span class="dv">5</span>)</span>
-<span id="cb43-3"><a href="subsetting-and-logical-operators.html#cb43-3"></a>matrix_c</span>
-<span id="cb43-4"><a href="subsetting-and-logical-operators.html#cb43-4"></a><span class="kw">dim</span>(matrix_c)</span>
-<span id="cb43-5"><a href="subsetting-and-logical-operators.html#cb43-5"></a></span>
-<span id="cb43-6"><a href="subsetting-and-logical-operators.html#cb43-6"></a><span class="co"># this will be a good time to practice using the &quot;:&quot;, seq, rep</span></span>
-<span id="cb43-7"><a href="subsetting-and-logical-operators.html#cb43-7"></a><span class="co"># matrix_c[row,col]</span></span>
-<span id="cb43-8"><a href="subsetting-and-logical-operators.html#cb43-8"></a>matrix_c[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>]</span>
-<span id="cb43-9"><a href="subsetting-and-logical-operators.html#cb43-9"></a>matrix_c[<span class="kw">rep</span>(<span class="dv">1</span>,<span class="dv">3</span>), <span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="dv">2</span>)]</span>
-<span id="cb43-10"><a href="subsetting-and-logical-operators.html#cb43-10"></a>matrix_c[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="dv">2</span>)] &lt;-<span class="st"> </span><span class="ot">NA</span></span>
-<span id="cb43-11"><a href="subsetting-and-logical-operators.html#cb43-11"></a></span>
-<span id="cb43-12"><a href="subsetting-and-logical-operators.html#cb43-12"></a>matrix_c &lt;-<span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>, <span class="dt">nrow =</span> <span class="dv">5</span>)</span>
-<span id="cb43-13"><a href="subsetting-and-logical-operators.html#cb43-13"></a>matrix_c</span>
-<span id="cb43-14"><a href="subsetting-and-logical-operators.html#cb43-14"></a>matrix_c[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>), <span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="dv">2</span>)] &lt;-<span class="st"> </span><span class="ot">NA</span></span>
-<span id="cb43-15"><a href="subsetting-and-logical-operators.html#cb43-15"></a>matrix_c</span>
-<span id="cb43-16"><a href="subsetting-and-logical-operators.html#cb43-16"></a></span>
-<span id="cb43-17"><a href="subsetting-and-logical-operators.html#cb43-17"></a>matrix_c &lt;-<span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>, <span class="dt">nrow =</span> <span class="dv">5</span>)</span>
-<span id="cb43-18"><a href="subsetting-and-logical-operators.html#cb43-18"></a></span>
-<span id="cb43-19"><a href="subsetting-and-logical-operators.html#cb43-19"></a>matrix_c[<span class="kw">seq</span>(<span class="dv">1</span>,<span class="kw">nrow</span>(matrix_c)), <span class="kw">seq</span>(<span class="dv">1</span>,<span class="kw">c</span>(<span class="kw">ncol</span>(matrix_c)))[<span class="op">-</span><span class="dv">3</span>]]</span>
-<span id="cb43-20"><a href="subsetting-and-logical-operators.html#cb43-20"></a></span>
-<span id="cb43-21"><a href="subsetting-and-logical-operators.html#cb43-21"></a><span class="co"># Some complexity</span></span>
-<span id="cb43-22"><a href="subsetting-and-logical-operators.html#cb43-22"></a>matrix_c[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>][<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),<span class="dv">2</span>]</span></code></pre></div>
-</div>
-<div id="indexing-data-frames" class="section level2">
-<h2><span class="header-section-number">8.4</span> Indexing Data Frames</h2>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="subsetting-and-logical-operators.html#cb44-1"></a>student.df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">students =</span> <span class="kw">c</span>(<span class="st">&quot;Angie&quot;</span>, <span class="st">&quot;Kelly&quot;</span>, <span class="st">&quot;Adam&quot;</span>, <span class="st">&quot;Jessica&quot;</span>),</span>
-<span id="cb44-2"><a href="subsetting-and-logical-operators.html#cb44-2"></a>                         <span class="dt">grades =</span> <span class="kw">rep</span>(<span class="st">&quot;A+&quot;</span>, <span class="dv">4</span>), </span>
-<span id="cb44-3"><a href="subsetting-and-logical-operators.html#cb44-3"></a>                         <span class="dt">GRE.Percentiles =</span> <span class="kw">runif</span>(<span class="dv">4</span>, <span class="dt">min =</span> <span class="fl">0.70</span>, <span class="dt">max =</span> <span class="fl">0.99</span>))</span>
-<span id="cb44-4"><a href="subsetting-and-logical-operators.html#cb44-4"></a></span>
-<span id="cb44-5"><a href="subsetting-and-logical-operators.html#cb44-5"></a>student.df<span class="op">$</span>students</span>
-<span id="cb44-6"><a href="subsetting-and-logical-operators.html#cb44-6"></a>student.df<span class="op">$</span>students[<span class="dv">4</span>]</span>
-<span id="cb44-7"><a href="subsetting-and-logical-operators.html#cb44-7"></a>student.df<span class="op">$</span>students[<span class="kw">c</span>(<span class="dv">4</span>)]</span>
-<span id="cb44-8"><a href="subsetting-and-logical-operators.html#cb44-8"></a>student.df<span class="op">$</span>students[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>)]</span></code></pre></div>
-</div>
-<div id="logical-operators" class="section level2">
-<h2><span class="header-section-number">8.5</span> Logical operators</h2>
+<div id="working-in-r" class="section level1">
+<h1><span class="header-section-number">6</span> Working in R</h1>
+<div id="arithmetic-operators" class="section level2">
+<h2><span class="header-section-number">6.1</span> Arithmetic operators</h2>
 <table>
 <thead>
 <tr class="header">
@@ -312,84 +248,128 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </thead>
 <tbody>
 <tr class="odd">
-<td>&lt;</td>
-<td>less than</td>
+<td>+</td>
+<td>addition</td>
 </tr>
 <tr class="even">
-<td>&gt;</td>
-<td>greater than</td>
+<td>-</td>
+<td>subtraction</td>
 </tr>
 <tr class="odd">
-<td>&lt;=</td>
-<td>less than or equal to</td>
+<td>*</td>
+<td>multiplication</td>
 </tr>
 <tr class="even">
-<td>&gt;=</td>
-<td>greater than or equal to</td>
+<td>/</td>
+<td>division</td>
 </tr>
 <tr class="odd">
-<td>==</td>
-<td>exactly equal to</td>
+<td>^</td>
+<td>exponentiation</td>
 </tr>
 </tbody>
 </table>
-<p>Logical operators are useful in indexing and subsetting data classes. They return <code>TRUE</code> and <code>FALSE</code> values.</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="subsetting-and-logical-operators.html#cb45-1"></a><span class="co"># logical operators examples</span></span>
-<span id="cb45-2"><a href="subsetting-and-logical-operators.html#cb45-2"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
-<span id="cb45-3"><a href="subsetting-and-logical-operators.html#cb45-3"></a>w &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">2</span>)</span>
-<span id="cb45-4"><a href="subsetting-and-logical-operators.html#cb45-4"></a>y <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb45-5"><a href="subsetting-and-logical-operators.html#cb45-5"></a>w <span class="op">==</span><span class="st"> </span><span class="dv">2</span></span>
-<span id="cb45-6"><a href="subsetting-and-logical-operators.html#cb45-6"></a>w <span class="op">&lt;</span><span class="st"> </span><span class="dv">4</span> <span class="op">|</span><span class="st"> </span>w <span class="op">&gt;=</span><span class="st"> </span><span class="dv">8</span></span>
-<span id="cb45-7"><a href="subsetting-and-logical-operators.html#cb45-7"></a>w <span class="op">&gt;</span><span class="st"> </span><span class="dv">4</span> <span class="op">&amp;</span><span class="st"> </span>w <span class="op">&lt;=</span><span class="st"> </span><span class="dv">8</span></span></code></pre></div>
-<p>Combine logical operators with the function <code>which</code></p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="subsetting-and-logical-operators.html#cb46-1"></a><span class="co"># logical operators examples</span></span>
-<span id="cb46-2"><a href="subsetting-and-logical-operators.html#cb46-2"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
-<span id="cb46-3"><a href="subsetting-and-logical-operators.html#cb46-3"></a>y <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb46-4"><a href="subsetting-and-logical-operators.html#cb46-4"></a><span class="kw">which</span>(y <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>)</span>
-<span id="cb46-5"><a href="subsetting-and-logical-operators.html#cb46-5"></a><span class="kw">which</span>(y <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>)</span>
-<span id="cb46-6"><a href="subsetting-and-logical-operators.html#cb46-6"></a><span class="kw">which</span>(y <span class="op">&lt;=</span><span class="st"> </span><span class="dv">3</span>)</span>
-<span id="cb46-7"><a href="subsetting-and-logical-operators.html#cb46-7"></a>y[<span class="kw">which</span>(y <span class="op">&lt;=</span><span class="st"> </span><span class="dv">3</span>)] &lt;-<span class="st"> </span><span class="dv">0</span></span></code></pre></div>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="subsetting-and-logical-operators.html#cb47-1"></a>student.df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">students =</span> <span class="kw">c</span>(<span class="st">&quot;Angie&quot;</span>, <span class="st">&quot;Kelly&quot;</span>, <span class="st">&quot;Adam&quot;</span>, <span class="st">&quot;Jessica&quot;</span>),</span>
-<span id="cb47-2"><a href="subsetting-and-logical-operators.html#cb47-2"></a>                         <span class="dt">grades =</span> <span class="kw">rep</span>(<span class="st">&quot;A+&quot;</span>, <span class="dv">4</span>), </span>
-<span id="cb47-3"><a href="subsetting-and-logical-operators.html#cb47-3"></a>                         <span class="dt">GRE.Percentiles =</span> <span class="kw">c</span>(<span class="fl">0.8</span>, <span class="fl">0.83</span>, <span class="fl">0.74</span>, <span class="fl">0.96</span>), </span>
-<span id="cb47-4"><a href="subsetting-and-logical-operators.html#cb47-4"></a>                         <span class="dt">Sat.scores =</span> <span class="kw">c</span>(<span class="dv">1212</span>, <span class="dv">907</span>, <span class="dv">979</span>, <span class="dv">988</span>))</span>
-<span id="cb47-5"><a href="subsetting-and-logical-operators.html#cb47-5"></a>student.df</span>
-<span id="cb47-6"><a href="subsetting-and-logical-operators.html#cb47-6"></a>student.df<span class="op">$</span>Sat.scores <span class="op">&gt;</span><span class="st"> </span><span class="dv">1000</span></span>
-<span id="cb47-7"><a href="subsetting-and-logical-operators.html#cb47-7"></a></span>
-<span id="cb47-8"><a href="subsetting-and-logical-operators.html#cb47-8"></a><span class="co"># Use this for indexing</span></span>
-<span id="cb47-9"><a href="subsetting-and-logical-operators.html#cb47-9"></a>student.df<span class="op">$</span>Sat.scores[student.df<span class="op">$</span>Sat.scores <span class="op">&gt;</span><span class="st"> </span><span class="dv">1000</span>]</span>
-<span id="cb47-10"><a href="subsetting-and-logical-operators.html#cb47-10"></a>student.df[student.df<span class="op">$</span>Sat.scores <span class="op">&gt;</span><span class="st"> </span><span class="dv">1000</span>, ]</span>
-<span id="cb47-11"><a href="subsetting-and-logical-operators.html#cb47-11"></a></span>
-<span id="cb47-12"><a href="subsetting-and-logical-operators.html#cb47-12"></a>student.df<span class="op">$</span>Sat.scores <span class="op">&gt;</span><span class="st"> </span><span class="dv">1000</span></span>
-<span id="cb47-13"><a href="subsetting-and-logical-operators.html#cb47-13"></a>student.df<span class="op">$</span>GRE.Percentiles <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.75</span></span>
-<span id="cb47-14"><a href="subsetting-and-logical-operators.html#cb47-14"></a></span>
-<span id="cb47-15"><a href="subsetting-and-logical-operators.html#cb47-15"></a><span class="co"># Combine boolean values using and, or</span></span>
-<span id="cb47-16"><a href="subsetting-and-logical-operators.html#cb47-16"></a>student.df<span class="op">$</span>Sat.scores <span class="op">&gt;</span><span class="st"> </span><span class="dv">1000</span> <span class="op">&amp;</span><span class="st"> </span>student.df<span class="op">$</span>GRE.Percentiles <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.75</span></span>
-<span id="cb47-17"><a href="subsetting-and-logical-operators.html#cb47-17"></a>bool.ind &lt;-<span class="st"> </span>student.df<span class="op">$</span>Sat.scores <span class="op">&gt;</span><span class="st"> </span><span class="dv">1000</span> <span class="op">|</span><span class="st"> </span>student.df<span class="op">$</span>GRE.Percentiles <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.75</span></span>
-<span id="cb47-18"><a href="subsetting-and-logical-operators.html#cb47-18"></a>student.df[bool.ind, ]</span></code></pre></div>
-<p>Logical operators practice</p>
+<p>PEMDAS applies when writing R-code</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="working-in-r.html#cb24-1"></a><span class="co"># Arithmetic operators in action:</span></span>
+<span id="cb24-2"><a href="working-in-r.html#cb24-2"></a><span class="dv">5</span> <span class="op">+</span><span class="st"> </span><span class="dv">5</span> <span class="op">/</span><span class="st"> </span><span class="dv">2</span></span>
+<span id="cb24-3"><a href="working-in-r.html#cb24-3"></a><span class="dv">3</span> <span class="op">*</span><span class="st"> </span><span class="dv">2</span><span class="op">^</span><span class="dv">2</span></span>
+<span id="cb24-4"><a href="working-in-r.html#cb24-4"></a>(<span class="dv">3</span><span class="op">*</span><span class="dv">2</span>)<span class="op">^</span><span class="dv">2</span> </span>
+<span id="cb24-5"><a href="working-in-r.html#cb24-5"></a><span class="co"># Arithmetic operators using objects:</span></span>
+<span id="cb24-6"><a href="working-in-r.html#cb24-6"></a>z &lt;-<span class="st"> </span><span class="dv">5</span></span>
+<span id="cb24-7"><a href="working-in-r.html#cb24-7"></a>w &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">2</span>)</span>
+<span id="cb24-8"><a href="working-in-r.html#cb24-8"></a>s &lt;-<span class="st"> </span>w[<span class="dv">3</span>]</span>
+<span id="cb24-9"><a href="working-in-r.html#cb24-9"></a>z <span class="op">+</span><span class="st"> </span>s</span></code></pre></div>
+</div>
+<div id="arithmetic-operators-practice" class="section level2">
+<h2><span class="header-section-number">6.2</span> Arithmetic operators practice</h2>
+<p>Using what you know about parenthesis and PEMDAS, in one line of code do each of the following:</p>
 <table>
 <thead>
 <tr class="header">
 <th>Number</th>
-<th>Exercise</th>
+<th>Excercise</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>1.</td>
-<td>Assign a vector <code>a</code> to have six elements: 1,0,8,11,12,20</td>
+<td>Assign the variable <code>x</code> to be a vector containing the values 5,5,6,2</td>
 </tr>
 <tr class="even">
 <td>2.</td>
-<td>Which elements in <code>a</code> are less than five</td>
+<td>Assign the variable <code>y</code> to be a vector containing the values 3,3,1,7</td>
 </tr>
 <tr class="odd">
 <td>3.</td>
-<td>Which elements in <code>a</code> are greater than 13 or less than 10</td>
+<td>Add <code>x</code> and <code>y</code></td>
+</tr>
+<tr class="even">
+<td>4.</td>
+<td>Substract <code>y</code> from <code>x</code></td>
+</tr>
+<tr class="odd">
+<td>5.</td>
+<td>Assign <code>d</code> as <code>y</code> divided by <code>x</code></td>
+</tr>
+<tr class="even">
+<td>3.</td>
+<td>Multiply <code>z</code> by <code>s</code> then add five (<code>z</code> and <code>s</code> from last practice)</td>
+</tr>
+<tr class="odd">
+<td>4.</td>
+<td>Add 5 to <code>z</code> then multilply by <code>s</code></td>
+</tr>
+<tr class="even">
+<td>5.</td>
+<td>Take <code>z</code> to the fifth power and then add 2</td>
+</tr>
+<tr class="odd">
+<td>6.</td>
+<td>Divide <code>s</code> by three, then add 33, then take that sum to the 0.5 power</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="missing-values-na" class="section level2">
+<h2><span class="header-section-number">6.3</span> Missing values (NA)</h2>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="working-in-r.html#cb25-1"></a><span class="co"># is.na tests for missing values</span></span>
+<span id="cb25-2"><a href="working-in-r.html#cb25-2"></a>dat<span class="fl">.1</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="ot">NA</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb25-3"><a href="working-in-r.html#cb25-3"></a>dat<span class="fl">.1</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></span>
+<span id="cb25-4"><a href="working-in-r.html#cb25-4"></a>dat<span class="fl">.1</span> <span class="op">+</span><span class="st"> </span><span class="kw">rep</span>(<span class="dv">2</span>, <span class="kw">length</span>(dat<span class="fl">.1</span>))</span></code></pre></div>
+</div>
+<div id="dealing-with-missing-values" class="section level2">
+<h2><span class="header-section-number">6.4</span> Dealing with missing values</h2>
+<ul>
+<li><p>In R, missing values are represented by “NA”.</p></li>
+<li><p>Undefined values (like dividing by zero) are represented by “NaN”, not a number. Often missing values are represented with numbers: -1, 99, -9999, etc. This is obviously a problem and should be avoided. You will likely need to use indexing prior using arithmetic operations to replace these values.</p></li>
+</ul>
+<p>The “is.na” function and the “na.rm”" argument:</p>
+<ul>
+<li><p>Sometimes we do not know whether there are missing values in our data.</p></li>
+<li><p>We can use the <code>is.na</code> function to test for missing values:</p></li>
+</ul>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="working-in-r.html#cb26-1"></a><span class="co"># is.na tests for missing values</span></span>
+<span id="cb26-2"><a href="working-in-r.html#cb26-2"></a>dat<span class="fl">.1</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="ot">NA</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb26-3"><a href="working-in-r.html#cb26-3"></a><span class="kw">is.na</span>(dat<span class="fl">.1</span>)</span>
+<span id="cb26-4"><a href="working-in-r.html#cb26-4"></a><span class="kw">which</span>(<span class="kw">is.na</span>(dat<span class="fl">.1</span>))</span></code></pre></div>
+<p>We can use the logical <code>na.rm</code> argument to remove missing values from our data prior to executing the funciton:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="working-in-r.html#cb27-1"></a>dat<span class="fl">.1</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="ot">NA</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb27-2"><a href="working-in-r.html#cb27-2"></a><span class="kw">mean</span>(dat<span class="fl">.1</span>)</span>
+<span id="cb27-3"><a href="working-in-r.html#cb27-3"></a><span class="kw">mean</span>(dat<span class="fl">.1</span>, <span class="dt">na.rm =</span> T)</span></code></pre></div>
+</div>
+<div id="dealing-with-problematic-values" class="section level2">
+<h2><span class="header-section-number">6.5</span> Dealing with problematic values</h2>
+<p>Sometimes we code no data as -1 and that can really screw things up. R does not know that -1 means “no data”. However we can replace the -1 with NA. There are many ways to do this, but here is a one way.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="working-in-r.html#cb28-1"></a><span class="co"># In this example, -1 is coded as a missing data field. Think back to our logical arguments and subsetting exercises.</span></span>
+<span id="cb28-2"><a href="working-in-r.html#cb28-2"></a>dat<span class="fl">.2</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb28-3"><a href="working-in-r.html#cb28-3"></a>dat<span class="fl">.2</span> <span class="op">==</span><span class="st"> </span><span class="dv">-1</span></span>
+<span id="cb28-4"><a href="working-in-r.html#cb28-4"></a>dat<span class="fl">.2</span>[dat<span class="fl">.2</span> <span class="op">==</span><span class="st"> </span><span class="dv">-1</span>]</span>
+<span id="cb28-5"><a href="working-in-r.html#cb28-5"></a>dat<span class="fl">.2</span>[dat<span class="fl">.2</span> <span class="op">==</span><span class="st"> </span><span class="dv">-1</span>] &lt;-<span class="st"> </span><span class="ot">NA</span> </span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="working-in-r.html#cb29-1"></a>dat<span class="fl">.1</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="ot">NA</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb29-2"><a href="working-in-r.html#cb29-2"></a><span class="co"># is.na tests for missing values</span></span>
+<span id="cb29-3"><a href="working-in-r.html#cb29-3"></a><span class="kw">is.na</span>(dat<span class="fl">.1</span>) </span>
+<span id="cb29-4"><a href="working-in-r.html#cb29-4"></a><span class="co"># returns the element(s) number in the vector that is NA</span></span>
+<span id="cb29-5"><a href="working-in-r.html#cb29-5"></a><span class="kw">which</span>(<span class="kw">is.na</span>(dat<span class="fl">.1</span>))</span></code></pre></div>
 
 </div>
 </div>
@@ -398,8 +378,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="examples-of-coding-statistical-operations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="loops-and-ifelse-statements.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-classes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="examples-of-coding-statistical-operations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>

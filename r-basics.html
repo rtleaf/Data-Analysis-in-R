@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>10 Assignments | _main.knit</title>
+  <title>11 R Basics | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="10 Assignments | _main.knit" />
+  <meta property="og:title" content="11 R Basics | _main.knit" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="10 Assignments | _main.knit" />
+  <meta name="twitter:title" content="11 R Basics | _main.knit" />
   
   
   
@@ -29,7 +29,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="loops-and-ifelse-statements.html"/>
+<link rel="prev" href="assignments.html"/>
 
 <script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -183,12 +183,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.8" data-path="data-classes.html"><a href="data-classes.html#matrix"><i class="fa fa-check"></i><b>5.8</b> Matrix</a></li>
 <li class="chapter" data-level="5.9" data-path="data-classes.html"><a href="data-classes.html#dataframe"><i class="fa fa-check"></i><b>5.9</b> DataFrame</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="working-in-r.html"><a href="working-in-r.html"><i class="fa fa-check"></i><b>6</b> Working in R</a><ul>
-<li class="chapter" data-level="6.1" data-path="working-in-r.html"><a href="working-in-r.html#arithmetic-operators"><i class="fa fa-check"></i><b>6.1</b> Arithmetic operators</a></li>
-<li class="chapter" data-level="6.2" data-path="working-in-r.html"><a href="working-in-r.html#arithmetic-operators-practice"><i class="fa fa-check"></i><b>6.2</b> Arithmetic operators practice</a></li>
-<li class="chapter" data-level="6.3" data-path="working-in-r.html"><a href="working-in-r.html#missing-values-na"><i class="fa fa-check"></i><b>6.3</b> Missing values (NA)</a></li>
-<li class="chapter" data-level="6.4" data-path="working-in-r.html"><a href="working-in-r.html#dealing-with-missing-values"><i class="fa fa-check"></i><b>6.4</b> Dealing with missing values</a></li>
-<li class="chapter" data-level="6.5" data-path="working-in-r.html"><a href="working-in-r.html#dealing-with-problematic-values"><i class="fa fa-check"></i><b>6.5</b> Dealing with problematic values</a></li>
+<li class="chapter" data-level="6" data-path="working-in-r-01.html"><a href="working-in-r-01.html"><i class="fa fa-check"></i><b>6</b> Working in R 01</a><ul>
+<li class="chapter" data-level="6.1" data-path="working-in-r-01.html"><a href="working-in-r-01.html#arithmetic-operators"><i class="fa fa-check"></i><b>6.1</b> Arithmetic operators</a></li>
+<li class="chapter" data-level="6.2" data-path="working-in-r-01.html"><a href="working-in-r-01.html#arithmetic-operators-practice"><i class="fa fa-check"></i><b>6.2</b> Arithmetic operators practice</a></li>
+<li class="chapter" data-level="6.3" data-path="working-in-r-01.html"><a href="working-in-r-01.html#missing-values-na"><i class="fa fa-check"></i><b>6.3</b> Missing values (NA)</a></li>
+<li class="chapter" data-level="6.4" data-path="working-in-r-01.html"><a href="working-in-r-01.html#dealing-with-missing-values"><i class="fa fa-check"></i><b>6.4</b> Dealing with missing values</a></li>
+<li class="chapter" data-level="6.5" data-path="working-in-r-01.html"><a href="working-in-r-01.html#dealing-with-problematic-values"><i class="fa fa-check"></i><b>6.5</b> Dealing with problematic values</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html"><i class="fa fa-check"></i><b>7</b> Examples of coding statistical operations</a><ul>
 <li class="chapter" data-level="7.1" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#z-scores"><i class="fa fa-check"></i><b>7.1</b> Z-scores</a></li>
@@ -199,17 +199,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.6" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#analysis-of-variance"><i class="fa fa-check"></i><b>7.6</b> Analysis of Variance</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html"><i class="fa fa-check"></i><b>8</b> Subsetting and Logical Operators</a><ul>
-<li class="chapter" data-level="8.1" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#indexing"><i class="fa fa-check"></i><b>8.1</b> Indexing</a></li>
-<li class="chapter" data-level="8.2" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#indexing-using-a-negative-sign"><i class="fa fa-check"></i><b>8.2</b> Indexing using a negative sign</a></li>
-<li class="chapter" data-level="8.3" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#slicing-matrices"><i class="fa fa-check"></i><b>8.3</b> Slicing Matrices</a></li>
-<li class="chapter" data-level="8.4" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#indexing-data-frames"><i class="fa fa-check"></i><b>8.4</b> Indexing Data Frames</a></li>
-<li class="chapter" data-level="8.5" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#logical-operators"><i class="fa fa-check"></i><b>8.5</b> Logical operators</a></li>
+<li class="chapter" data-level="8.1" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#indexing-01"><i class="fa fa-check"></i><b>8.1</b> Indexing 01</a></li>
+<li class="chapter" data-level="8.2" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#indexing-02"><i class="fa fa-check"></i><b>8.2</b> Indexing 02</a></li>
+<li class="chapter" data-level="8.3" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#indexing-03"><i class="fa fa-check"></i><b>8.3</b> Indexing 03</a></li>
+<li class="chapter" data-level="8.4" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#logical-operators"><i class="fa fa-check"></i><b>8.4</b> Logical operators</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html"><i class="fa fa-check"></i><b>9</b> Loops and ifelse statements</a><ul>
 <li class="chapter" data-level="9.1" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html#loops"><i class="fa fa-check"></i><b>9.1</b> Loops</a></li>
-<li class="chapter" data-level="9.2" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html#nested-loops"><i class="fa fa-check"></i><b>9.2</b> Nested Loops</a></li>
-<li class="chapter" data-level="9.3" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html#while-loop"><i class="fa fa-check"></i><b>9.3</b> while loop</a></li>
-<li class="chapter" data-level="9.4" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html#if-else-and-ifelse"><i class="fa fa-check"></i><b>9.4</b> If, else, and ifelse</a></li>
+<li class="chapter" data-level="9.2" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html#if-else-and-ifelse"><i class="fa fa-check"></i><b>9.2</b> If, else, and ifelse</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="assignments.html"><a href="assignments.html"><i class="fa fa-check"></i><b>10</b> Assignments</a><ul>
 <li class="chapter" data-level="10.1" data-path="assignments.html"><a href="assignments.html#turning-in-code"><i class="fa fa-check"></i><b>10.1</b> Turning in code</a></li>
@@ -217,6 +214,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.3" data-path="assignments.html"><a href="assignments.html#assignment-02---communicate"><i class="fa fa-check"></i><b>10.3</b> Assignment 02 - Communicate</a></li>
 <li class="chapter" data-level="10.4" data-path="assignments.html"><a href="assignments.html#assignment-03---the-tidyverse-and-loops"><i class="fa fa-check"></i><b>10.4</b> Assignment 03 - The Tidyverse and Loops</a></li>
 <li class="chapter" data-level="10.5" data-path="assignments.html"><a href="assignments.html#project"><i class="fa fa-check"></i><b>10.5</b> Project</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>11</b> R Basics</a><ul>
+<li class="chapter" data-level="11.1" data-path="r-basics.html"><a href="r-basics.html#arithmetic-operators-1"><i class="fa fa-check"></i><b>11.1</b> Arithmetic operators</a></li>
+<li class="chapter" data-level="11.2" data-path="r-basics.html"><a href="r-basics.html#arithmetic-operators-practice-1"><i class="fa fa-check"></i><b>11.2</b> Arithmetic operators practice</a></li>
+<li class="chapter" data-level="11.3" data-path="r-basics.html"><a href="r-basics.html#missing-values-na-1"><i class="fa fa-check"></i><b>11.3</b> Missing values (NA)</a></li>
+<li class="chapter" data-level="11.4" data-path="r-basics.html"><a href="r-basics.html#dealing-with-missing-values-1"><i class="fa fa-check"></i><b>11.4</b> Dealing with missing values</a></li>
 </ul></li>
 </ul>
 
@@ -235,137 +238,127 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="assignments" class="section level1">
-<h1><span class="header-section-number">10</span> Assignments</h1>
-<p>Below you will find:</p>
+<div id="r-basics" class="section level1">
+<h1><span class="header-section-number">11</span> R Basics</h1>
+<div id="arithmetic-operators-1" class="section level2">
+<h2><span class="header-section-number">11.1</span> Arithmetic operators</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+</td>
+<td>addition</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td>subtraction</td>
+</tr>
+<tr class="odd">
+<td>*</td>
+<td>multiplication</td>
+</tr>
+<tr class="even">
+<td>/</td>
+<td>division</td>
+</tr>
+<tr class="odd">
+<td>^</td>
+<td>exponentiation</td>
+</tr>
+</tbody>
+</table>
+<p>PEMDAS applies when writing R-code</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="r-basics.html#cb57-1"></a><span class="co"># Arithmetic operators in action:</span></span>
+<span id="cb57-2"><a href="r-basics.html#cb57-2"></a><span class="dv">5</span> <span class="op">+</span><span class="st"> </span><span class="dv">5</span> <span class="op">/</span><span class="st"> </span><span class="dv">2</span></span>
+<span id="cb57-3"><a href="r-basics.html#cb57-3"></a><span class="dv">3</span> <span class="op">*</span><span class="st"> </span><span class="dv">2</span><span class="op">^</span><span class="dv">2</span></span>
+<span id="cb57-4"><a href="r-basics.html#cb57-4"></a>(<span class="dv">3</span><span class="op">*</span><span class="dv">2</span>)<span class="op">^</span><span class="dv">2</span> </span>
+<span id="cb57-5"><a href="r-basics.html#cb57-5"></a><span class="co"># Arithmetic operators using objects:</span></span>
+<span id="cb57-6"><a href="r-basics.html#cb57-6"></a>z &lt;-<span class="st"> </span><span class="dv">5</span></span>
+<span id="cb57-7"><a href="r-basics.html#cb57-7"></a>w &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">2</span>)</span>
+<span id="cb57-8"><a href="r-basics.html#cb57-8"></a>s &lt;-<span class="st"> </span>w[<span class="dv">3</span>]</span>
+<span id="cb57-9"><a href="r-basics.html#cb57-9"></a>z <span class="op">+</span><span class="st"> </span>s</span></code></pre></div>
+</div>
+<div id="arithmetic-operators-practice-1" class="section level2">
+<h2><span class="header-section-number">11.2</span> Arithmetic operators practice</h2>
+<p>Using what you know about parenthesis and PEMDAS, in one line of code do each of the following:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Number</th>
+<th>Excercise</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.</td>
+<td>Assign the variable <code>x</code> to be a vector containing the values 5,5,6,2</td>
+</tr>
+<tr class="even">
+<td>2.</td>
+<td>Assign the variable <code>y</code> to be a vector containing the values 3,3,1,7</td>
+</tr>
+<tr class="odd">
+<td>3.</td>
+<td>Add <code>x</code> and <code>y</code></td>
+</tr>
+<tr class="even">
+<td>4.</td>
+<td>Substract <code>y</code> from <code>x</code></td>
+</tr>
+<tr class="odd">
+<td>5.</td>
+<td>Assign <code>d</code> as <code>y</code> divided by <code>x</code></td>
+</tr>
+<tr class="even">
+<td>3.</td>
+<td>Multiply <code>z</code> by <code>s</code> then add five (<code>z</code> and <code>s</code> from last practice)</td>
+</tr>
+<tr class="odd">
+<td>4.</td>
+<td>Add 5 to <code>z</code> then multilply by <code>s</code></td>
+</tr>
+<tr class="even">
+<td>5.</td>
+<td>Take <code>z</code> to the fifth power and then add 2</td>
+</tr>
+<tr class="odd">
+<td>6.</td>
+<td>Divide <code>s</code> by three, then add 33, then take that sum to the 0.5 power</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="missing-values-na-1" class="section level2">
+<h2><span class="header-section-number">11.3</span> Missing values (NA)</h2>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="r-basics.html#cb58-1"></a><span class="co"># is.na tests for missing values</span></span>
+<span id="cb58-2"><a href="r-basics.html#cb58-2"></a>dat<span class="fl">.1</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="ot">NA</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb58-3"><a href="r-basics.html#cb58-3"></a>dat<span class="fl">.1</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></span>
+<span id="cb58-4"><a href="r-basics.html#cb58-4"></a>dat<span class="fl">.1</span> <span class="op">+</span><span class="st"> </span><span class="kw">rep</span>(<span class="dv">2</span>, <span class="kw">length</span>(dat<span class="fl">.1</span>))</span></code></pre></div>
+</div>
+<div id="dealing-with-missing-values-1" class="section level2">
+<h2><span class="header-section-number">11.4</span> Dealing with missing values</h2>
 <ul>
-<li><p>A description of how code will be turned in and evaluated.</p></li>
-<li><p>Four assignments that you will complete during the semester.</p></li>
-<li><p>A description of the Project.</p></li>
+<li>In R, missing values are represented by “NA”.</li>
 </ul>
-<div id="turning-in-code" class="section level2">
-<h2><span class="header-section-number">10.1</span> Turning in code</h2>
-<p>You will save your code to your individual-linked dropbox account.</p>
-<p>Considerations:</p>
-<ol style="list-style-type: decimal">
-<li><p>All files submitted will be .r files and these must be annotated and have descriptive header information. Annotation and descriptive header information is reviewed in the pages of this course’s website.</p></li>
-<li><p>For assignments that require you to submit multiple files, all of the files will need to run error free and accomplish the tasks for credit to be earned.</p></li>
-</ol>
-</div>
-<div id="assignment-01---working-in-r-and-rstudio" class="section level2">
-<h2><span class="header-section-number">10.2</span> Assignment 01 - Working in R and RStudio</h2>
-<div id="assignment-01.01" class="section level3">
-<h3><span class="header-section-number">10.2.1</span> Assignment 01.01</h3>
+<p>The “is.na” function and the “na.rm”" argument:</p>
 <ul>
-<li><p>Make a new script into the ‘code’ directory, the name of the script will be called ‘init.proj.r’</p></li>
-<li><p>This script will be called ‘init.proj’</p></li>
-<li><p>The code will populate the working directory with subdirectories: R, data, doc, figs, and output.</p></li>
-<li><p>The goal of the function will be to automatically creates a directory structure outlined in (<a href="https://nicercode.github.io/blog/2013-04-05-projects/" class="uri">https://nicercode.github.io/blog/2013-04-05-projects/</a>). i.e. it will have directories: .</p></li>
+<li><p>Sometimes we do not know whether there are missing values in our data.</p></li>
+<li><p>We can use the <code>is.na</code> function to test for missing values:</p></li>
 </ul>
-</div>
-<div id="assignment-01.02" class="section level3">
-<h3><span class="header-section-number">10.2.2</span> Assignment 01.02</h3>
-<ul>
-<li><p>Make a new script, the name of the script will be called ‘import.and.write.r’</p></li>
-<li><p>This script will do the following:</p></li>
-</ul>
-<ol style="list-style-type: decimal">
-<li><p>Write the entire mtcars data as a csv file to the ‘data’ directory (mtcars is in the package ‘datasets’)</p></li>
-<li><p>Import the the.csv file you wrote, selecting only the first 10 rows only.</p></li>
-<li><p>From this imported and reduced data frame, make a new data frame that includes a column that is the hp per cylinder (divide hp by cyl)</p></li>
-<li><p>Name this column “hp.per.cyl”.</p></li>
-<li><p>Print the data frame to the screen</p></li>
-<li><p>Save the data frame the ‘data’ directory as mtcars.red.RData (it will be saved as file type .RData).</p></li>
-</ol>
-</div>
-<div id="assignment-01.03" class="section level3">
-<h3><span class="header-section-number">10.2.3</span> Assignment 01.03</h3>
-<ul>
-<li>Make a new script, the name of the script will be called ‘index.practice.r’</li>
-</ul>
-<ol style="list-style-type: decimal">
-<li>x &lt;- c(“ww”, “ee”, “ff”, “uu”, “kk”), use indexing to return:</li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li>“ee”, “ff”</li>
-<li>“ee”</li>
-<li>“ff”</li>
-</ol>
-<ol start="2" style="list-style-type: decimal">
-<li>x &lt;- c(“ss”, “aa”, “ff”, “kk”, “bb”), use indexing to return:</li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li>“uu”</li>
-<li>NA</li>
-<li>“kk”</li>
-</ol>
-<ol start="3" style="list-style-type: decimal">
-<li><p>a &lt;- c(2, 4, 6, 8) and b &lt;- c(TRUE, FALSE, TRUE, FALSE)
-Write code to determine the maximum and minimum values of a[b].</p></li>
-<li><p>Write an R expression that will return the sum value of 10 for the vector x &lt;- c(2, 1, 4, 2, 1, NA)</p></li>
-<li><p>Write an R expression that will return the sum value of 11 for the vector x &lt;- c(2, 1, 4, 2, 1, NA)</p></li>
-<li><p>Consider the data frame s &lt;- data.frame(first= as.factor(c(“x”, “y”, “a”, “b”, “x”, “z”)), second=c(2, 4, 6, 8, 10, 12)). Write two different R statements that will return the output 2, 4, 10, by using the variable first as an index vector.</p></li>
-<li><p>Write three different R statements that will return the positions of 3 and 7 in the vector x &lt;- c(1, 3, 6, 7, 3, 7, 8, 9, 3, 7, 2).</p></li>
-</ol>
-</div>
-<div id="assignment-01.04" class="section level3">
-<h3><span class="header-section-number">10.2.4</span> Assignment 01.04</h3>
-<ul>
-<li>Make a new script, the name of the script will be called ‘logical.operators.practice.r’</li>
-</ul>
-<p>Using the mtcars data:</p>
-<ol style="list-style-type: decimal">
-<li><p>Use logical operators to output only those rows of data where column mpg is between 15 and 20 (excluding 15 and 20).</p></li>
-<li><p>Use logical operators to output only those rows of data where column cyl is equal to 6 and column am is not 0.</p></li>
-<li><p>Output only those rows of data where columns vs and am have the same value 1, solve this without using == operator.</p></li>
-<li><p>Output only those rows of data where at least vs or am have the value 1, solve this without using == or !=.</p></li>
-</ol>
-</div>
-<div id="assignment-01.05" class="section level3">
-<h3><span class="header-section-number">10.2.5</span> Assignment 01.05</h3>
-<ul>
-<li>Make a new script, the name of the script will be called ‘loops.practice.r’</li>
-</ul>
-<p>Using the mtcars data:</p>
-<ol style="list-style-type: decimal">
-<li><p>Write a for loop that iterates over the first seven values of the first numeric column in mtcars and prints the cube of each number using print().</p></li>
-<li><p>Write a for loop that iterates over the first seven values of the first three numeric columns in mtcars and prints values using print().</p></li>
-<li><p>Write a for loop that iterates over the column names of the iris dataset. The loop will print each column name and the number of characters in the column name in parenthesis. Example output for one iteration of the loop is: “Sepal.Length (12)”. Use the following functions print(), paste() and nchar().</p></li>
-<li><p>Write a while loop that prints out standard random normal numbers (use rnorm()) but stops (breaks) if you get a number bigger than 1.</p></li>
-<li><p>Use a while loop to investigate the number of terms required before the product (1)(2)(3)(4)…(n) reaches a value greater than 10 million.</p></li>
-</ol>
-</div>
-</div>
-<div id="assignment-02---communicate" class="section level2">
-<h2><span class="header-section-number">10.3</span> Assignment 02 - Communicate</h2>
-</div>
-<div id="assignment-03---the-tidyverse-and-loops" class="section level2">
-<h2><span class="header-section-number">10.4</span> Assignment 03 - The Tidyverse and Loops</h2>
-</div>
-<div id="project" class="section level2">
-<h2><span class="header-section-number">10.5</span> Project</h2>
-<div id="project-requirement-01" class="section level3">
-<h3><span class="header-section-number">10.5.1</span> Project Requirement 01:</h3>
-<p>You will upload a .Rmd file that I will knit to an .html file. This document will include your name and the title of your project. Note in Rmarkdown doc, it is easiest to put all of the files (.r, .png, ect.) into a single directory, so no need to make sub-directories in the project.</p>
-<p>You will write approximately 400 words allocated into three sections:</p>
-<p>1.) Introduce your project - three sentences.</p>
-<p>2.) Describe the:</p>
-<ul>
-<li><p>computational methods and</p></li>
-<li><p>the data you will use.</p></li>
-</ul>
-<p>This section (the computation section section) will take the most text. You will use topic sentences and paragraphs to describe the general and specific approach you will use to evaluate the data. The data must be larger than 2,000 records and must be publicly available.</p>
-<p>You will keep the scope of the proposal to focus on description of the data and describe in detail how you will manipulate the data with code (i.e. describe the computational methods in detail). The focus of the project is not to review the actual scientific implications (statistical inference and hypothesis testing). Instead, the focus of the project will be data exploration, using Groelmund and Wickham approaches.</p>
-<p>3.) Describe the deliverable (at least three) that you will accomplish (one sentence per deliverable),</p>
-<p>4.) Present the project idea to the class - 20 minute presentation using only material you have provided me in the .Rmd file.</p>
-<p>The document will be titled “Name.Proj.Prop.Rmd”, where “Name” is your last name. You will meet in person or by phone, with me, to discuss the project scope and objectives prior to submitting the .Rmd file.</p>
-</div>
-<div id="project-requirement-02" class="section level3">
-<h3><span class="header-section-number">10.5.2</span> Project Requirement 02:</h3>
-<p>You will prepare a .Rmd file of your project. I will knit this to a .html file that you will present to the class.</p>
-<p>The grade assigned based on the level of complexity of the analysis and amount of original coding. Full credit will be given to projects that showcase your expertise in all aspects of the techniques discussed in this class. Only projects that contain every aspect of import, tidy, transform, visualize, model, and communicate can be given full credit. The code you provide in your project will be extensive and will document your mastery of the tidyverse, data visualization, and original and interesting analysis. My expectation is that the coding will be extensive and demonstrate the philosophy of reproducible workflow that we have studied. The .html knit must knit on my machine.</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="r-basics.html#cb59-1"></a><span class="co"># is.na tests for missing values</span></span>
+<span id="cb59-2"><a href="r-basics.html#cb59-2"></a>dat<span class="fl">.1</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="ot">NA</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb59-3"><a href="r-basics.html#cb59-3"></a><span class="kw">is.na</span>(dat<span class="fl">.1</span>)</span>
+<span id="cb59-4"><a href="r-basics.html#cb59-4"></a><span class="kw">which</span>(<span class="kw">is.na</span>(dat<span class="fl">.1</span>))</span></code></pre></div>
+<p>We can use the logical <code>na.rm</code> argument to remove missing values from our data prior to executing the funciton:</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="r-basics.html#cb60-1"></a>dat<span class="fl">.1</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="ot">NA</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb60-2"><a href="r-basics.html#cb60-2"></a><span class="kw">mean</span>(dat<span class="fl">.1</span>)</span>
+<span id="cb60-3"><a href="r-basics.html#cb60-3"></a><span class="kw">mean</span>(dat<span class="fl">.1</span>, <span class="dt">na.rm =</span> T)</span></code></pre></div>
 
-</div>
 </div>
 </div>
             </section>
@@ -373,7 +366,7 @@ Write code to determine the maximum and minimum values of a[b].</p></li>
           </div>
         </div>
       </div>
-<a href="loops-and-ifelse-statements.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="assignments.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
