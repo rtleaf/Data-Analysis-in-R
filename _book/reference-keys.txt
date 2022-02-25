@@ -87,8 +87,9 @@ assignment-01.02
 assignment-01.03
 assignment-01.04
 assignment-01.05
-assignment-02---communicate
-assignment-03---the-tidyverse-and-loops
+assignment-02
+assignment-03
+assignment-04
 project
 project-requirement-01
 project-requirement-02

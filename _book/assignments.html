@@ -224,9 +224,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="10.1" data-path="assignments.html"><a href="assignments.html#turning-in-code"><i class="fa fa-check"></i><b>10.1</b> Turning in code</a></li>
 <li class="chapter" data-level="10.2" data-path="assignments.html"><a href="assignments.html#assignment-01---working-in-r-and-rstudio"><i class="fa fa-check"></i><b>10.2</b> Assignment 01 - Working in R and RStudio</a></li>
-<li class="chapter" data-level="10.3" data-path="assignments.html"><a href="assignments.html#assignment-02---communicate"><i class="fa fa-check"></i><b>10.3</b> Assignment 02 - Communicate</a></li>
-<li class="chapter" data-level="10.4" data-path="assignments.html"><a href="assignments.html#assignment-03---the-tidyverse-and-loops"><i class="fa fa-check"></i><b>10.4</b> Assignment 03 - The Tidyverse and Loops</a></li>
-<li class="chapter" data-level="10.5" data-path="assignments.html"><a href="assignments.html#project"><i class="fa fa-check"></i><b>10.5</b> Project</a></li>
+<li class="chapter" data-level="10.3" data-path="assignments.html"><a href="assignments.html#assignment-02"><i class="fa fa-check"></i><b>10.3</b> Assignment 02</a></li>
+<li class="chapter" data-level="10.4" data-path="assignments.html"><a href="assignments.html#assignment-03"><i class="fa fa-check"></i><b>10.4</b> Assignment 03</a></li>
+<li class="chapter" data-level="10.5" data-path="assignments.html"><a href="assignments.html#assignment-04"><i class="fa fa-check"></i><b>10.5</b> Assignment 04</a></li>
+<li class="chapter" data-level="10.6" data-path="assignments.html"><a href="assignments.html#project"><i class="fa fa-check"></i><b>10.6</b> Project</a></li>
 </ul></li>
 </ul>
 
@@ -255,11 +256,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="turning-in-code" class="section level2" number="10.1">
 <h2><span class="header-section-number">10.1</span> Turning in code</h2>
-<p>You will save your code to your individual-linked dropbox account.</p>
-<p>Considerations:</p>
 <ol style="list-style-type: decimal">
 <li><p>All files submitted will be .r files and these must be annotated and have descriptive header information. Annotation and descriptive header information is reviewed in the pages of this course’s website.</p></li>
 <li><p>For assignments that require you to submit multiple files, all of the files will need to run error free and accomplish the tasks for credit to be earned.</p></li>
+<li><p>You will email me your .r files.</p></li>
 </ol>
 </div>
 <div id="assignment-01---working-in-r-and-rstudio" class="section level2" number="10.2">
@@ -267,21 +267,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="assignment-01.01" class="section level3" number="10.2.1">
 <h3><span class="header-section-number">10.2.1</span> Assignment 01.01</h3>
 <ul>
-<li><p>Make a new script into the ‘code’ directory, the name of the script will be called ‘init.proj.r’</p></li>
-<li><p>This script will be called ‘init.proj’</p></li>
-<li><p>The code will populate the working directory with subdirectories: R, data, doc, figs, and output.</p></li>
-<li><p>The goal of the function will be to automatically creates a directory structure outlined in (<a href="https://nicercode.github.io/blog/2013-04-05-projects/" class="uri">https://nicercode.github.io/blog/2013-04-05-projects/</a>). i.e. it will have directories: .</p></li>
+<li><p>Make a new script in the ‘code’ directory, the name of the script will be called ‘init.proj.r’</p></li>
+<li><p>The code will populate the working directory with the following sub-directories: “R”, “data”, “doc”, “figs”, and “output”.</p></li>
+<li><p>The goal of the script will be to automatically creates a directory structure outlined in (<a href="https://nicercode.github.io/blog/2013-04-05-projects/" class="uri">https://nicercode.github.io/blog/2013-04-05-projects/</a>).</p></li>
 </ul>
 </div>
 <div id="assignment-01.02" class="section level3" number="10.2.2">
 <h3><span class="header-section-number">10.2.2</span> Assignment 01.02</h3>
 <ul>
-<li><p>Make a new script, the name of the script will be called ‘import.and.write.r’</p></li>
+<li><p>Make a new script called ‘import.and.write.r’</p></li>
 <li><p>This script will do the following:</p></li>
 </ul>
 <ol style="list-style-type: decimal">
 <li><p>Write the entire mtcars data as a csv file to the ‘data’ directory (mtcars is in the package ‘datasets’)</p></li>
-<li><p>Import the the.csv file you wrote, selecting only the first 10 rows only.</p></li>
+<li><p>Import the the .csv file you wrote, selecting only the first 10 rows.</p></li>
 <li><p>From this imported and reduced data frame, make a new data frame that includes a column that is the hp per cylinder (divide hp by cyl)</p></li>
 <li><p>Name this column “hp.per.cyl”.</p></li>
 <li><p>Print the data frame to the screen</p></li>
@@ -302,20 +301,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>“ff”</li>
 </ol>
 <ol start="2" style="list-style-type: decimal">
-<li>x &lt;- c(“ss”, “aa”, “ff”, “kk”, “bb”), use indexing to return:</li>
+<li><p>Create a &lt;- c(2, 4, 6, 8) and b &lt;- c(TRUE, FALSE, TRUE, FALSE). Write code to determine the maximum and minimum values of a[b].</p></li>
+<li><p>Write an R expression that will return the sum of 10 for the vector x &lt;- c(2, 1, 4, 2, 1, NA)</p></li>
+<li><p>Write an R expression that will return the sum of 11 for the vector x &lt;- c(2, 1, 4, 2, 1, NA)</p></li>
+<li><p>Consider the data frame s. S &lt;- data.frame(first= as.factor(c(“x”, “y”, “a”, “b”, “x”, “z”)), second=c(2, 4, 6, 8, 10, 12)).</p></li>
 </ol>
-<ol style="list-style-type: lower-alpha">
-<li>“uu”</li>
-<li>NA</li>
-<li>“kk”</li>
-</ol>
-<ol start="3" style="list-style-type: decimal">
-<li><p>a &lt;- c(2, 4, 6, 8) and b &lt;- c(TRUE, FALSE, TRUE, FALSE)
-Write code to determine the maximum and minimum values of a[b].</p></li>
-<li><p>Write an R expression that will return the sum value of 10 for the vector x &lt;- c(2, 1, 4, 2, 1, NA)</p></li>
-<li><p>Write an R expression that will return the sum value of 11 for the vector x &lt;- c(2, 1, 4, 2, 1, NA)</p></li>
-<li><p>Consider the data frame s &lt;- data.frame(first= as.factor(c(“x”, “y”, “a”, “b”, “x”, “z”)), second=c(2, 4, 6, 8, 10, 12)). Write two different R statements that will return the output 2, 4, 10, by using the variable first as an index vector.</p></li>
-<li><p>Write three different R statements that will return the positions of 3 and 7 in the vector x &lt;- c(1, 3, 6, 7, 3, 7, 8, 9, 3, 7, 2).</p></li>
+<p>Write two different R statements that will return the output 2, 4, 10, by using the variable first as an index vector.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Write two different R statements that will return the positions of 3 and 7 in the vector x &lt;- c(1, 3, 6, 7, 3, 7, 8, 9, 3, 7, 2).</li>
 </ol>
 </div>
 <div id="assignment-01.04" class="section level3" number="10.2.4">
@@ -327,8 +320,8 @@ Write code to determine the maximum and minimum values of a[b].</p></li>
 <ol style="list-style-type: decimal">
 <li><p>Use logical operators to output only those rows of data where column mpg is between 15 and 20 (excluding 15 and 20).</p></li>
 <li><p>Use logical operators to output only those rows of data where column cyl is equal to 6 and column am is not 0.</p></li>
-<li><p>Output only those rows of data where columns vs and am have the same value 1, solve this without using == operator.</p></li>
-<li><p>Output only those rows of data where at least vs or am have the value 1, solve this without using == or !=.</p></li>
+<li><p>Output only those rows of data where columns vs and am have the same value 1.</p></li>
+<li><p>Output only those rows of data where at least vs or am have the value 1.</p></li>
 </ol>
 </div>
 <div id="assignment-01.05" class="section level3" number="10.2.5">
@@ -339,41 +332,57 @@ Write code to determine the maximum and minimum values of a[b].</p></li>
 <p>Using the mtcars data:</p>
 <ol style="list-style-type: decimal">
 <li><p>Write a for loop that iterates over the first seven values of the first numeric column in mtcars and prints the cube of each number using print().</p></li>
-<li><p>Write a for loop that iterates over the first seven values of the first three numeric columns in mtcars and prints values using print().</p></li>
-<li><p>Write a for loop that iterates over the column names of the iris dataset. The loop will print each column name and the number of characters in the column name in parenthesis. Example output for one iteration of the loop is: “Sepal.Length (12)”. Use the following functions print(), paste() and nchar().</p></li>
+<li><p>Write a for loop that iterates over the first seven values of the first three numeric columns in mtcars and prints values using print(). Save these values inside the loop in an object called first.vals.</p></li>
+<li><p>Write a for loop that iterates over the column names of the “iris” dataset. The loop will print each column name and the number of characters in the column name in parenthesis. Example output for one iteration of the loop is: “Sepal.Length (12)”. Use the following functions print(), paste() and nchar().</p></li>
 <li><p>Write a while loop that prints out standard random normal numbers (use rnorm()) but stops (breaks) if you get a number bigger than 1.</p></li>
 <li><p>Use a while loop to investigate the number of terms required before the product (1)(2)(3)(4)…(n) reaches a value greater than 10 million.</p></li>
 </ol>
 </div>
 </div>
-<div id="assignment-02---communicate" class="section level2" number="10.3">
-<h2><span class="header-section-number">10.3</span> Assignment 02 - Communicate</h2>
+<div id="assignment-02" class="section level2" number="10.3">
+<h2><span class="header-section-number">10.3</span> Assignment 02</h2>
 </div>
-<div id="assignment-03---the-tidyverse-and-loops" class="section level2" number="10.4">
-<h2><span class="header-section-number">10.4</span> Assignment 03 - The Tidyverse and Loops</h2>
+<div id="assignment-03" class="section level2" number="10.4">
+<h2><span class="header-section-number">10.4</span> Assignment 03</h2>
 </div>
-<div id="project" class="section level2" number="10.5">
-<h2><span class="header-section-number">10.5</span> Project</h2>
-<div id="project-requirement-01" class="section level3" number="10.5.1">
-<h3><span class="header-section-number">10.5.1</span> Project Requirement 01:</h3>
-<p>You will upload a .Rmd file that I will knit to an .html file. This document will include your name and the title of your project. Note in Rmarkdown doc, it is easiest to put all of the files (.r, .png, ect.) into a single directory, so no need to make sub-directories in the project.</p>
-<p>You will write approximately 400 words allocated into three sections:</p>
-<p>1.) Introduce your project - three sentences.</p>
-<p>2.) Describe the:</p>
+<div id="assignment-04" class="section level2" number="10.5">
+<h2><span class="header-section-number">10.5</span> Assignment 04</h2>
+</div>
+<div id="project" class="section level2" number="10.6">
+<h2><span class="header-section-number">10.6</span> Project</h2>
+<div id="project-requirement-01" class="section level3" number="10.6.1">
+<h3><span class="header-section-number">10.6.1</span> Project Requirement 01:</h3>
+<p>The focus of the project is not to review the actual scientific implications (statistical inference and hypothesis testing). Instead, the focus of the project will be data exploration, using R4DS approaches.</p>
+<p>You will upload a .Rmd file that I will knit to an .html file.</p>
+<p>This document will include your name and the title of your project.</p>
+<p>You will write approximately 800 words allocated into three sections:</p>
+<p>1.) Introduction, three sentences maximum.</p>
+<p>2.) Data Description, four sentences maximum. The data must be larger than 2,000 records and have greater than 10 varaibles. The data must be publicly available on the web. As part of your data description, your .Rmd file will obtain data directly from the web, load the data, and then you will write code to display it (raw or summarized, your choice) to help with your explanation of the structure and scope of the data. You will have a minimum of three tables or figures to describe the scope of the data, this needs to be coded using data wrangling from your imported data.</p>
+<p>3.) Describe the deliverable (at least three) that you will accomplish (one sentence per deliverable). These will likely be testable hypotheses or consicse objectives that you will evaluate by wrangling data, visualization, and analysis.</p>
+<p>4.) The computational methods section will use the remainder of your text. You will describe the general and then specific approaches you will use to evaluate the data. Describe in detail how you will manipulate the data with code that you will write (i.e. describe the computational methods in detail). You may want to provide code to describe your approach (this will not count in your word limit).</p>
+<p>5.) Present the project idea to the class - 20 minute presentation using only material you have provided me in the .Rmd file to me.</p>
+<p>The document will be titled “Name.Proj.Prop.Rmd”, where “Name” is your last name. You are very welcome to meet with me in person or by phone to discuss the project scope and objectives prior to submitting the .Rmd file.</p>
+<p>Rubric:</p>
 <ul>
-<li><p>computational methods and</p></li>
-<li><p>the data you will use.</p></li>
+<li><p>Did you follow the requirements for length? 2 of 20 points.</p></li>
+<li><p>Do data correspond to the dimension requirements? 2 of 20 points.</p></li>
+<li><p>Did you follow Tufte’s philosophy in your data representation? 4 of 20 points.</p></li>
+<li><p>Are the deliverables sufficiently interesting and complex to require substantial analysis? 6 of 20 points.</p></li>
+<li><p>Do the computational methods include code that (4 of 20 points):</p></li>
 </ul>
-<p>This section (the computation section section) will take the most text. You will use topic sentences and paragraphs to describe the general and specific approach you will use to evaluate the data. The data must be larger than 2,000 records and must be publicly available.</p>
-<p>You will keep the scope of the proposal to focus on description of the data and describe in detail how you will manipulate the data with code (i.e. describe the computational methods in detail). The focus of the project is not to review the actual scientific implications (statistical inference and hypothesis testing). Instead, the focus of the project will be data exploration, using Groelmund and Wickham approaches.</p>
-<p>3.) Describe the deliverable (at least three) that you will accomplish (one sentence per deliverable),</p>
-<p>4.) Present the project idea to the class - 20 minute presentation using only material you have provided me in the .Rmd file.</p>
-<p>The document will be titled “Name.Proj.Prop.Rmd”, where “Name” is your last name. You will meet in person or by phone, with me, to discuss the project scope and objectives prior to submitting the .Rmd file.</p>
+<ol style="list-style-type: decimal">
+<li>That have all (five facets) of tidyverse fundamentals, maximizing the use of pipes?</li>
+<li>Include loops to showcase your command of this method?</li>
+<li>Exhibit R4DS workflow?</li>
+<li>Exhibit advanced and elegant graphic display?</li>
+<li>Use advanced statistical and analytical methods.</li>
+</ol>
 </div>
-<div id="project-requirement-02" class="section level3" number="10.5.2">
-<h3><span class="header-section-number">10.5.2</span> Project Requirement 02:</h3>
+<div id="project-requirement-02" class="section level3" number="10.6.2">
+<h3><span class="header-section-number">10.6.2</span> Project Requirement 02:</h3>
 <p>You will prepare a .Rmd file of your project. I will knit this to a .html file that you will present to the class.</p>
-<p>The grade assigned based on the level of complexity of the analysis and amount of original coding. Full credit will be given to projects that showcase your expertise in all aspects of the techniques discussed in this class. Only projects that contain every aspect of import, tidy, transform, visualize, model, and communicate can be given full credit. The code you provide in your project will be extensive and will document your mastery of the tidyverse, data visualization, and original and interesting analysis. My expectation is that the coding will be extensive and demonstrate the philosophy of reproducible workflow that we have studied. The .html knit must knit on my machine.</p>
+<p>The grade assigned based on the level of complexity of the analysis and amount of original coding and the rubric above will be used.</p>
+<p>Full credit will be given to projects that showcase your expertise in all aspects of the techniques discussed in this class. Only projects that contain every aspect of import, tidy, transform, visualize, model, and communicate can be given full credit. The code you provide in your project will be extensive and will document your mastery of the tidyverse, data visualization, and original and interesting analysis. My expectation is that the coding will be extensive and demonstrate the philosophy of reproducible workflow that we have studied. The .html knit must knit on my machine.</p>
 
 </div>
 </div>
