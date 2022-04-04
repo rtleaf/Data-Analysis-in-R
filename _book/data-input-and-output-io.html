@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Data input and output (IO) | _main.knit</title>
   <meta name="description" content="" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Data input and output (IO) | _main.knit" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -48,26 +47,26 @@
 
 
 
-<script src="book_assets/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="book_assets/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="book_assets/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="book_assets/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="book_assets/kePrint-0.0.1/kePrint.js"></script>
 <link href="book_assets/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -87,7 +86,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -133,91 +132,101 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Syllabus</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#special-topics-data-analysis-using-r"><i class="fa fa-check"></i><b>1.1</b> Special Topics: Data analysis using R</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#course-description-and-objectives"><i class="fa fa-check"></i><b>1.2</b> Course Description and Objectives</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#at-the-conclusion-of-this-course"><i class="fa fa-check"></i><b>1.3</b> At the conclusion of this course:</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-materials"><i class="fa fa-check"></i><b>1.4</b> Course Materials</a></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#course-scheduling"><i class="fa fa-check"></i><b>1.5</b> Course Scheduling</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#course-workload-statement"><i class="fa fa-check"></i><b>1.6</b> Course Workload Statement</a></li>
-<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#course-evaluation"><i class="fa fa-check"></i><b>1.7</b> Course Evaluation</a></li>
-<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#assignment-policy-and-procedures"><i class="fa fa-check"></i><b>1.8</b> Assignment Policy and Procedures</a></li>
-<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#grading-scale"><i class="fa fa-check"></i><b>1.9</b> Grading scale</a></li>
-<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#academic-support-resources"><i class="fa fa-check"></i><b>1.10</b> Academic Support Resources</a></li>
-<li class="chapter" data-level="1.11" data-path="index.html"><a href="index.html#academic-success"><i class="fa fa-check"></i><b>1.11</b> Academic Success</a></li>
-<li class="chapter" data-level="1.12" data-path="index.html"><a href="index.html#mental-well-being-statement"><i class="fa fa-check"></i><b>1.12</b> Mental Well-Being Statement</a></li>
-<li class="chapter" data-level="1.13" data-path="index.html"><a href="index.html#covid-19-physical-well-being"><i class="fa fa-check"></i><b>1.13</b> Covid-19 (Physical Well-Being)</a></li>
-<li class="chapter" data-level="1.14" data-path="index.html"><a href="index.html#nondiscrimination-statement"><i class="fa fa-check"></i><b>1.14</b> Nondiscrimination Statement</a></li>
-<li class="chapter" data-level="1.15" data-path="index.html"><a href="index.html#confidentiality-and-mandatory-reporting"><i class="fa fa-check"></i><b>1.15</b> Confidentiality and Mandatory Reporting</a></li>
-<li class="chapter" data-level="1.16" data-path="index.html"><a href="index.html#academic-integrity"><i class="fa fa-check"></i><b>1.16</b> Academic Integrity</a></li>
-<li class="chapter" data-level="1.17" data-path="index.html"><a href="index.html#content-of-this-online-material."><i class="fa fa-check"></i><b>1.17</b> Content of this online material.</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Syllabus<span></span></a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#special-topics-data-analysis-using-r"><i class="fa fa-check"></i><b>1.1</b> Special Topics: Data analysis using R<span></span></a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#course-description-and-objectives"><i class="fa fa-check"></i><b>1.2</b> Course Description and Objectives<span></span></a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#at-the-conclusion-of-this-course"><i class="fa fa-check"></i><b>1.3</b> At the conclusion of this course:<span></span></a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-materials"><i class="fa fa-check"></i><b>1.4</b> Course Materials<span></span></a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#course-scheduling"><i class="fa fa-check"></i><b>1.5</b> Course Scheduling<span></span></a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#course-workload-statement"><i class="fa fa-check"></i><b>1.6</b> Course Workload Statement<span></span></a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#course-evaluation"><i class="fa fa-check"></i><b>1.7</b> Course Evaluation<span></span></a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#assignment-policy-and-procedures"><i class="fa fa-check"></i><b>1.8</b> Assignment Policy and Procedures<span></span></a></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#grading-scale"><i class="fa fa-check"></i><b>1.9</b> Grading scale<span></span></a></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#academic-support-resources"><i class="fa fa-check"></i><b>1.10</b> Academic Support Resources<span></span></a></li>
+<li class="chapter" data-level="1.11" data-path="index.html"><a href="index.html#academic-success"><i class="fa fa-check"></i><b>1.11</b> Academic Success<span></span></a></li>
+<li class="chapter" data-level="1.12" data-path="index.html"><a href="index.html#mental-well-being-statement"><i class="fa fa-check"></i><b>1.12</b> Mental Well-Being Statement<span></span></a></li>
+<li class="chapter" data-level="1.13" data-path="index.html"><a href="index.html#covid-19-physical-well-being"><i class="fa fa-check"></i><b>1.13</b> Covid-19 (Physical Well-Being)<span></span></a></li>
+<li class="chapter" data-level="1.14" data-path="index.html"><a href="index.html#nondiscrimination-statement"><i class="fa fa-check"></i><b>1.14</b> Nondiscrimination Statement<span></span></a></li>
+<li class="chapter" data-level="1.15" data-path="index.html"><a href="index.html#confidentiality-and-mandatory-reporting"><i class="fa fa-check"></i><b>1.15</b> Confidentiality and Mandatory Reporting<span></span></a></li>
+<li class="chapter" data-level="1.16" data-path="index.html"><a href="index.html#academic-integrity"><i class="fa fa-check"></i><b>1.16</b> Academic Integrity<span></span></a></li>
+<li class="chapter" data-level="1.17" data-path="index.html"><a href="index.html#content-of-this-online-material."><i class="fa fa-check"></i><b>1.17</b> Content of this online material.<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html"><i class="fa fa-check"></i><b>2</b> RStudio and R</a><ul>
-<li class="chapter" data-level="2.1" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html#r-installation"><i class="fa fa-check"></i><b>2.1</b> R installation</a></li>
-<li class="chapter" data-level="2.2" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html#rstudio-installation"><i class="fa fa-check"></i><b>2.2</b> RStudio installation</a></li>
-<li class="chapter" data-level="2.3" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html#rstudio-and-r-1"><i class="fa fa-check"></i><b>2.3</b> RStudio and R</a></li>
-<li class="chapter" data-level="2.4" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html#working-in-rstudio"><i class="fa fa-check"></i><b>2.4</b> Working in RStudio</a></li>
-<li class="chapter" data-level="2.5" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html#change-my-.rprofile-site"><i class="fa fa-check"></i><b>2.5</b> Change my .Rprofile site</a></li>
-<li class="chapter" data-level="2.6" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html#useful-rstudio-shortcuts"><i class="fa fa-check"></i><b>2.6</b> Useful RStudio shortcuts</a></li>
+<li class="chapter" data-level="2" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html"><i class="fa fa-check"></i><b>2</b> RStudio and R<span></span></a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html#r-installation"><i class="fa fa-check"></i><b>2.1</b> R installation<span></span></a></li>
+<li class="chapter" data-level="2.2" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html#rstudio-installation"><i class="fa fa-check"></i><b>2.2</b> RStudio installation<span></span></a></li>
+<li class="chapter" data-level="2.3" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html#rstudio-and-r-1"><i class="fa fa-check"></i><b>2.3</b> RStudio and R<span></span></a></li>
+<li class="chapter" data-level="2.4" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html#working-in-rstudio"><i class="fa fa-check"></i><b>2.4</b> Working in RStudio<span></span></a></li>
+<li class="chapter" data-level="2.5" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html#change-my-.rprofile-site"><i class="fa fa-check"></i><b>2.5</b> Change my .Rprofile site<span></span></a></li>
+<li class="chapter" data-level="2.6" data-path="rstudio-and-r.html"><a href="rstudio-and-r.html#useful-rstudio-shortcuts"><i class="fa fa-check"></i><b>2.6</b> Useful RStudio shortcuts<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="projects-and-directory-structure.html"><a href="projects-and-directory-structure.html"><i class="fa fa-check"></i><b>3</b> Projects and Directory Structure</a><ul>
-<li class="chapter" data-level="3.1" data-path="projects-and-directory-structure.html"><a href="projects-and-directory-structure.html#projects"><i class="fa fa-check"></i><b>3.1</b> Projects</a></li>
-<li class="chapter" data-level="3.2" data-path="projects-and-directory-structure.html"><a href="projects-and-directory-structure.html#stereotypical-directory-structure"><i class="fa fa-check"></i><b>3.2</b> Stereotypical Directory Structure</a></li>
-<li class="chapter" data-level="3.3" data-path="projects-and-directory-structure.html"><a href="projects-and-directory-structure.html#filetypes-in-r"><i class="fa fa-check"></i><b>3.3</b> Filetypes in R</a></li>
+<li class="chapter" data-level="3" data-path="projects-and-directory-structure.html"><a href="projects-and-directory-structure.html"><i class="fa fa-check"></i><b>3</b> Projects and Directory Structure<span></span></a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="projects-and-directory-structure.html"><a href="projects-and-directory-structure.html#projects"><i class="fa fa-check"></i><b>3.1</b> Projects<span></span></a></li>
+<li class="chapter" data-level="3.2" data-path="projects-and-directory-structure.html"><a href="projects-and-directory-structure.html#stereotypical-directory-structure"><i class="fa fa-check"></i><b>3.2</b> Stereotypical Directory Structure<span></span></a></li>
+<li class="chapter" data-level="3.3" data-path="projects-and-directory-structure.html"><a href="projects-and-directory-structure.html#filetypes-in-r"><i class="fa fa-check"></i><b>3.3</b> Filetypes in R<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html"><i class="fa fa-check"></i><b>4</b> Data input and output (IO)</a><ul>
-<li class="chapter" data-level="4.1" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#some-considerations"><i class="fa fa-check"></i><b>4.1</b> Some considerations:</a></li>
-<li class="chapter" data-level="4.2" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#reading-and-writing-files"><i class="fa fa-check"></i><b>4.2</b> Reading and Writing Files</a></li>
-<li class="chapter" data-level="4.3" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#small-data"><i class="fa fa-check"></i><b>4.3</b> Small data</a></li>
-<li class="chapter" data-level="4.4" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#practice"><i class="fa fa-check"></i><b>4.4</b> Practice</a></li>
-<li class="chapter" data-level="4.5" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#larger-data"><i class="fa fa-check"></i><b>4.5</b> Large(r) data</a></li>
+<li class="chapter" data-level="4" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html"><i class="fa fa-check"></i><b>4</b> Data input and output (IO)<span></span></a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#some-considerations"><i class="fa fa-check"></i><b>4.1</b> Some considerations:<span></span></a></li>
+<li class="chapter" data-level="4.2" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#reading-and-writing-files"><i class="fa fa-check"></i><b>4.2</b> Reading and Writing Files<span></span></a></li>
+<li class="chapter" data-level="4.3" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#small-data"><i class="fa fa-check"></i><b>4.3</b> Small data<span></span></a></li>
+<li class="chapter" data-level="4.4" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#practice"><i class="fa fa-check"></i><b>4.4</b> Practice<span></span></a></li>
+<li class="chapter" data-level="4.5" data-path="data-input-and-output-io.html"><a href="data-input-and-output-io.html#larger-data"><i class="fa fa-check"></i><b>4.5</b> Large(r) data<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="data-classes.html"><a href="data-classes.html"><i class="fa fa-check"></i><b>5</b> Data Classes</a><ul>
-<li class="chapter" data-level="5.1" data-path="data-classes.html"><a href="data-classes.html#numeric"><i class="fa fa-check"></i><b>5.1</b> Numeric</a></li>
-<li class="chapter" data-level="5.2" data-path="data-classes.html"><a href="data-classes.html#integer"><i class="fa fa-check"></i><b>5.2</b> Integer</a></li>
-<li class="chapter" data-level="5.3" data-path="data-classes.html"><a href="data-classes.html#character"><i class="fa fa-check"></i><b>5.3</b> Character</a></li>
-<li class="chapter" data-level="5.4" data-path="data-classes.html"><a href="data-classes.html#logical"><i class="fa fa-check"></i><b>5.4</b> Logical</a></li>
-<li class="chapter" data-level="5.5" data-path="data-classes.html"><a href="data-classes.html#factor"><i class="fa fa-check"></i><b>5.5</b> Factor</a></li>
-<li class="chapter" data-level="5.6" data-path="data-classes.html"><a href="data-classes.html#list"><i class="fa fa-check"></i><b>5.6</b> List</a></li>
-<li class="chapter" data-level="5.7" data-path="data-classes.html"><a href="data-classes.html#vectors"><i class="fa fa-check"></i><b>5.7</b> Vectors</a></li>
-<li class="chapter" data-level="5.8" data-path="data-classes.html"><a href="data-classes.html#matrix"><i class="fa fa-check"></i><b>5.8</b> Matrix</a></li>
-<li class="chapter" data-level="5.9" data-path="data-classes.html"><a href="data-classes.html#dataframe"><i class="fa fa-check"></i><b>5.9</b> DataFrame</a></li>
+<li class="chapter" data-level="5" data-path="data-classes.html"><a href="data-classes.html"><i class="fa fa-check"></i><b>5</b> Data Classes<span></span></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="data-classes.html"><a href="data-classes.html#numeric"><i class="fa fa-check"></i><b>5.1</b> Numeric<span></span></a></li>
+<li class="chapter" data-level="5.2" data-path="data-classes.html"><a href="data-classes.html#integer"><i class="fa fa-check"></i><b>5.2</b> Integer<span></span></a></li>
+<li class="chapter" data-level="5.3" data-path="data-classes.html"><a href="data-classes.html#character"><i class="fa fa-check"></i><b>5.3</b> Character<span></span></a></li>
+<li class="chapter" data-level="5.4" data-path="data-classes.html"><a href="data-classes.html#logical"><i class="fa fa-check"></i><b>5.4</b> Logical<span></span></a></li>
+<li class="chapter" data-level="5.5" data-path="data-classes.html"><a href="data-classes.html#factor"><i class="fa fa-check"></i><b>5.5</b> Factor<span></span></a></li>
+<li class="chapter" data-level="5.6" data-path="data-classes.html"><a href="data-classes.html#list"><i class="fa fa-check"></i><b>5.6</b> List<span></span></a></li>
+<li class="chapter" data-level="5.7" data-path="data-classes.html"><a href="data-classes.html#vectors"><i class="fa fa-check"></i><b>5.7</b> Vectors<span></span></a></li>
+<li class="chapter" data-level="5.8" data-path="data-classes.html"><a href="data-classes.html#matrix"><i class="fa fa-check"></i><b>5.8</b> Matrix<span></span></a></li>
+<li class="chapter" data-level="5.9" data-path="data-classes.html"><a href="data-classes.html#dataframe"><i class="fa fa-check"></i><b>5.9</b> DataFrame<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="working-in-r.html"><a href="working-in-r.html"><i class="fa fa-check"></i><b>6</b> Working in R</a><ul>
-<li class="chapter" data-level="6.1" data-path="working-in-r.html"><a href="working-in-r.html#arithmetic-operators"><i class="fa fa-check"></i><b>6.1</b> Arithmetic operators</a></li>
-<li class="chapter" data-level="6.2" data-path="working-in-r.html"><a href="working-in-r.html#arithmetic-operators-practice"><i class="fa fa-check"></i><b>6.2</b> Arithmetic operators practice</a></li>
-<li class="chapter" data-level="6.3" data-path="working-in-r.html"><a href="working-in-r.html#missing-values-na"><i class="fa fa-check"></i><b>6.3</b> Missing values (NA)</a></li>
-<li class="chapter" data-level="6.4" data-path="working-in-r.html"><a href="working-in-r.html#dealing-with-missing-values"><i class="fa fa-check"></i><b>6.4</b> Dealing with missing values</a></li>
-<li class="chapter" data-level="6.5" data-path="working-in-r.html"><a href="working-in-r.html#dealing-with-problematic-values"><i class="fa fa-check"></i><b>6.5</b> Dealing with problematic values</a></li>
+<li class="chapter" data-level="6" data-path="working-in-r.html"><a href="working-in-r.html"><i class="fa fa-check"></i><b>6</b> Working in R<span></span></a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="working-in-r.html"><a href="working-in-r.html#arithmetic-operators"><i class="fa fa-check"></i><b>6.1</b> Arithmetic operators<span></span></a></li>
+<li class="chapter" data-level="6.2" data-path="working-in-r.html"><a href="working-in-r.html#arithmetic-operators-practice"><i class="fa fa-check"></i><b>6.2</b> Arithmetic operators practice<span></span></a></li>
+<li class="chapter" data-level="6.3" data-path="working-in-r.html"><a href="working-in-r.html#missing-values-na"><i class="fa fa-check"></i><b>6.3</b> Missing values (NA)<span></span></a></li>
+<li class="chapter" data-level="6.4" data-path="working-in-r.html"><a href="working-in-r.html#dealing-with-missing-values"><i class="fa fa-check"></i><b>6.4</b> Dealing with missing values<span></span></a></li>
+<li class="chapter" data-level="6.5" data-path="working-in-r.html"><a href="working-in-r.html#dealing-with-problematic-values"><i class="fa fa-check"></i><b>6.5</b> Dealing with problematic values<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html"><i class="fa fa-check"></i><b>7</b> Examples of coding statistical operations</a><ul>
-<li class="chapter" data-level="7.1" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#z-scores"><i class="fa fa-check"></i><b>7.1</b> Z-scores</a></li>
-<li class="chapter" data-level="7.2" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#quantiles"><i class="fa fa-check"></i><b>7.2</b> Quantiles</a></li>
-<li class="chapter" data-level="7.3" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#normality"><i class="fa fa-check"></i><b>7.3</b> Normality</a></li>
-<li class="chapter" data-level="7.4" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#t-test"><i class="fa fa-check"></i><b>7.4</b> t-test</a></li>
-<li class="chapter" data-level="7.5" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#linear-models"><i class="fa fa-check"></i><b>7.5</b> Linear Models</a></li>
-<li class="chapter" data-level="7.6" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#analysis-of-variance"><i class="fa fa-check"></i><b>7.6</b> Analysis of Variance</a></li>
+<li class="chapter" data-level="7" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html"><i class="fa fa-check"></i><b>7</b> Examples of coding statistical operations<span></span></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#z-scores"><i class="fa fa-check"></i><b>7.1</b> Z-scores<span></span></a></li>
+<li class="chapter" data-level="7.2" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#quantiles"><i class="fa fa-check"></i><b>7.2</b> Quantiles<span></span></a></li>
+<li class="chapter" data-level="7.3" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#normality"><i class="fa fa-check"></i><b>7.3</b> Normality<span></span></a></li>
+<li class="chapter" data-level="7.4" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#t-test"><i class="fa fa-check"></i><b>7.4</b> t-test<span></span></a></li>
+<li class="chapter" data-level="7.5" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#linear-models"><i class="fa fa-check"></i><b>7.5</b> Linear Models<span></span></a></li>
+<li class="chapter" data-level="7.6" data-path="examples-of-coding-statistical-operations.html"><a href="examples-of-coding-statistical-operations.html#analysis-of-variance"><i class="fa fa-check"></i><b>7.6</b> Analysis of Variance<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html"><i class="fa fa-check"></i><b>8</b> Subsetting and Logical Operators</a><ul>
-<li class="chapter" data-level="8.1" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#indexing"><i class="fa fa-check"></i><b>8.1</b> Indexing</a></li>
-<li class="chapter" data-level="8.2" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#indexing-using-a-negative-sign"><i class="fa fa-check"></i><b>8.2</b> Indexing using a negative sign</a></li>
-<li class="chapter" data-level="8.3" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#slicing-matrices"><i class="fa fa-check"></i><b>8.3</b> Slicing Matrices</a></li>
-<li class="chapter" data-level="8.4" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#indexing-data-frames"><i class="fa fa-check"></i><b>8.4</b> Indexing Data Frames</a></li>
-<li class="chapter" data-level="8.5" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#logical-operators"><i class="fa fa-check"></i><b>8.5</b> Logical operators</a></li>
+<li class="chapter" data-level="8" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html"><i class="fa fa-check"></i><b>8</b> Subsetting and Logical Operators<span></span></a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#indexing"><i class="fa fa-check"></i><b>8.1</b> Indexing<span></span></a></li>
+<li class="chapter" data-level="8.2" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#indexing-using-a-negative-sign"><i class="fa fa-check"></i><b>8.2</b> Indexing using a negative sign<span></span></a></li>
+<li class="chapter" data-level="8.3" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#slicing-matrices"><i class="fa fa-check"></i><b>8.3</b> Slicing Matrices<span></span></a></li>
+<li class="chapter" data-level="8.4" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#indexing-data-frames"><i class="fa fa-check"></i><b>8.4</b> Indexing Data Frames<span></span></a></li>
+<li class="chapter" data-level="8.5" data-path="subsetting-and-logical-operators.html"><a href="subsetting-and-logical-operators.html#logical-operators"><i class="fa fa-check"></i><b>8.5</b> Logical operators<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html"><i class="fa fa-check"></i><b>9</b> Loops and ifelse statements</a><ul>
-<li class="chapter" data-level="9.1" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html#loops"><i class="fa fa-check"></i><b>9.1</b> Loops</a></li>
-<li class="chapter" data-level="9.2" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html#nested-loops"><i class="fa fa-check"></i><b>9.2</b> Nested Loops</a></li>
-<li class="chapter" data-level="9.3" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html#while-loop"><i class="fa fa-check"></i><b>9.3</b> while loop</a></li>
-<li class="chapter" data-level="9.4" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html#if-else-and-ifelse"><i class="fa fa-check"></i><b>9.4</b> If, else, and ifelse</a></li>
+<li class="chapter" data-level="9" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html"><i class="fa fa-check"></i><b>9</b> Loops and ifelse statements<span></span></a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html#loops"><i class="fa fa-check"></i><b>9.1</b> Loops<span></span></a></li>
+<li class="chapter" data-level="9.2" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html#nested-loops"><i class="fa fa-check"></i><b>9.2</b> Nested Loops<span></span></a></li>
+<li class="chapter" data-level="9.3" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html#while-loop"><i class="fa fa-check"></i><b>9.3</b> while loop<span></span></a></li>
+<li class="chapter" data-level="9.4" data-path="loops-and-ifelse-statements.html"><a href="loops-and-ifelse-statements.html#if-else-and-ifelse"><i class="fa fa-check"></i><b>9.4</b> If, else, and ifelse<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="assignments.html"><a href="assignments.html"><i class="fa fa-check"></i><b>10</b> Assignments</a><ul>
-<li class="chapter" data-level="10.1" data-path="assignments.html"><a href="assignments.html#turning-in-code"><i class="fa fa-check"></i><b>10.1</b> Turning in code</a></li>
-<li class="chapter" data-level="10.2" data-path="assignments.html"><a href="assignments.html#assignment-01---working-in-r-and-rstudio"><i class="fa fa-check"></i><b>10.2</b> Assignment 01 - Working in R and RStudio</a></li>
-<li class="chapter" data-level="10.3" data-path="assignments.html"><a href="assignments.html#assignment-02"><i class="fa fa-check"></i><b>10.3</b> Assignment 02</a></li>
-<li class="chapter" data-level="10.4" data-path="assignments.html"><a href="assignments.html#assignment-03"><i class="fa fa-check"></i><b>10.4</b> Assignment 03</a></li>
-<li class="chapter" data-level="10.5" data-path="assignments.html"><a href="assignments.html#assignment-04"><i class="fa fa-check"></i><b>10.5</b> Assignment 04</a></li>
-<li class="chapter" data-level="10.6" data-path="assignments.html"><a href="assignments.html#project"><i class="fa fa-check"></i><b>10.6</b> Project</a></li>
+<li class="chapter" data-level="10" data-path="assignments.html"><a href="assignments.html"><i class="fa fa-check"></i><b>10</b> Assignments<span></span></a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="assignments.html"><a href="assignments.html#turning-in-code"><i class="fa fa-check"></i><b>10.1</b> Turning in code<span></span></a></li>
+<li class="chapter" data-level="10.2" data-path="assignments.html"><a href="assignments.html#assignment-01---working-in-r-and-rstudio"><i class="fa fa-check"></i><b>10.2</b> Assignment 01 - Working in R and RStudio<span></span></a></li>
+<li class="chapter" data-level="10.3" data-path="assignments.html"><a href="assignments.html#assignment-02"><i class="fa fa-check"></i><b>10.3</b> Assignment 02<span></span></a></li>
+<li class="chapter" data-level="10.4" data-path="assignments.html"><a href="assignments.html#assignment-03"><i class="fa fa-check"></i><b>10.4</b> Assignment 03<span></span></a></li>
+<li class="chapter" data-level="10.5" data-path="assignments.html"><a href="assignments.html#assignment-04"><i class="fa fa-check"></i><b>10.5</b> Assignment 04<span></span></a></li>
+<li class="chapter" data-level="10.6" data-path="assignments.html"><a href="assignments.html#project"><i class="fa fa-check"></i><b>10.6</b> Project<span></span></a></li>
 </ul></li>
 </ul>
 
@@ -236,41 +245,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-input-and-output-io" class="section level1">
-<h1><span class="header-section-number">4</span> Data input and output (IO)</h1>
-<div id="some-considerations" class="section level2">
-<h2><span class="header-section-number">4.1</span> Some considerations:</h2>
+<div id="data-input-and-output-io" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Data input and output (IO)<a href="data-input-and-output-io.html#data-input-and-output-io" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="some-considerations" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Some considerations:<a href="data-input-and-output-io.html#some-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>Keep the names of local files downloaded from the internet or copied onto your computer unchanged. This will help you trace the provenance of the data in the future.</p></li>
 <li><p>R’s native file format <code>.RData</code> can be accessed using <code>load</code> and <code>save.</code></p></li>
 </ol>
 </div>
-<div id="reading-and-writing-files" class="section level2">
-<h2><span class="header-section-number">4.2</span> Reading and Writing Files</h2>
+<div id="reading-and-writing-files" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Reading and Writing Files<a href="data-input-and-output-io.html#reading-and-writing-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are many methods to read and write files in R programming. Your command of these is critical because all scientific work begins with data, and most data is found inside files and databases.</p>
 <p>Dealing with input is probably the first step of implementing any significant project.</p>
 </div>
-<div id="small-data" class="section level2">
-<h2><span class="header-section-number">4.3</span> Small data</h2>
+<div id="small-data" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Small data<a href="data-input-and-output-io.html#small-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>For very small datasets, is may be preferred to enter the data by hand.</li>
 </ul>
 <p><code>c</code> is a common function used for combine:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="data-input-and-output-io.html#cb3-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">19</span>)</span>
-<span id="cb3-2"><a href="data-input-and-output-io.html#cb3-2"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb3-3"><a href="data-input-and-output-io.html#cb3-3"></a><span class="kw">c</span>(x,y)</span>
-<span id="cb3-4"><a href="data-input-and-output-io.html#cb3-4"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(x,y,<span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="data-input-and-output-io.html#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">19</span>)</span>
+<span id="cb3-2"><a href="data-input-and-output-io.html#cb3-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb3-3"><a href="data-input-and-output-io.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(x,y)</span>
+<span id="cb3-4"><a href="data-input-and-output-io.html#cb3-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(x,y,<span class="dv">5</span>)</span></code></pre></div>
 <p>There are a suite of functions to enter data in the console. The sequence function <code>seq</code>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="data-input-and-output-io.html#cb4-1"></a>y &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="dv">10</span>)</span>
-<span id="cb4-2"><a href="data-input-and-output-io.html#cb4-2"></a>y &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="dv">10</span>, <span class="dt">by =</span> <span class="fl">2.5</span>)</span>
-<span id="cb4-3"><a href="data-input-and-output-io.html#cb4-3"></a>y &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="dv">10</span>, <span class="dt">length.out =</span> <span class="dv">22</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="data-input-and-output-io.html#cb4-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">10</span>)</span>
+<span id="cb4-2"><a href="data-input-and-output-io.html#cb4-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">10</span>, <span class="at">by =</span> <span class="fl">2.5</span>)</span>
+<span id="cb4-3"><a href="data-input-and-output-io.html#cb4-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">10</span>, <span class="at">length.out =</span> <span class="dv">22</span>)</span></code></pre></div>
 <p>Use the function <code>rep</code> (repeat):</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="data-input-and-output-io.html#cb5-1"></a>y &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dt">x =</span> <span class="dv">5</span>, <span class="dt">times =</span> <span class="dv">4</span>)</span>
-<span id="cb5-2"><a href="data-input-and-output-io.html#cb5-2"></a>x.value &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)</span>
-<span id="cb5-3"><a href="data-input-and-output-io.html#cb5-3"></a><span class="kw">rep</span>(x.value, <span class="dt">times =</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="data-input-and-output-io.html#cb5-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="at">x =</span> <span class="dv">5</span>, <span class="at">times =</span> <span class="dv">4</span>)</span>
+<span id="cb5-2"><a href="data-input-and-output-io.html#cb5-2" aria-hidden="true" tabindex="-1"></a>x.value <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)</span>
+<span id="cb5-3"><a href="data-input-and-output-io.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(x.value, <span class="at">times =</span> <span class="dv">3</span>)</span></code></pre></div>
 </div>
-<div id="practice" class="section level2">
-<h2><span class="header-section-number">4.4</span> Practice</h2>
+<div id="practice" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Practice<a href="data-input-and-output-io.html#practice" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <table>
 <colgroup>
 <col width="8%" />
@@ -305,47 +314,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="data-input-and-output-io.html#cb6-1"></a><span class="co"># Create a data frame using the &quot;data.frame&quot; function</span></span>
-<span id="cb6-2"><a href="data-input-and-output-io.html#cb6-2"></a>site.name &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;Site.01&quot;</span>,<span class="dv">3</span>),<span class="kw">rep</span>(<span class="st">&quot;Site.02&quot;</span>,<span class="dv">3</span>))</span>
-<span id="cb6-3"><a href="data-input-and-output-io.html#cb6-3"></a>density &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dt">x =</span> <span class="fl">2.3</span>, <span class="dt">times =</span> <span class="kw">length</span>(site.name))</span>
-<span id="cb6-4"><a href="data-input-and-output-io.html#cb6-4"></a>abundance &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="fl">14.5</span>, <span class="dt">to =</span> <span class="fl">19.8</span>, <span class="dt">length.out =</span> <span class="kw">length</span>(site.name))</span>
-<span id="cb6-5"><a href="data-input-and-output-io.html#cb6-5"></a>sampled. &lt;-<span class="st"> </span><span class="kw">c</span>(F, T, F, F, T, F)</span>
-<span id="cb6-6"><a href="data-input-and-output-io.html#cb6-6"></a>y.data.frame &lt;-<span class="st"> </span><span class="kw">data.frame</span>(site.name, density, abundance, sampled.)</span>
-<span id="cb6-7"><a href="data-input-and-output-io.html#cb6-7"></a>y.data.frame</span>
-<span id="cb6-8"><a href="data-input-and-output-io.html#cb6-8"></a><span class="kw">class</span>(y.data.frame)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="data-input-and-output-io.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame using the &quot;data.frame&quot; function</span></span>
+<span id="cb6-2"><a href="data-input-and-output-io.html#cb6-2" aria-hidden="true" tabindex="-1"></a>site.name <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">&quot;Site.01&quot;</span>,<span class="dv">3</span>),<span class="fu">rep</span>(<span class="st">&quot;Site.02&quot;</span>,<span class="dv">3</span>))</span>
+<span id="cb6-3"><a href="data-input-and-output-io.html#cb6-3" aria-hidden="true" tabindex="-1"></a>density <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="at">x =</span> <span class="fl">2.3</span>, <span class="at">times =</span> <span class="fu">length</span>(site.name))</span>
+<span id="cb6-4"><a href="data-input-and-output-io.html#cb6-4" aria-hidden="true" tabindex="-1"></a>abundance <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="fl">14.5</span>, <span class="at">to =</span> <span class="fl">19.8</span>, <span class="at">length.out =</span> <span class="fu">length</span>(site.name))</span>
+<span id="cb6-5"><a href="data-input-and-output-io.html#cb6-5" aria-hidden="true" tabindex="-1"></a>sampled. <span class="ot">&lt;-</span> <span class="fu">c</span>(F, T, F, F, T, F)</span>
+<span id="cb6-6"><a href="data-input-and-output-io.html#cb6-6" aria-hidden="true" tabindex="-1"></a>y.data.frame <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(site.name, density, abundance, sampled.)</span>
+<span id="cb6-7"><a href="data-input-and-output-io.html#cb6-7" aria-hidden="true" tabindex="-1"></a>y.data.frame</span>
+<span id="cb6-8"><a href="data-input-and-output-io.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y.data.frame)</span></code></pre></div>
 </div>
-<div id="larger-data" class="section level2">
-<h2><span class="header-section-number">4.5</span> Large(r) data</h2>
-<div id="read-csv" class="section level3">
-<h3><span class="header-section-number">4.5.1</span> Read csv</h3>
+<div id="larger-data" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Large(r) data<a href="data-input-and-output-io.html#larger-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="read-csv" class="section level3 hasAnchor" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> Read csv<a href="data-input-and-output-io.html#read-csv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p>Most scientific work will involve data larger than can be entered by hand.</p></li>
 <li><p>In this case we will use a suite of commands and different packages to get the data into our environment.</p></li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="data-input-and-output-io.html#cb7-1"></a><span class="kw">read.csv</span>(<span class="st">&quot;./Data/co2.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="data-input-and-output-io.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="st">&quot;./Data/co2.csv&quot;</span>)</span></code></pre></div>
 </div>
-<div id="read-xlsx" class="section level3">
-<h3><span class="header-section-number">4.5.2</span> Read xlsx</h3>
+<div id="read-xlsx" class="section level3 hasAnchor" number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> Read xlsx<a href="data-input-and-output-io.html#read-xlsx" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>MS Excel files are widely used</li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="data-input-and-output-io.html#cb8-1"></a><span class="kw">install.packages</span>(<span class="st">&#39;readxl&#39;</span>)</span>
-<span id="cb8-2"><a href="data-input-and-output-io.html#cb8-2"></a><span class="kw">require</span>(<span class="st">&#39;readxl&#39;</span>)</span>
-<span id="cb8-3"><a href="data-input-and-output-io.html#cb8-3"></a></span>
-<span id="cb8-4"><a href="data-input-and-output-io.html#cb8-4"></a><span class="kw">read_xlsx</span>(<span class="st">&quot;./Data/Codes.xlsx&quot;</span>, <span class="dt">sheet =</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="data-input-and-output-io.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;readxl&#39;</span>)</span>
+<span id="cb8-2"><a href="data-input-and-output-io.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(<span class="st">&#39;readxl&#39;</span>)</span>
+<span id="cb8-3"><a href="data-input-and-output-io.html#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="data-input-and-output-io.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">read_xlsx</span>(<span class="st">&quot;./Data/Codes.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span></code></pre></div>
 </div>
-<div id="download-data-from-public-repository" class="section level3">
-<h3><span class="header-section-number">4.5.3</span> Download data from public repository</h3>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="data-input-and-output-io.html#cb9-1"></a>Website can be found here<span class="op">:</span><span class="st"> &quot;https://www.stats.govt.nz/large-datasets/csv-files-for-download/&quot;</span></span>
-<span id="cb9-2"><a href="data-input-and-output-io.html#cb9-2"></a></span>
-<span id="cb9-3"><a href="data-input-and-output-io.html#cb9-3"></a>The data are accessed by this URL<span class="op">:</span></span>
-<span id="cb9-4"><a href="data-input-and-output-io.html#cb9-4"></a>url &lt;-<span class="st"> &quot;https://www.stats.govt.nz/assets/Uploads/Annual-enterprise-survey/Annual-enterprise-survey-2020-financial-year-provisional/Download-data/annual-enterprise-survey-2020-financial-year-provisional-csv.csv&quot;</span></span>
-<span id="cb9-5"><a href="data-input-and-output-io.html#cb9-5"></a></span>
-<span id="cb9-6"><a href="data-input-and-output-io.html#cb9-6"></a>You can see that the url links to a .csv file. This is a file <span class="cf">in</span> an online directory. Access the directory <span class="cf">in</span> a web browser<span class="op">:</span><span class="st"> </span>https<span class="op">:</span><span class="er">//</span>www.stats.govt.nz<span class="op">/</span></span>
-<span id="cb9-7"><a href="data-input-and-output-io.html#cb9-7"></a><span class="st">  </span></span>
-<span id="cb9-8"><a href="data-input-and-output-io.html#cb9-8"></a>destfile &lt;-<span class="st"> &quot;./Data/output.csv&quot;</span></span>
-<span id="cb9-9"><a href="data-input-and-output-io.html#cb9-9"></a></span>
-<span id="cb9-10"><a href="data-input-and-output-io.html#cb9-10"></a><span class="kw">download.file</span>(url, destfile)</span></code></pre></div>
+<div id="download-data-from-public-repository" class="section level3 hasAnchor" number="4.5.3">
+<h3><span class="header-section-number">4.5.3</span> Download data from public repository<a href="data-input-and-output-io.html#download-data-from-public-repository" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="data-input-and-output-io.html#cb9-1" aria-hidden="true" tabindex="-1"></a>Website can be found here<span class="sc">:</span> <span class="st">&quot;https://www.stats.govt.nz/large-datasets/csv-files-for-download/&quot;</span></span>
+<span id="cb9-2"><a href="data-input-and-output-io.html#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="data-input-and-output-io.html#cb9-3" aria-hidden="true" tabindex="-1"></a>The data are accessed by this URL<span class="sc">:</span></span>
+<span id="cb9-4"><a href="data-input-and-output-io.html#cb9-4" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">&quot;https://www.stats.govt.nz/assets/Uploads/Annual-enterprise-survey/Annual-enterprise-survey-2020-financial-year-provisional/Download-data/annual-enterprise-survey-2020-financial-year-provisional-csv.csv&quot;</span></span>
+<span id="cb9-5"><a href="data-input-and-output-io.html#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="data-input-and-output-io.html#cb9-6" aria-hidden="true" tabindex="-1"></a>You can see that the url links to a .csv file. This is a file <span class="cf">in</span> an online directory. Access the directory <span class="cf">in</span> a web browser<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>www.stats.govt.nz<span class="sc">/</span></span>
+<span id="cb9-7"><a href="data-input-and-output-io.html#cb9-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-8"><a href="data-input-and-output-io.html#cb9-8" aria-hidden="true" tabindex="-1"></a>destfile <span class="ot">&lt;-</span> <span class="st">&quot;./Data/output.csv&quot;</span></span>
+<span id="cb9-9"><a href="data-input-and-output-io.html#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="data-input-and-output-io.html#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(url, destfile)</span></code></pre></div>
 
 </div>
 </div>
