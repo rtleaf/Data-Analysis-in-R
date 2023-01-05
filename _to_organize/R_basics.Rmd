@@ -1,0 +1,86 @@
+---
+site: "bookdown::bookdown_site"
+output:
+  bookdown::gitbook:
+    lib_dir: "book_assets"
+  bookdown::pdf_book:
+    keep_tex: yes
+---
+
+# R Basics
+
+## Arithmetic operators
+Symbol| Operation
+------| ---------
++     | addition
+-     | subtraction
+*     | multiplication
+/     | division
+^     | exponentiation
+
+PEMDAS applies when writing R-code
+
+
+
+```{r, eval=FALSE}
+# Arithmetic operators in action:
+5 + 5 / 2
+3 * 2^2
+(3*2)^2 
+# Arithmetic operators using objects:
+z <- 5
+w <- c(3,7,9,2)
+s <- w[3]
+z + s
+```
+
+## Arithmetic operators practice
+
+Using what you know about parenthesis and PEMDAS, in one line of code do each of the following:  
+
+Number | Excercise
+------ | -------------------------------------------------------------------
+1.     |Assign the variable `x` to be a vector containing the values 5,5,6,2  
+2.     |Assign the variable `y` to be a vector containing the values 3,3,1,7
+3.     |Add `x` and `y`
+4.     |Substract `y` from `x` 
+5.     |Assign `d` as `y` divided by `x`
+3.     |Multiply `z` by `s` then add five (`z` and `s` from last practice)
+4.     |Add 5 to `z` then multilply by `s`
+5.     |Take `z` to the fifth power and then add 2
+6.     |Divide `s` by three, then add 33, then take that sum to the 0.5 power
+
+## Missing values (NA)
+
+```{r, eval=FALSE}
+# is.na tests for missing values
+dat.1 <- c(-1,NA,1,1,-1)
+dat.1 + 2
+dat.1 + rep(2, length(dat.1))
+```
+
+
+## Dealing with missing values
+
++ In R, missing values are represented by "NA". 
+
+The "is.na" function and the "na.rm"" argument:
+
++ Sometimes we do not know whether there are missing values in our data. 
+
++ We can use the `is.na` function to test for missing values:
+
+```{r, eval=FALSE}
+# is.na tests for missing values
+dat.1 <- c(-1,NA,1,1,-1)
+is.na(dat.1)
+which(is.na(dat.1))
+```
+
+We can use the logical `na.rm` argument to remove missing values from our data prior to executing the funciton:
+```{r, eval=FALSE}
+dat.1 <- c(-1,NA,1,1,-1)
+mean(dat.1)
+mean(dat.1, na.rm = T)
+```
+
