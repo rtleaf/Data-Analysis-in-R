@@ -4,8 +4,8 @@ Instructor,Dr. Robert Leaf
 Email,robert.leaf@usm.edu
 Office,GCRL Oceanography 119
 Phone, 2-4296
-Course Meeting Days,MW
-Course Meeting Time,2:30 to 3:45 PM
+Course Meeting Days,"T,Th"
+Course Meeting Time,4:00 to 5:15 PM
 Office Hours,Make a time to see me in-person or online.
 Course Workload Statement,"Students are expected to invest considerable time outside of class in learning the material for this course. The expectation of the University of Southern Mississippi is that students should spend approximately 2 to 3 hours outside of class each week for every hour in class working on reading, assignments, studying, and other work for the course. Time management is thus critical for student success. All students should assess their personal circumstances and talk with their advisors about the appropriate number of credit hours to take each term. Resources for academic support can be found at https://www.usm.edu/success. "
 Academic Support Resources,"If a student believes that they have a disability which is covered by the Americans with Disabilities Act (ADA) and makes them eligible to receive classroom accommodations, they should contact the Office for Disability Accommodations (ODA) for information regarding the registration process.  Disabilities covered by the ADA may include but are not limited to ADHD, learning disabilities, psychiatric disabilities, physical disabilities, chronic health disorders, temporary illnesses or injuries and pregnancies. Students should contact ODA if they are not certain whether their documented medical condition qualifies for ODA services.  Students are only required to disclose their disability to the Office for Disability Accommodations.  All information submitted to ODA by the student is held with strict confidentiality."
@@ -18,8 +18,8 @@ Academic Integrity,"All students at the University of Southern Mississippi are e
 Academic Integrity 2,"Engaging in any of these behaviors or supporting others who do so will result in academic penalties and/or other sanctions. If a faculty member determines that a student has violated our Academic Integrity Policy, sanctions ranging from resubmission of work to course failure may occur, including the possibility of receiving a grade of “XF” for the course, which will be on the student’s transcript with the notation “Failure due to academic misconduct.”  "
 Course Materials 1,R for Data Science by G. Grolemund and H. Wickham (https://r4ds.had.co.nz/). This is R4DS in the syllabus.
 Course Materials 2,bookdown: Authoring Books and Technical Documents with R Markdown by Y. Xie (https://bookdown.org/yihui/bookdown/). This is BD in the syllabus.
-Course Materials 3,Mastering Shiny by H. Wickham (https://mastering-shiny.org/). This is MS in the syllabus.
-Course Materials 4,"Tufte, E. R. (2001). The Visual Display of Quantitative Information. Cheshire, Connecticut: Graphics Press. This is Tufte in the syllabus."
+Course Materials 3,"Tufte, E. R. (2001). The Visual Display of Quantitative Information. Cheshire, Connecticut: Graphics Press. This is Tufte in the syllabus."
+Course Materials 4,
 Assignment Policy and Procedures,"All assigned work (Assignments and Project) will be due at the beginning of class on its assigned due date. You will be submitting your code to me, via email at .r files and I will check that the code runs properly, grade the assignment, and provide feedback within five business days. Late work will not be given full credit."
 Assignment Policy and Procedures 2,"To receive full credit, all code must run on all my machine and return all required components of the assignment. You may turn in any assignment as many times as necessary to ensure that you receive credit."
 Assignment Policy and Procedures 3,
