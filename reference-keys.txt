@@ -8,13 +8,6 @@ course-workload-statement
 course-evaluation
 assignment-policy-and-procedures
 grading-scale
-academic-support-resources
-academic-success
-mental-well-being-statement
-covid-19-physical-well-being
-nondiscrimination-statement
-confidentiality-and-mandatory-reporting
-academic-integrity
 content-of-this-online-material.
 rstudio-and-r
 r-installation

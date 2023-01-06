@@ -13,6 +13,7 @@ output:
 ```{r, include=FALSE}
 options(tinytex.verbose = TRUE)
 syl.comp <- read.csv("Syllabus Components.csv")
+
 ```
 
 ## `r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Title")])`
@@ -108,39 +109,6 @@ names(course.eval) <- c("Evaluation type",	"Number",	"Points per item",	"Total p
 knitr::kable(course.eval) %>%
   kable_styling(bootstrap_options = "striped", full_width = T, position = "center")
 ```
-
-## Academic Support Resources
-`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Academic Support Resources")])`
-
-## Academic Success
-`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Academic Success")])`
-
-## Mental Well-Being Statement
-`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Mental Well-Being Statement")])`
-
-## Covid-19 (Physical Well-Being)
-
-`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Covid 1")])`
-
-`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Covid 2")])`
-
-`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Covid 3")])`
-
-`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Covid 4")])`
-
-`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Covid 5")])`
-
-## Nondiscrimination Statement
-`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Nondiscrimination Statement")])`
-
-## Confidentiality and Mandatory Reporting
-`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Confidentiality and Mandatory Reporting")])`
-\pagebreak
-
-## Academic Integrity
-`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Academic Integrity")])`
-
-`r paste0(syl.comp$VAR2[which(syl.comp$VAR1 == "Academic Integrity 2")])`
 
 ## Content of this online material.
 
